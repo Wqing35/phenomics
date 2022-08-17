@@ -33,7 +33,7 @@ readme_table <- select(out_df,
                        Altmetric = altmetric,
                        `Corresponding authors` = correspond_authors)
 readme_kable <- kable(readme_table,escape = F)
-cat(readme_kable, file = "./get_readme/readme_kable.html")
+cat(readme_kable, file = "./get_readme/readme_kable.txt")
 
 
 
