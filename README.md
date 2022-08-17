@@ -7,6 +7,12 @@
 
 https://www.springer.com/journal/43657
 
+
+## Number of submissions of each month
+
+![Number of submissions of each month](https://github.com/Telogen/Phenomics/tree/master/get_readme/number_of_submissions.png)
+
+
 ## All *Phenomics* online papers
 
 Updata time: 2022-08-17
