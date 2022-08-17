@@ -8,21 +8,15 @@ file_name <- plot_file_names[1]
 file_name
 full_file_name <- paste0('/mdshare/node8/txmdata/test/Phenomics/weekly_online_paper_metrices/output/',file_name)
 out_df <- read.table(full_file_name,sep = '\t',header = T)
-
 # knitr::kable(out_df)
 
-out_df$title <- strsplit(out_df$title,' ') %>% 
-  sapply(function(title){
-    paste(c(title[1:5],'...'),collapse = ' ')
-  })
-out_df
 out_df <- mutate(out_df,
                  url = read.table('/mdshare/node8/txmdata/test/Phenomics/weekly_online_paper_metrices/0_urls.txt')$V1,
                  short_title = strsplit(title,' ') %>% 
                    sapply(function(one_title){
                      paste(c(one_title[1:5],'...'),collapse = ' ')
                    }),
-                 short_title_with_link = cell_spec(title, "html", link = url)) 
+                 short_title_with_link = cell_spec(short_title, "html", link = url)) 
 
 readme_table <- select(out_df,
                        `Article title` = short_title_with_link,
