@@ -8,9 +8,10 @@
 https://www.springer.com/journal/43657
 
 
-## Number of submissions of each month
 
-![Number of submissions of each month](https://github.com/Telogen/Phenomics/tree/master/get_readme/number_of_submissions.png)
+## All papers submitted to *Phenomics* 
+
+![Number of submissions of each month](https://upload-images.jianshu.io/upload_images/17916304-b9607675e7e18bcc.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 
 ## All *Phenomics* online papers
