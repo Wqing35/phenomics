@@ -1,0 +1,116 @@
+```{r, echo = FALSE,results = 'hide',message = FALSE}
+library(dplyr)
+library(ggplot2)
+library(cowplot)
+library(Seurat) 
+library(grid) 
+library(ggpubr) 
+
+this_year <- '2022'
+this_month <- '8'
+this_date <- '9'
+
+data <- read.csv('./20220731_out.csv')
+
+header <- paste0('Phenomics期刊进展（',this_year,'年',this_month,'月',this_date,'日）')
+```
+
+```{r, echo = FALSE,results = 'hide',message = FALSE}
+
+year <- sapply(strsplit(data$Initial.Date.Submitted,'-'),function(i){i[3]})
+data$Year <- year
+month <- sapply(strsplit(data$Initial.Date.Submitted,'-'),function(i){paste0(i[2],'-',i[3])})
+data$Month <- factor(month,levels = rev(unique(month)))
+word1 <- paste0('**1. 投稿数量：**','截止',this_year,'年',this_month,'月',this_date,'日',
+                '，累计收到投稿',(nrow(data)),'篇，含',
+                length(which((data$Article.Type == 'Article'))),'篇研究论文、',
+                length(which((data$Article.Type == 'Review'))),'篇综述、',
+                length(which((data$Article.Type == 'Protocol'))),'篇Protocol、',
+                length(which((data$Article.Type == 'Brief Communication'))),'篇简要通讯、',
+                length(which((data$Article.Type == 'Commentary'))),'篇评论和',
+                length(which((data$Article.Type == 'Correspondence/Letter to the Editor'))),'篇读者来信',
+                '。自2020年7月开刊，2020年投稿平均',round(length(which(data$Year == '20'))/6,1),
+                '篇/月，2021年投稿平均',round(length(which(data$Year == '21'))/12,1),
+                '篇/月，2022年投稿平均',round(length(which(data$Year == '22'))/as.numeric(this_month),1),
+                '篇/月（如图1）。')
+
+
+
+data$is_China <- factor(data$Country == 'CHINA',labels = c('Overseas','China'))
+Institute <- data$Institution.of.the.First.Corresponding.Author
+is_Fudan <- stringr::str_detect(Institute,'Fudan')
+is_Fudan_University <- Institute == 'Fudan University'
+data$Institute <- as.character(data$is_China)
+data$Institute[which(is_Fudan_University)] <- 'Fudan University'
+data$Institute[setdiff(which(is_Fudan), which(is_Fudan_University))] <- 'Fudan-Hospitals'
+data$Institute[which(data$Institute == 'China')] <- 'Non-Fudan'
+
+word2 <- paste0('**2. 投稿分布：**','如图2所示，国内投稿',length(which(data$is_China == 'China')),
+                '篇（复旦及附属医院',length(which(data$is.Fudan == 1)),
+                '篇，其它国内单位',length(which(data$Institute == 'Non-Fudan')),
+                '篇），国外',(length(unique(data$Country))-1),'个国家',
+                (length(unique(data[which(data$is_China == 'Overseas'),]$Institution.of.the.First.Corresponding.Author))-1),
+                '家科研机构投稿',length(which(data$Institute == 'Overseas')),
+                '篇；具体单位情况详见附件1。含',
+                length(which(data$is.invited == 'Y')),'篇邀请稿（',round(length(which(data$is.invited == 'Y'))/nrow(data)*100,1),
+                '%）和',length(which(data$is.invited == 'N')),'篇自投稿（',round(length(which(data$is.invited == 'N'))/nrow(data)*100,1) ,'%）')
+
+
+```
+
+<h1 align="center">
+
+`r header`
+
+</h1>
+
+### 一、投稿情况
+
+`r word1`
+
+`r word2`
+
+```{r, echo = FALSE,results = 'hide',message = FALSE,fig.height = 3,fig.width=10,fig.align = 'center'}
+fig1 <- ggplot(data = data[-nrow(data),],aes(x = Month)) +
+  geom_bar(width = 0.8,aes(fill = Institute)) +
+  geom_text(stat='count', aes(label=..count..), vjust= -0.1,size = 3.5) +
+  theme(axis.text.x = element_text(angle = 45, hjust = 0.5, vjust = 0.5)) +
+  labs(x = '', y = '') + 
+  labs(caption = "图1 开刊后每月投稿数量") +
+  theme(plot.caption = element_text(vjust = .5,hjust = 0.5, size = 10)) + 
+  NoLegend() + 
+  ylim(0,15)
+pie_data <- data.frame(table(data$Institute))
+colnames(pie_data) <- c('Institutes','Freqency')
+pie_data$Percentage = pie_data$Freq/sum(pie_data$Freq)*100
+pie_data$label = rev(paste0(pie_data$Institutes,'\n',pie_data$Freqency,'篇\n',round(pie_data$Freq/sum(pie_data$Freq)*100,2),'%'))
+fig2 <- ggplot(pie_data, aes(x = "", y = Percentage, fill = Institutes)) +
+               geom_bar(stat = "identity") +
+               coord_polar(theta = "y") +
+               geom_text(aes(y= 100-(cumsum(Percentage)-Percentage/2), x= 1.1),
+                         label = rev(pie_data$label),size = 3.5) +
+               labs(x = '', y = '') +
+               cowplot::theme_nothing() + 
+  labs(caption = "图2 文章第一通讯作者单位分布") +
+  theme(plot.caption = element_text(vjust = .5,hjust = 0.5, size = 10)) + NoLegend()
+
+ggpubr::ggarrange(plotlist = list(fig1, fig2), ncol = 2, nrow = 1,widths = c(2, 1))
+```
+
+------------------------------------------------------------------------
+
+```{r, echo = FALSE,results = 'hide',message = FALSE}
+word3 <- paste0('累计接受文章',length(which(data$Current.Status == 'Final Decision Accept')),
+                '篇，拒稿或transfer',length(which(data$Current.Status %in%
+                                               c('Final Decision Reject','Submission Transferred',
+                                                 'Content Files Deleted - Forced to Withdrawn '))),
+                '篇，其它正在审稿中（如下表），具体审稿情况如附件2；2021年已上线6期（23篇+1篇开刊词），2022年已上线',
+                (length(unique(data$Issue))-7),'期（共计',
+                (length(unique(data$Issue))-7)*6,'篇），已上线文章相关参数见附件3。')
+
+```
+
+### 二、审稿情况
+
+`r word3`
+
