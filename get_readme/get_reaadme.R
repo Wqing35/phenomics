@@ -1,14 +1,13 @@
 # get_reaadme
 library(kableExtra)
 library(knitr)
+library(dplyr)
 
 plot_file_names <- list.files('./weekly_online_paper_metrices/output/')
 file_name <- plot_file_names[1]
 file_name
 full_file_name <- paste0('/mdshare/node8/txmdata/test/Phenomics/weekly_online_paper_metrices/output/',file_name)
 out_df <- read.table(full_file_name,sep = '\t',header = T)
-out_df$update_time <- NULL
-
 
 # knitr::kable(out_df)
 
@@ -16,18 +15,25 @@ out_df$title <- strsplit(out_df$title,' ') %>%
   sapply(function(title){
     paste(c(title[1:5],'...'),collapse = ' ')
   })
+out_df
+out_df <- mutate(out_df,
+                 url = read.table('/mdshare/node8/txmdata/test/Phenomics/weekly_online_paper_metrices/0_urls.txt')$V1,
+                 short_title = strsplit(title,' ') %>% 
+                   sapply(function(one_title){
+                     paste(c(one_title[1:5],'...'),collapse = ' ')
+                   }),
+                 short_title_with_link = cell_spec(title, "html", link = url)) 
 
-urls <- read.table('/mdshare/node8/txmdata/test/Phenomics/weekly_online_paper_metrices/0_urls.txt')$V1
-
-out_df %>% 
-  mutate(title2 = cell_spec(title, "html", link = urls)) %>%
-  kable(escape = FALSE) %>%
-  kable_styling(bootstrap_options = c("hover", "condensed")) %>% 
-  cat(., file = "df.html")
-
-colnames(out_df) <- c("Article title","Article type","Online time","Access","Citation","Altmetric","Corresponding authors")
-
-
+readme_table <- select(out_df,
+                       `Article title` = short_title_with_link,
+                       `Article type` = type,
+                       `Online time` = time,
+                       Access = access,
+                       Citation = citation,
+                       Altmetric = altmetric,
+                       `Corresponding authors` = correspond_authors)
+readme_kable <- kable(readme_table)
+cat(readme_kable, file = "./get_readme/readme_kable.html")
 
 
 
