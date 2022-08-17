@@ -1,5 +1,5 @@
 # plot
-plot_file_names <- list.files('./Phenomics/weekly_online_paper_metrices/output/')
+plot_file_names <- list.files('./weekly_online_paper_metrices/output/')
 plot_file_names
 
 df <- pbmcapply::pbmclapply(plot_file_names,function(file_name){
@@ -9,11 +9,18 @@ df <- pbmcapply::pbmclapply(plot_file_names,function(file_name){
   total_access <- sum(out_df$access)
   total_citation <- sum(out_df$citation)
   total_altmetric <- sum(out_df$altmetric)
-
-
+  
+  
 },mc.cores = 10) %>% do.call(what = rbind)
 
-#
-ggplot(out_df,aes(x = update_time)) +
-  geom_boxplot(aes(y = access))
+# test
+library(ggplot2)
+ggplot(out_df) +
+  geom_boxplot(aes(y = access)) + 
+  geom_boxplot(aes(y = citation)) + 
+  geom_boxplot(aes(y = altmetric)) 
+
+
+knitr::kable(out_df)
+
 
