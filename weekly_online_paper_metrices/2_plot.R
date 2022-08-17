@@ -13,14 +13,7 @@ df <- pbmcapply::pbmclapply(plot_file_names,function(file_name){
   
 },mc.cores = 10) %>% do.call(what = rbind)
 
-# test
-library(ggplot2)
-ggplot(out_df) +
-  geom_boxplot(aes(y = access)) + 
-  geom_boxplot(aes(y = citation)) + 
-  geom_boxplot(aes(y = altmetric)) 
 
 
-knitr::kable(out_df)
 
 
