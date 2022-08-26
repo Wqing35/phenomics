@@ -1,0 +1,64 @@
+title	type	time	access	citation	altmetric	correspond_authors	update_time
+Low Concordance Between Blood Pressures Measured in Periodic Health Examinations and in a Workplace-Based Hypertension Management Program	Article	2022-08-18	64	0	1	Shouling Wu, An Pan	2022-08-22
+Cross-sectional Exploration of the Relationship Between Glutamate Abnormalities and Tic Disorder Severity Using Proton Magnetic Resonance Spectroscopy	Article	2022-08-16	95	0	0	Xiao-Yong Zhang, Min Wu	2022-08-22
+Human Genetic Variants Associated with COVID-19 Severity are Enriched in Immune and Epithelium Regulatory Networks	Article	2022-08-13	144	0	1	Yong Wang	2022-08-22
+Report on the 3rd Board Meeting of the International Human Phenome Consortium	Meeting Report	2022-06-22	691	0	1	Mei Tian, Li Jin	2022-08-22
+Palmprint Phenotype Feature Extraction and Classification Based on Deep Learning	Article	2022-06-22	340	0	1	Sijia Wang, Guangtao Zhai	2022-08-22
+Mitochondria as the Essence of Yang Qi in the Human Body	Review	2022-06-16	756	0	1	Junjie Luo, Zhenglong Gu	2022-08-22
+Multi-omics Analysis of Young Portulaca oleracea L. Plants’ Responses to High NaCl Doses Reveals Insights into Pathways and Genes Responsive to Salinity Stress in this Halophyte Species	Article	2022-06-15	451	0	1	Manoel Teixeira Souza Júnior	2022-08-22
+Plasma Lipidomic Subclasses and Risk of Hypertension in Middle-Aged and Elderly Chinese	Article	2022-06-14	429	0	1	Rong Zeng, Liang Sun, Xu Lin	2022-08-22
+Identification of Germline Mutations in East-Asian Young Never-Smokers with Lung Adenocarcinoma by Whole-Exome Sequencing	Article	2022-06-11	633	0	1	Libing Shen, Yihua Sun, Yang Zhang	2022-08-22
+Clinical Profiles at the Time of Diagnosis of SARS-CoV-2 Infection in Costa Rica During the Pre-vaccination Period Using a Machine Learning Approach	Article	2022-06-07	421	1	1	Jose Arturo Molina-Mora	2022-08-22
+Global Quantitative Proteomics Analysis Reveals the Downstream Signaling Networks of Msx1 and Msx2 in Myoblast Differentiation	Article	2022-03-14	391	0	0	Yenan Yang	2022-08-22
+Basic Phenotyping of Male Fertility from 2019 to 2020 at the Human Sperm Bank of Fudan University	Article	2022-02-28	354	0	0	Feng Jiang	2022-08-22
+Biomarkers and Disease Trajectories Influencing Women’s Health: Results from the UK Biobank Cohort	Article	2022-05-12	747	0	0	Haomin Yang, Weimin Ye	2022-08-22
+Why Do We Care More About Disease than Health?	Commentary	2022-01-28	1519	0	20	Martin Picard	2022-08-22
+Immunosuppression Induced by Brain-Specific HDAC6 Knockdown Improves Aging Performance in Drosophila melanogaster	Article	2022-02-23	577	0	0	Jing-Dong J. Han, Wei Yu	2022-08-22
+Metabolic Molecular Diagnosis of Inflammatory Bowel Disease by Synergistical Promotion of Layered Titania Nanosheets with Graphitized Carbon	Article	2022-06-01	331	0	1	Chunhui Deng, Nianrong Sun, Hao Wu	2022-08-22
+A Comprehensive Review of High Throughput Phenotyping and Machine Learning for Plant Stress Phenotyping	Review	2022-04-04	2146	3	7	Karansher S. Sandhu	2022-08-22
+Emerging Regulatory Mechanisms of N6-Methyladenosine Modification in Cancer Metastasis	Review	2022-05-25	470	0	1	Lunxiu Qin	2022-08-22
+Deep Clinical Phenotyping of Parkinson’s Disease: Towards a New Era of Research and Clinical Care	Review	2022-05-21	427	0	1	Jian Wang	2022-08-22
+A Hashing-Based Framework for Enhancing Cluster Delineation of High-Dimensional Single-Cell Profiles	Article	2022-05-19	351	0	1	Xianting Ding	2022-08-22
+Nascent Proteome and Glycoproteome Reveal the Inhibition Role of ALG1 in Hepatocellular Carcinoma Cell Migration	Article	2022-05-14	443	0	0	Hong Shu, Haojie Lu	2022-08-22
+Causal Effect of Genetically Determined Blood Copper Concentrations on Multiple Diseases: A Mendelian Randomization and Phenome-Wide Association Study	Article	2022-05-07	404	0	0	Longman Li, Xiaobo Yang	2022-08-22
+Three Novel Mutations of Microphthalmos Identified in Two Chinese Families	Article	2022-05-07	239	0	0	Yi Lu, Tianyu Zheng	2022-08-22
+Correction to: Welcome to the Phenomics Journal	Correction	2022-05-06	115	0	0	Li Jin	2022-08-22
+Unraveling the Dynamic Integration of Auxin, Brassinosteroid and Gibberellin in Early Shade-Induced Hypocotyl Elongation	Article	2022-02-13	536	0	0	Lin Li	2022-08-22
+Optical Imaging of Epigenetic Modifications in Cancer: A Systematic Review	Review	2022-02-07	795	0	0	Yang Du, Jie Tian	2022-08-22
+Beyond Mendelian Inheritance: Genetic Buffering and Phenotype Variability	Review	2021-12-27	1176	0	0	Andrea Rossi, Zacharias Kontarakis	2022-08-22
+Positron Emission Tomography Molecular Imaging for Phenotyping and Management of Lymphoma	Review	2022-02-24	601	0	0	Hong Zhang, Ali Cahid Civelek, Mei Tian	2022-08-22
+Preoperative Characteristics of Ocular Biometry in Children with Unilateral Congenital Cataracts	Article	2022-02-22	271	0	0	Yi Lu	2022-08-22
+A Preliminary Study on the Evaluation of Human Sperm Head Morphology with a Domestic Digital Holographic Image System	Article	2022-02-26	448	0	1	Feng Jiang	2022-08-22
+Recent Advances in Understanding of Alzheimer’s Disease Progression Through Mass Spectrometry-Based Metabolomics	Review	2022-02-22	1057	0	17	Lingjun Li	2022-08-22
+Pan-cancer analysis identifies RNA helicase DDX1 as a prognostic marker	Article	2022-01-19	735	0	0	Jixi Li	2022-08-22
+Diurnal Circadian Lighting Accumulation Model: A Predictor of the Human Circadian Phase Shift Phenotype	Article	2022-02-11	752	0	0	Yandan Lin	2022-08-22
+Recent Progresses in Electrochemical DNA Biosensors for MicroRNA Detection	Review	2022-01-21	1002	1	0	Xianting Ding	2022-08-22
+CYP2C9*3 Increases the Ibuprofen Response of Hemodynamically Significant Patent Ductus Arteriosus in the Infants with Gestational Age of More Than 30 Weeks	Correspondence	2021-11-11	557	0	0	Wenhao Zhou	2022-08-22
+Seasonality and Sex-Biased Fluctuation of Birth Weight in Tibetan Populations	Article	2022-01-31	445	0	0	 Ouzhuluobu, Xuebin Qi, Bing Su	2022-08-22
+Correction to: N-Glycoproteomics Study of Putative N-Glycoprotein Biomarkers of Drug Resistance in MCF-7/ADR Cells657	Correction	2022-01-17	173	0	0	Yun Chen, Zhixin Tian	2022-08-22
+Phenome-Wide Association Analysis Reveals Novel Links Between Genetically Determined Levels of Liver Enzymes and Disease Phenotypes	Article	2022-01-11	864	0	0	Xingdong Chen	2022-08-22
+Mapping Cell Phenomics with Multiparametric Flow Cytometry Assays	Review	2022-01-09	1334	0	0	Shan Jiang, Jing Wang, Ying Wan	2022-08-22
+N-Glycoproteomics Study of Putative N-Glycoprotein Biomarkers of Drug Resistance in MCF-7/ADR Cells	Article	2021-10-28	931	4	0	Yun Chen, Zhixin Tian	2022-08-22
+Mental Calculation Drives Reliable and Weak Distant Connectivity While Music Listening Induces Dense Local Connectivity	Article	2021-11-10	1038	0	0	Yuguo Yu	2022-08-22
+Strided Self-Supervised Low-Dose CT Denoising for Lung Nodule Classification	Article	2021-10-26	890	3	0	Hongming Shan	2022-08-22
+Systematic Genome-Wide Profiles Reveal Alternative Splicing Landscape and Implications of Splicing Regulator DExD-Box Helicase 21 in Aggressive Progression of Adrenocortical Carcinoma	Article	2021-10-29	963	4	0	Yuanyuan Qu, Hailiang Zhang, Dingwei Ye	2022-08-22
+Pseudotime Ordering Single-Cell Transcriptomic of β Cells Pancreatic Islets in Health and Type 2 Diabetes	Article	2021-10-19	800	1	0	Xingxing Kong, Tiemin Liu	2022-08-22
+Phenotypes of Cardiovascular Diseases: Current Status and Future Perspectives	Review	2021-08-26	813	0	0	Jiangping Song	2022-08-22
+Causal Relationship Between Complement C3, C4, and Nonalcoholic Fatty Liver Disease: Bidirectional Mendelian Randomization Analysis	Article	2021-09-23	640	0	0	Xiaobo Yang	2022-08-22
+Origin and Spread of the ALDH2 Glu504Lys Allele	Review	2021-09-20	1162	1	0	Aijun Sun	2022-08-22
+Recommendation for Cardiac Magnetic Resonance Imaging-Based Phenotypic Study: Imaging Part	Review	2021-07-28	1641	0	0	Chengyan Wang, He Wang	2022-08-22
+Molecular Phenomic Approaches to Deconvolving the Systemic Effects of SARS-CoV-2 Infection and Post-acute COVID-19 Syndrome	Review	2021-07-22	2175	2	34	Jeremy K. Nicholson	2022-08-22
+Computational Methods for Prediction of Human Protein-Phenotype Associations: A Review	Review	2021-08-06	1144	1	3	Shanfeng Zhu	2022-08-22
+Prediction of Metabolic Disorders Using NMR-Based Metabolomics: The Shanghai Changfeng Study	Article	2021-08-24	847	1	0	Ming-feng Xia, Hui-ru Tang, Xin Gao	2022-08-22
+Defense of COVID-19 by Human Organoids	Review	2021-07-14	2282	1	0	Xinhua Lin, Bing Zhao	2022-08-22
+Random Penetrance of Mutations Among Individuals: A New Type of Genetic Drift in Molecular Evolution	Article	2021-06-17	772	1	0	Xun Gu	2022-08-22
+Molecular Determinants of Antibiotic Resistance in the Costa Rican Pseudomonas aeruginosa AG1 by a Multi-omics Approach: A Review of 10 Years of Study	Review	2021-06-17	1989	1	2	Jose Arturo Molina-Mora	2022-08-22
+Genetic Architecture of Childhood Kidney and Urological Diseases in China	Article	2021-07-15	1074	5	0	Jia Rao, Hong Xu	2022-08-22
+Effect of Light on Cognitive Function During a Stroop Task Using Functional Near-Infrared Spectroscopy	Article	2021-04-19	1731	1	2	Wei Chen	2022-08-22
+Distribution Atlas of COVID-19 Pneumonia on Computed Tomography: A Deep Learning Based Description	Article	2021-05-11	1435	2	1	Shenghong Ju	2022-08-22
+Comparison of Metabolic Profiling of Arabidopsis Inflorescences Between Landsberg erecta and Columbia, and Meiosis-Defective Mutants by 1H-NMR Spectroscopy	Article	2021-05-11	1178	0	0	Limin Zhang, Yingxiang Wang	2022-08-22
+High-Throughput Phenotyping: A Platform to Accelerate Crop Improvement	Review	2021-05-11	2522	7	1	Neelam R. Yadav	2022-08-22
+Welcome to the Phenomics Journal	Editorial	2021-01-11	3665	1	5	Li Jin	2022-08-22
+Using Composite Phenotypes to Reveal Hidden Physiological Heterogeneity in High-Altitude Acclimatization in a Chinese Han Longitudinal Cohort	Article	2021-02-22	3737	3	7	Jiucun Wang, Li Jin	2022-08-22
+The Ultrafast and Accurate Mapping Algorithm FANSe3: Mapping a Human Whole-Genome Sequencing Dataset Within 30 Minutes	Article	2021-02-22	2666	5	7	Gong Zhang, Jingjie Jin	2022-08-22
+In Situ Saturating Mutagenesis Screening Identifies a Functional Genomic Locus that Regulates Ucp1 Expression	Correspondence	2021-02-22	1719	2	0	Qiurong Ding	2022-08-22

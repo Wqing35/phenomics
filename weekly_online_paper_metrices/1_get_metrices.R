@@ -9,7 +9,7 @@ sys.time <- Sys.time() %>% as.character()
 update_time <- strsplit(sys.time,' ')[[1]][1]
 update_time
 
-urls <- read.table('/mdshare/node8/txmdata/test/Phenomics/weekly_online_paper_metrices/0_urls.txt')$V1
+urls <- read.table('/mdshare/node8/tianlejin/Phenomics/weekly_online_paper_metrices/0_urls.txt')$V1
 
 get_online_paper_metrices <- function(url){
   # url <- urls[4]
@@ -109,7 +109,7 @@ head(out_df)
 sum(out_df$access)
 sum(out_df$citation)
 
-out_file_name <- paste0('/mdshare/node8/txmdata/test/Phenomics/weekly_online_paper_metrices/output/',update_time,'.txt')
+out_file_name <- paste0('/mdshare/node8/tianlejin/Phenomics/weekly_online_paper_metrices/output/',update_time,'.txt')
 out_file_name
 write.table(x = out_df,file = out_file_name,quote = F,sep = '\t',row.names = F)
 
