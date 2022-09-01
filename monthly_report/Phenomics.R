@@ -8,11 +8,11 @@ this_year <- '2022'
 this_month <- '8'
 this_date <- '9'
 
-data <- read.table('./monthly_report/Editorial_Search_Submissions_results_20220809T101525107.tab',sep = '\t',quote = '',header=T)
+data <- read.table('./monthly_report/Editorial_Search_Submissions_results_20220831T193100918.tab',sep = '\t',quote = '',header=T)
 data$Classifications <- NULL
 data$Country <- unlist(strsplit(sapply(strsplit(data$Author.Name,'\\('),function(i){i[2]}),'\\)'))
 data$is_China <- factor(data$Country == 'CHINA',labels = c('Overseas','China'))
-write.csv(data,paste0('./Phenomics/20220731_out.csv'))
+write.csv(data,paste0('./monthly_report/20220831_out.csv'),fileEncoding = 'UTF-8')
 
 ################################################################
 data <- read.csv('./monthly_report/20220731_out.csv')
