@@ -9,14 +9,15 @@ file_name
 full_file_name <- paste0('/mdshare/node8/tianlejin/Phenomics/weekly_online_paper_metrices/output/',file_name)
 out_df <- read.table(full_file_name,sep = '\t',header = T)
 # knitr::kable(out_df)
+head(out_df)
 
 out_df <- mutate(out_df,
-                 url = read.table('/mdshare/node8/tianlejin/Phenomics/weekly_online_paper_metrices/0_urls.txt')$V1,
                  short_title = strsplit(title,' ') %>% 
                    sapply(function(one_title){
                      paste(c(one_title[1:5],'...'),collapse = ' ')
                    }),
                  short_title_with_link = cell_spec(short_title, "html", link = url)) 
+colnames(out_df)
 
 readme_table <- select(out_df,
                        `Article title` = short_title_with_link,
@@ -25,7 +26,9 @@ readme_table <- select(out_df,
                        Access = access,
                        Citation = citation,
                        Altmetric = altmetric,
-                       `Corresponding authors` = correspond_authors)
+                       `Corresponding authors` = correspond_authors,
+                       Volume = volume,
+                       Issue = issue)
 readme_kable <- kable(readme_table,escape = F)
 cat(readme_kable, file = "./get_readme/readme_kable.txt")
 

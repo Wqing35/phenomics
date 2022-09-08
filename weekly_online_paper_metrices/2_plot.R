@@ -9,7 +9,8 @@ plot_file_names <- list.files('./weekly_online_paper_metrices/output/')
 plot_file_names
 
 df <- pbmcapply::pbmclapply(plot_file_names,function(file_name){
-  # file_name <- plot_file_names[1]
+  file_name <- rev(plot_file_names)[1]
+  file_name
   full_file_name <- paste0('/mdshare/node8/tianlejin/Phenomics/weekly_online_paper_metrices/output/',file_name)
   out_df <- read.table(full_file_name,sep = '\t',header = T)
   total_access <- sum(out_df$access)

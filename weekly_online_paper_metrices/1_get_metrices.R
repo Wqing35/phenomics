@@ -9,10 +9,13 @@ sys.time <- Sys.time() %>% as.character()
 update_time <- strsplit(sys.time,' ')[[1]][1]
 update_time
 
-urls <- read.table('/mdshare/node8/tianlejin/Phenomics/weekly_online_paper_metrices/0_urls.txt')$V1
+online_data <- read.csv('/mdshare/node8/tianlejin/Phenomics/weekly_online_paper_metrices/SearchResults.csv')
+# head(online_data)
 
-get_online_paper_metrices <- function(url){
-  # url <- urls[4]
+get_online_paper_metrices <- function(online_data,idx){
+  # idx <- 1
+  
+  url <- online_data$URL[idx]
   webpage <- read_html(url,encoding = 'utf-8')
 
   # title
@@ -84,20 +87,32 @@ get_online_paper_metrices <- function(url){
   time <- str_sub(time_line,time_start_loc,time_end_loc)
   time
 
+  
+  # volume
+  volume <- online_data$Journal.Volume[idx]
+  if(is.na(volume)){volume <- ' '}
+  
+  # issue
+  issue <- online_data$Journal.Issue[idx]
+  if(is.na(issue)){issue <- ' '}
+  
   return(c(title = title,
+           url = url,
            type = type,
            time = time,
            access = access,
            citation = citation,
            altmetric = altmetric,
            correspond_authors = correspond_authors,
-           update_time = update_time))
+           update_time = update_time,
+           volume = volume,
+           issue = issue))
 }
 
 out <- c()
-for(url in urls){
-  print(url)
-  this_out <- get_online_paper_metrices(url)
+for(idx in 1:nrow(online_data)){
+  print(online_data$Item.Title[idx])
+  this_out <- get_online_paper_metrices(online_data,idx)
   out <- rbind(out,this_out)
   # print(this_out)
 }
@@ -105,6 +120,9 @@ out_df <- as.data.frame(out)
 rownames(out_df) <- NULL
 out_df$access <- as.numeric(out_df$access)
 out_df$citation <- as.numeric(out_df$citation)
+out_df <- out_df[order(out_df$time,decreasing = T),]
+
+
 head(out_df)
 sum(out_df$access)
 sum(out_df$citation)

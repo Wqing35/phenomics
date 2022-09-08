@@ -6,7 +6,7 @@ library(Seurat)
 
 this_year <- '2022'
 this_month <- '8'
-this_date <- '9'
+this_date <- '31'
 
 data <- read.table('./monthly_report/Editorial_Search_Submissions_results_20220831T193100918.tab',sep = '\t',quote = '',header=T)
 data$Classifications <- NULL
@@ -15,13 +15,17 @@ data$is_China <- factor(data$Country == 'CHINA',labels = c('Overseas','China'))
 write.csv(data,paste0('./monthly_report/20220831_out.csv'),fileEncoding = 'UTF-8')
 
 ################################################################
-data <- read.csv('./monthly_report/20220731_out.csv')
+data <- read.csv('./monthly_report/Phenomics0831.csv')
+tail(data)
+data <- data[-nrow(data),]
 
 
 '####################### 一、投稿情况 ###########################' %>% message()
 '1. 投稿数量：' %>% message()
-year <- sapply(strsplit(data$Initial.Date.Submitted,'-'),function(i){i[3]})
-data$Year <- year
+sub_year <- sapply(strsplit(data$Initial.Date.Submitted,'-'),function(i){i[3]})
+data$sub_year <- sub_year
+status_year <- sapply(strsplit(data$Status.Date,'-'),function(i){i[3]})
+data$status_year <- status_year
 month <- sapply(strsplit(data$Initial.Date.Submitted,'-'),function(i){paste0(i[2],'-',i[3])})
 data$Month <- factor(month,levels = rev(unique(month)))
 word1 <- paste0('截止',this_year,'年',this_month,'月',this_date,'日',
@@ -32,20 +36,13 @@ word1 <- paste0('截止',this_year,'年',this_month,'月',this_date,'日',
                 length(which((data$Article.Type == 'Brief Communication'))),'篇简要通讯、',
                 length(which((data$Article.Type == 'Commentary'))),'篇评论和',
                 length(which((data$Article.Type == 'Correspondence/Letter to the Editor'))),'篇读者来信',
-                '。自2020年7月开刊，2020年投稿平均',round(length(which(data$Year == '20'))/6,1),
-                '篇/月，2021年投稿平均',round(length(which(data$Year == '21'))/12,1),
-                '篇/月，2022年投稿平均',round(length(which(data$Year == '22'))/as.numeric(this_month),1),
+                '。自2020年7月开刊，2020年投稿平均',round(length(which(data$sub_year == '20'))/6,1),
+                '篇/月，2021年投稿平均',round(length(which(data$sub_year == '21'))/12,1),
+                '篇/月，2022年投稿平均',round(length(which(data$sub_year == '22'))/as.numeric(this_month),1),
                 '篇/月（如图1）。')
 word1 %>% print()
 table(data$Article.Type)
 
-# 图1
-fig1 <- ggplot(data = data[-nrow(data),],aes(x = Month)) +
-  geom_bar(width = 0.8,aes(fill = Institute)) +
-  geom_text(stat='count', aes(label=..count..), vjust= -0.1) +
-  theme(axis.text.x = element_text(angle = 45, hjust = 0.5, vjust = 0.5)) +
-  labs(x = '', y = '')
-fig1
 # 投稿分布
 data$is_China <- factor(data$Country == 'CHINA',labels = c('Overseas','China'))
 Institute <- data$Institution.of.the.First.Corresponding.Author
@@ -66,6 +63,15 @@ word2 <- paste0('如图2所示，国内投稿',length(which(data$is_China == 'Ch
                 length(which(data$is.invited == 'Y')),'篇邀请稿（',round(length(which(data$is.invited == 'Y'))/nrow(data)*100,1),
                 '%）和',length(which(data$is.invited == 'N')),'篇自投稿（',round(length(which(data$is.invited == 'N'))/nrow(data)*100,1) ,'%）')
 word2 %>% print()
+
+
+# 图1
+fig1 <- ggplot(data = data[-nrow(data),],aes(x = Month)) +
+  geom_bar(width = 0.8,aes(fill = Institute)) +
+  geom_text(stat='count', aes(label=..count..), vjust= -0.1) +
+  theme(axis.text.x = element_text(angle = 45, hjust = 0.5, vjust = 0.5)) +
+  labs(x = '', y = '')
+fig1
 
 # 图2
 pie_data <- data.frame(table(data$Institute))
@@ -93,7 +99,7 @@ word3 <- paste0('累计接受文章',length(which(data$Current.Status == 'Final 
                 (length(unique(data$Issue))-7),'期（共计',
                 (length(unique(data$Issue))-7)*6,'篇），已上线文章相关参数见附件3。')
 word3 %>% print()
-table(data$Current.Status)
+table(data$Current.Status,data$status_year)
 
 '####################### 表一 ###########################' %>% message()
 data$Round <- '1round'
@@ -110,35 +116,48 @@ data$article_type_chinese <- paste0(names,'(',article_type,')')
 
 
 '# Accept列'%>% message()
-table(data$Current.Status,data$Year)['Final Decision Accept',] %>% print()
+accept <- table(data$Current.Status,data$status_year)['Final Decision Accept',] %>% print()
+
 '# Accept but need final editing列' %>% message()
-table(data$Decision,data$Year)['Accept but needs final editing',] %>% print()
+ABFE <- table(data$Decision,data$status_year)['Accept but needs final editing',] %>% print()
+# 要排除Final Decision Accept的，这些不算做Accept but needs final editing
+tmp_data <- data[which(data$Current.Status == 'Final Decision Accept' & data$Decision == 'Accept but needs final editing'),]
+tmp_data$status_year
+exclude <- nrow(tmp_data)
+
 '# Reject/transfer列' %>% message()
-colSums(table(data$Current.Status,data$Year)[c(
+RT <- colSums(table(data$Current.Status,data$status_year)[c(
   'Final Decision Reject','Submission Transferred'),]) %>% print()
 
+'# 最后一列' %>% message()
+last <- colSums(table(data$Current.Status,data$status_year)[c(
+  'Content Files Deleted - Forced to Withdrawn','Sent Back to Author'),]) %>% print()
+
+##################### UNDER REVIEW	和 EVISE 的new_data #####################
 new_data <- filter(data,Current.Status != 'Final Decision Accept' &
                      Current.Status != 'Final Decision Reject' &
                      Current.Status != 'Submission Transferred' &
                      Current.Status != 'Sent Back to Author' &
                      Current.Status != 'Content Files Deleted - Forced to Withdrawn' &
                      Decision != 'Accept but needs final editing')
+# 验证一下
+nrow(data)
+nrow(new_data) + sum(accept) + sum(ABFE) - exclude + sum(RT) + sum(last)
+
+table(new_data$Current.Status)
 
 '# Under Review列' %>% message()
 review_data <- filter(new_data,Current.Status %in%
-                        c('New Submission','Reviewers Assigned',
+                        c('New Submission','Reviewers Assigned','Revision Submitted',
                           'Under Review',  'Reviews Completed','Editor Assigned'))
 table(review_data$Round)
 '# Revise列' %>% message()
 revise_data <-filter(new_data,!Current.Status %in%
-                       c('New Submission','Reviewers Assigned',
+                       c('New Submission','Reviewers Assigned','Revision Submitted',
                          'Under Review',  'Reviews Completed','Editor Assigned') &
                      Current.Status != '')
 table(revise_data$Decision,revise_data$Round)
 
-'# Withdraw/Send back to author列' %>% message()
-colSums(table(data$Current.Status,data$Year)[c('Sent Back to Author',
-                                               'Content Files Deleted - Forced to Withdrawn'),]) %>% print()
 
 
 
@@ -183,7 +202,8 @@ word6 <- paste0('尚未上线发表',length(not_online_index),'篇：',
                 stringr::str_c(all_name_article_type[not_online_index],collapse = '、'),'。')
 paste0('3) ',word6) %>% print()
 
-accept_but_need_index <- which(data$Decision == 'Accept but needs final editing')
+accept_but_need_index <- which(data$Decision == 'Accept but needs final editing' &
+                                 data$Current.Status != 'Final Decision Accept')
 word7 <- paste0('已接收但在做最后编辑文章',length(accept_but_need_index),'篇：',
                 stringr::str_c(all_name_article_type[accept_but_need_index],collapse = '、'),'。')
 paste0('4) ',word7) %>% print()
@@ -193,11 +213,11 @@ message('---------------------------------------------------------------')
 word8 <- paste0('在审文章',nrow(review_data),'篇：')
 paste0('# ',word8) %>% print()
 
-word9 <- paste0(length(Under_review_1st_index),'篇一审中：',
+word9 <- paste0(length(which(review_data$Round == '1round')),'篇一审中：',
                 stringr::str_c(filter(review_data,Round == '1round')$article_type_chinese,collapse = '、'),'。')
 paste0('1) ',word9) %>% print()
 
-word10 <- paste0(length(Under_review_23_index),'篇二/三审中：',
+word10 <- paste0(length(which(review_data$Round == '2/3round')),'篇二/三审中：',
                 stringr::str_c(filter(review_data,Round == '2/3round')$article_type_chinese,collapse = '、'),'。')
 paste0('2) ',word10) %>% print()
 
@@ -237,6 +257,12 @@ word15 <- paste0(nrow(filter(revise_data,
                                        Round == '2/3round' &
                                          Decision %in% c('Minor revisions','Minor Revisions'))$article_type_chinese,collapse = '、'),'。')
 paste0('4) ',word15) %>% print()
+
+
+
+
+
+
 
 
 
