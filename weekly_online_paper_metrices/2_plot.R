@@ -1,6 +1,7 @@
 # plot
 library(ggplot2)
 library(ggpubr)
+library(aplot)
 library(dplyr)
 library(txmBioinfoToolkit)
 
@@ -9,7 +10,7 @@ plot_file_names <- list.files('./weekly_online_paper_metrices/output/')
 plot_file_names
 
 df <- pbmcapply::pbmclapply(plot_file_names,function(file_name){
-  file_name <- rev(plot_file_names)[1]
+  # file_name <- rev(plot_file_names)[1]
   file_name
   full_file_name <- paste0('/mdshare/node8/tianlejin/Phenomics/weekly_online_paper_metrices/output/',file_name)
   out_df <- read.table(full_file_name,sep = '\t',header = T)
@@ -26,23 +27,38 @@ df <- pbmcapply::pbmclapply(plot_file_names,function(file_name){
 },mc.cores = 10) %>% do.call(what = rbind)
 
 
-ggplot(df,aes(x = Date,y = `Total access`)) + 
+access_plot <- ggplot(df,aes(x = Date,y = `Total access`)) + 
   geom_point(stat = "identity") +
-  geom_text(aes(label = `Total access`),hjust = -.2,vjust = -.2) + 
-  geom_smooth(method = 'lm', se = F, color = 'red') +
-  stat_cor(method = "spearman") +
-  xlim(0,100000) +
-  ylim(0,100000) 
-  
-  
-ggplot(df,aes(x = Date,y = `Total citations`)) + 
-  geom_point(stat = "identity") +
-  geom_text(aes(label = `Total citations`),hjust = -.2,vjust = -.2) + 
-  geom_smooth(method = 'lm', se = F, color = 'red') +
-  stat_cor(method = "spearman") 
+  geom_line(aes(group = 1)) +
+  geom_text(aes(label = `Total access`),hjust = .5,vjust = -.8) + 
+  ylim((min(df$`Total access`) - 1000),(max(df$`Total access`) + 1000)) + 
+  # ggtitle('Total altmetrics') + 
+  theme(axis.title.x = element_blank(),
+        plot.title = element_text(hjust = .5)) 
 
-ggplot(df,aes(x = Date,y = `Total altmetrics`)) + 
+citations_plot <- ggplot(df,aes(x = Date,y = `Total citations`)) + 
   geom_point(stat = "identity") +
-  geom_text(aes(label = `Total altmetrics`),hjust = -.2,vjust = -.2)
+  geom_line(aes(group = 1)) +
+  geom_text(aes(label = `Total citations`),hjust = .5,vjust = -.8) + 
+  ylim((min(df$`Total citations`) - 2),(max(df$`Total citations`) + 2)) + 
+  # ggtitle('Total altmetrics') + 
+  theme(axis.title.x = element_blank(),
+        plot.title = element_text(hjust = .5)) 
+
+altmetrics_plot <- ggplot(df,aes(x = Date,y = `Total altmetrics`)) + 
+  geom_point(stat = "identity") +
+  geom_line(aes(group = 1)) +
+  geom_text(aes(label = `Total altmetrics`),hjust = .5,vjust = -.8) + 
+  ylim((min(df$`Total altmetrics`) - 2),(max(df$`Total altmetrics`) + 2)) + 
+  # ggtitle('Total altmetrics') + 
+  theme(axis.title.x = element_blank(),
+        plot.title = element_text(hjust = .5)) 
+
+
+access_plot %>% 
+  insert_bottom(citations_plot, height = 1) %>% 
+  insert_bottom(altmetrics_plot, height = 1)
+
+
 
 

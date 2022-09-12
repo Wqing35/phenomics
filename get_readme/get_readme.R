@@ -1,4 +1,6 @@
 # get_reaadme
+# download csv:
+# https://link.springer.com/search?query=&search-within=Journal&facet-journal-id=43657
 library(kableExtra)
 library(knitr)
 library(dplyr)
