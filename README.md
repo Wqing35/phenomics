@@ -8,13 +8,19 @@
 https://www.springer.com/journal/43657
 
 
+## Contact *Phenomics*
+
+phenomics@fudan.edu.cn
+
 
 ## All papers submitted to *Phenomics* 
 
-![Number of submissions of each month](https://upload-images.jianshu.io/upload_images/17916304-2e94e3ea76b6bf2a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![All papers submitted to *Phenomics* ](https://upload-images.jianshu.io/upload_images/17916304-2e94e3ea76b6bf2a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 
 ## All *Phenomics* online papers
+
+![All *Phenomics* online papers](https://upload-images.jianshu.io/upload_images/17916304-cb36e91044fda9ab.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 Updata time: 2022-09-12
 
@@ -754,10 +760,6 @@ Updata time: 2022-09-12
 
 
 
-
-## Contact *Phenomics*
-
-phenomics@fudan.edu.cn
 
 
 
