@@ -3,7 +3,7 @@ library(dplyr,verbose = F,warn.conflicts = F)
 library(ggplot2,verbose = F,warn.conflicts = F)
 library(txmBioinfoToolkit,verbose = F,warn.conflicts = F)
 
-out_df <- readRDS('./others/STTT_papers/all_papers_info_df.RDS')
+out_df <- readRDS('./others/STTT_papers/STTT_all_papers_info_df.RDS')
 head(out_df)
 
 # View(out_df)
@@ -36,7 +36,8 @@ ggplot(out_df,aes(x = year)) +
   
 
 # subjects
-all_subjects <- strsplit(out_df$subjects,', ') %>% unlist(use.names = F)
+out_df_high_cited <- out_df[which(out_df$citation > 10),]
+all_subjects <- strsplit(out_df_high_cited$subjects,', ') %>% unlist(use.names = F)
 plot_data_all <- table(all_subjects) %>% sort(T) %>% as.data.frame()
 head(plot_data_all)
 colnames(plot_data_all) <- c('Subject','Frequency')
@@ -45,15 +46,34 @@ plot_data <- head(plot_data_all,20)
 ggplot(plot_data, aes(x = Subject, y = Frequency,color = Subject,fill = Subject)) + 
   geom_bar(stat = "identity", position = position_dodge(width = 0.8, preserve = "single"), width = 0.7) + 
   geom_text(aes(label = round(Frequency,2)), size = 5, position = position_dodge(0.8), vjust = -0.5) + 
-  ggtitle('Top 20 STTT subjects') + 
+  ggtitle("Top 20 STTT highly cited (citation > 10) papers' subjects") + 
+  ylim(0,80) +
   theme_light() + 
-  theme(legend.position = "none",plot.margin = unit(c(0,0,0,1),units = 'cm'),
+  theme(legend.position = "none",plot.margin = unit(c(.2,.2,.2,1.2),units = 'cm'),
         axis.text.x = element_text(angle = 45, hjust = 1, vjust = 1,size = 12,colour = 'black'),
         plot.title = element_text(hjust = 0.5)) 
 
 
+# citations
+out_df$citation_range <- '0'
+out_df[which(out_df$citation > 0 & out_df$citation <= 5),]$citation_range <- '1-5'
+out_df[which(out_df$citation > 5 & out_df$citation <= 10),]$citation_range <- '6-10'
+out_df[which(out_df$citation > 10 & out_df$citation <= 50),]$citation_range <- '11-50'
+out_df[which(out_df$citation > 50 & out_df$citation <= 100),]$citation_range <- '51-100'
+out_df[which(out_df$citation > 100 & out_df$citation <= 500),]$citation_range <- '101-500'
+out_df[which(out_df$citation > 500),]$citation_range <- '>500'
+
+table(out_df$citation_range)
+out_df$citation_range <- factor(out_df$citation_range,
+                                levels = c('0','1-5','6-10','11-50','51-100','101-500','>500'))
 
 
+ggplot(out_df,aes(x = citation_range)) + 
+  geom_bar(width = 0.8, aes(fill = type)) + 
+  geom_text(stat = "count", aes(label = ..count..), vjust = -0.5) + 
+  theme_light() + 
+  xlab('Citation ranges') + 
+  ylab('Number')
 
 
 
