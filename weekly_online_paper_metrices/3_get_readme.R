@@ -31,7 +31,7 @@ readme_table <- select(out_df,
                        `Corresponding authors` = correspond_authors,
                        Volume = volume,
                        Issue = issue)
-readme_kable <- kable(readme_table,escape = F)
+readme_kable <- kable(readme_table,escape = F,align = 'c')
 cat(readme_kable, file = "./weekly_online_paper_metrices/readme_kable.txt")
 
 
