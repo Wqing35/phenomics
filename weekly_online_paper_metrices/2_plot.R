@@ -60,7 +60,7 @@ altmetrics_plot <- ggplot(df,aes(x = Date,y = `Total altmetrics`)) +
   ylim((min(df$`Total altmetrics`) - 2),(max(df$`Total altmetrics`) + 2)) + 
   theme_light() + 
   theme(axis.title.x = element_blank(),
-        axis.text.x = element_text(size = 12,color = 'black'),
+        axis.text.x = element_text(size = 12,color = 'black',angle = 45,vjust = 1,hjust = 1),
         axis.title.y = element_text(size = 14,color = 'black'),
         axis.text.y = element_blank(),
         axis.ticks.y = element_blank(),

@@ -32,7 +32,7 @@ readme_table <- select(out_df,
                        Volume = volume,
                        Issue = issue)
 readme_kable <- kable(readme_table,escape = F)
-cat(readme_kable, file = "./get_readme/readme_kable.txt")
+cat(readme_kable, file = "./weekly_online_paper_metrices/readme_kable.txt")
 
 
 
