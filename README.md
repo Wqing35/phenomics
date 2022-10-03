@@ -12,12 +12,9 @@ https://www.springer.com/journal/43657
 
 phenomics@fudan.edu.cn
 
-# 投稿数
-
-
 ## All papers submitted to *Phenomics* 
 
-![6d7a7eaf-46eb-498c-89d8-8bc5eb920337.png](https://upload-images.jianshu.io/upload_images/17916304-992804dbf4d9b690.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![6d7a7eaf-46eb-498c-89d8-8bc5eb920337.png](https://upload-images.jianshu.io/upload_images/17916304-6e02e8549efa2ffe.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 
 ## All *Phenomics* online papers
@@ -25,7 +22,6 @@ phenomics@fudan.edu.cn
 Updata time: 2022-010-03
 
 ![6b5eeea4-c8d0-484c-9d7c-388a398d531b.png](https://upload-images.jianshu.io/upload_images/17916304-9570df0747280eb9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
-
 
 
 <table>
