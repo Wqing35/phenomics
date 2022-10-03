@@ -5,11 +5,11 @@ library(kableExtra)
 library(knitr)
 library(dplyr)
 
-plot_file_names <- list.files('./weekly_online_paper_metrices/output/')
+plot_file_names <- list.files('../Phenomics/weekly_online_paper_metrices/output/')
 file_name <- rev(plot_file_names)[1]
 file_name
 full_file_name <- paste0('/mdshare/node8/tianlejin/Phenomics/weekly_online_paper_metrices/output/',file_name)
-out_df <- read.table(full_file_name,sep = '\t',header = T)
+out_df <- readxl::read_excel(full_file_name)
 # knitr::kable(out_df)
 head(out_df)
 
@@ -24,15 +24,15 @@ colnames(out_df)
 readme_table <- select(out_df,
                        `Article title` = short_title_with_link,
                        `Article type` = type,
-                       `Online time` = time,
+                       `Online time` = online_time,
                        Access = access,
                        Citation = citation,
                        Altmetric = altmetric,
-                       `Corresponding authors` = correspond_authors,
+                       # `Corresponding authors` = correspond_authors,
                        Volume = volume,
                        Issue = issue)
 readme_kable <- kable(readme_table,escape = F,align = 'c')
-cat(readme_kable, file = "./weekly_online_paper_metrices/readme_kable.txt")
+cat(readme_kable, file = "../Phenomics/weekly_online_paper_metrices/readme_kable.txt")
 
 
 

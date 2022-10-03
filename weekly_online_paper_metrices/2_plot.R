@@ -3,17 +3,20 @@ library(ggplot2)
 library(ggpubr)
 library(aplot)
 library(dplyr)
-library(txmBioinfoToolkit)
 
 
-plot_file_names <- list.files('./weekly_online_paper_metrices/output/')
+plot_file_names <- list.files('../Phenomics/weekly_online_paper_metrices/output/')
 plot_file_names
 
 df <- pbmcapply::pbmclapply(plot_file_names,function(file_name){
   # file_name <- rev(plot_file_names)[1]
   file_name
   full_file_name <- paste0('/mdshare/node8/tianlejin/Phenomics/weekly_online_paper_metrices/output/',file_name)
-  out_df <- read.table(full_file_name,sep = '\t',header = T)
+  if(str_detect(file_name,'xlsx')){
+    out_df <- readxl::read_excel(full_file_name)
+  }else{
+    out_df <- read.table(full_file_name,sep = '\t',header = T)
+  }
   total_access <- sum(out_df$access)
   total_citation <- sum(out_df$citation)
   total_altmetric <- sum(out_df$altmetric)
@@ -31,7 +34,7 @@ access_plot <- ggplot(df,aes(x = Date,y = `Total access`)) +
   geom_point(stat = "identity") +
   geom_line(aes(group = 1)) +
   geom_text(aes(label = `Total access`),hjust = .5,vjust = -.8) + 
-  ylim((min(df$`Total access`) - 1000),(max(df$`Total access`) + 1000)) + 
+  ylim((min(df$`Total access`) - 1000),(max(df$`Total access`) + 2000)) + 
   theme_light() + 
   theme(axis.title.x = element_blank(),
         axis.text.x = element_blank(),

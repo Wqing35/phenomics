@@ -1,21 +1,24 @@
 library(dplyr)
+library(stringr)
 library(ggplot2)
 library(cowplot)
 library(Seurat)
 
 
 this_year <- '2022'
-this_month <- '8'
-this_date <- '31'
+this_month <- '9'
+this_date <- '30'
 
-data <- read.table('./monthly_report/Editorial_Search_Submissions_results_20220831T193100918.tab',sep = '\t',quote = '',header=T)
+data <- read.table('./monthly_report/Editorial_Search_Submissions_results_20220930T204538819.tab',
+                   sep = '\t',quote = '',header=T)
 data$Classifications <- NULL
 data$Country <- unlist(strsplit(sapply(strsplit(data$Author.Name,'\\('),function(i){i[2]}),'\\)'))
 data$is_China <- factor(data$Country == 'CHINA',labels = c('Overseas','China'))
-write.csv(data,paste0('./monthly_report/20220831_out.csv'),fileEncoding = 'UTF-8')
+data <- data[order(data$Manuscript.Number),]
+write.csv(data,paste0('./monthly_report/20220930_out.csv'),fileEncoding = 'UTF-8')
 
 ################################################################
-data <- read.csv('./monthly_report/Phenomics0831.csv')
+data <- read.csv('./monthly_report/Phenomics0930.csv')
 tail(data)
 data <- data[-nrow(data),]
 
@@ -44,21 +47,12 @@ word1 %>% print()
 table(data$Article.Type)
 
 # 投稿分布
-data$is_China <- factor(data$Country == 'CHINA',labels = c('Overseas','China'))
-Institute <- data$Institution.of.the.First.Corresponding.Author
-is_Fudan <- stringr::str_detect(Institute,'Fudan')
-is_Fudan_University <- Institute == 'Fudan University'
-data$Institute <- as.character(data$is_China)
-data$Institute[which(is_Fudan_University)] <- 'Fudan University'
-data$Institute[setdiff(which(is_Fudan), which(is_Fudan_University))] <- 'Fudan-Hospitals'
-data$Institute[which(data$Institute == 'China')] <- 'Non-Fudan'
-
-word2 <- paste0('如图2所示，国内投稿',length(which(data$is_China == 'China')),
+word2 <- paste0('如图2所示，国内投稿',length(which(data$Country == 'CHINA')),
                 '篇（复旦及附属医院',length(which(data$is.Fudan == 1)),
-                '篇，其它国内单位',length(which(data$Institute == 'Non-Fudan')),
+                '篇，其它国内单位',length(which(data$Institution == 'Non-Fudan')),
                 '篇），国外',(length(unique(data$Country))-1),'个国家',
-                (length(unique(data[which(data$is_China == 'Overseas'),]$Institution.of.the.First.Corresponding.Author))-1),
-                '家科研机构投稿',length(which(data$Institute == 'Overseas')),
+                (length(unique(data[which(data$Country != 'CHINA'),]$Institution.of.the.First.Corresponding.Author))-1),
+                '家科研机构投稿',length(which(data$Institution == 'Overseas')),
                 '篇；具体单位情况详见附件1。含',
                 length(which(data$is.invited == 'Y')),'篇邀请稿（',round(length(which(data$is.invited == 'Y'))/nrow(data)*100,1),
                 '%）和',length(which(data$is.invited == 'N')),'篇自投稿（',round(length(which(data$is.invited == 'N'))/nrow(data)*100,1) ,'%）')
@@ -67,17 +61,17 @@ word2 %>% print()
 
 # 图1
 fig1 <- ggplot(data = data[-nrow(data),],aes(x = Month)) +
-  geom_bar(width = 0.8,aes(fill = Institute)) +
+  geom_bar(width = 0.8,aes(fill = Institution)) +
   geom_text(stat='count', aes(label=..count..), vjust= -0.1) +
   theme(axis.text.x = element_text(angle = 45, hjust = 0.5, vjust = 0.5)) +
   labs(x = '', y = '')
 fig1
 
 # 图2
-pie_data <- data.frame(table(data$Institute))
+pie_data <- data.frame(table(data$Institution))
 colnames(pie_data) <- c('Institutes','Freqency')
 pie_data$Percentage = pie_data$Freq/sum(pie_data$Freq)*100
-pie_data$label = rev(paste0(pie_data$Institutes,'\n',pie_data$Freqency,'篇\n',round(pie_data$Freq/sum(pie_data$Freq)*100,2),'%'))
+pie_data$label = rev(paste0(pie_data$Institutes,'\n',pie_data$Freqency,'\n',round(pie_data$Freq/sum(pie_data$Freq)*100,2),'%'))
 fig2 <- ggplot(pie_data, aes(x = "", y = Percentage, fill = Institutes)) +
                geom_bar(stat = "identity") +
                coord_polar(theta = "y") +
