@@ -19,7 +19,7 @@ phenomics@fudan.edu.cn
 
 ## All *Phenomics* online papers
 
-Updata time: 2022-010-03
+Updata time: 2022-10-03
 
 ![6b5eeea4-c8d0-484c-9d7c-388a398d531b.png](https://upload-images.jianshu.io/upload_images/17916304-9570df0747280eb9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
