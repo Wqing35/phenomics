@@ -1,5 +1,5 @@
 # get_online_paper_metrices
-devtools::install_github('Telogen/ASNJ')
+# devtools::install_github('Telogen/ASNJ')
 
 library(ASNJ)
 library(dplyr)
