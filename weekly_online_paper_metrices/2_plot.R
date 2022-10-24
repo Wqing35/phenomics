@@ -35,7 +35,7 @@ access_plot <- ggplot(df,aes(x = Date,y = `Total access`)) +
   geom_point(stat = "identity") +
   geom_line(aes(group = 1)) +
   geom_text(aes(label = `Total access`),hjust = .5,vjust = -.8) + 
-  ylim((min(df$`Total access`) - 1000),(max(df$`Total access`) + 2000)) + 
+  ylim((min(df$`Total access`) - 1000),(max(df$`Total access`) + 5000)) + 
   theme_light() + 
   theme(axis.title.x = element_blank(),
         axis.text.x = element_blank(),
@@ -48,7 +48,7 @@ citations_plot <- ggplot(df,aes(x = Date,y = `Total citations`)) +
   geom_point(stat = "identity") +
   geom_line(aes(group = 1)) +
   geom_text(aes(label = `Total citations`),hjust = .5,vjust = -.8) + 
-  ylim((min(df$`Total citations`) - 2),(max(df$`Total citations`) + 2)) + 
+  ylim((min(df$`Total citations`) - 2),(max(df$`Total citations`) + 5)) + 
   theme_light() + 
   theme(axis.title.x = element_blank(),
         axis.text.x = element_blank(),
