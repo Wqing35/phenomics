@@ -6,21 +6,21 @@ library(Seurat)
 
 
 this_year <- '2022'
-this_month <- '9'
-this_date <- '30'
+this_month <- '10'
+this_date <- '31'
 
-data <- read.table('./monthly_report/Editorial_Search_Submissions_results_20220930T204538819.tab',
+data <- read.table('./monthly_report/version1/Editorial_Search_Submissions_results_20221031T114750873.tab',
                    sep = '\t',quote = '',header=T)
 data$Classifications <- NULL
 data$Country <- unlist(strsplit(sapply(strsplit(data$Author.Name,'\\('),function(i){i[2]}),'\\)'))
 data$is_China <- factor(data$Country == 'CHINA',labels = c('Overseas','China'))
 data <- data[order(data$Manuscript.Number),]
-write.csv(data,paste0('./monthly_report/20220930_out.csv'),fileEncoding = 'UTF-8')
+write.csv(data,paste0('./monthly_report/version1/20221031_out.csv'),fileEncoding = 'UTF-8')
 
 ################################################################
-data <- read.csv('./monthly_report/Phenomics0930.csv')
-tail(data)
-data <- data[-nrow(data),]
+data <- read.csv('./monthly_report/version2/Phenomics期刊工作进展数据表0930.csv')
+tail(data,20)
+data <- data[1:140,]
 
 
 '####################### 一、投稿情况 ###########################' %>% message()
@@ -73,12 +73,12 @@ colnames(pie_data) <- c('Institutes','Freqency')
 pie_data$Percentage = pie_data$Freq/sum(pie_data$Freq)*100
 pie_data$label = rev(paste0(pie_data$Institutes,'\n',pie_data$Freqency,'\n',round(pie_data$Freq/sum(pie_data$Freq)*100,2),'%'))
 fig2 <- ggplot(pie_data, aes(x = "", y = Percentage, fill = Institutes)) +
-               geom_bar(stat = "identity") +
-               coord_polar(theta = "y") +
-               geom_text(aes(y= 100-(cumsum(Percentage)-Percentage/2), x= 1.1),
-                         label = rev(pie_data$label)) +
-               labs(x = '', y = '') +
-               cowplot::theme_nothing()
+  geom_bar(stat = "identity") +
+  coord_polar(theta = "y") +
+  geom_text(aes(y= 100-(cumsum(Percentage)-Percentage/2), x= 1.1),
+            label = rev(pie_data$label)) +
+  labs(x = '', y = '') +
+  cowplot::theme_nothing()
 fig2
 ggpubr::ggarrange(plotlist = list(fig1, fig2), ncol = 2, nrow = 1,widths = c(2, 1))
 
@@ -89,11 +89,82 @@ word3 <- paste0('累计接受文章',length(which(data$Current.Status == 'Final 
                 '篇，拒稿或transfer',length(which(data$Current.Status %in%
                                                c('Final Decision Reject','Submission Transferred',
                                                  'Content Files Deleted - Forced to Withdrawn '))),
-                '篇，其它正在审稿中（如下表），具体审稿情况如附件2；2021年已上线6期（23篇+1篇开刊词），2022年已上线',
-                (length(unique(data$Issue))-7),'期（共计',
-                (length(unique(data$Issue))-7)*6,'篇），已上线文章相关参数见附件3。')
+                '篇，其它正在审稿中（如下表），具体审稿情况如附件2；2021年已上线6期，',
+                '2022年已上线5期，已上线文章相关参数见https://github.com/Telogen/Journal-Phenomics。')
 word3 %>% print()
 table(data$Current.Status,data$status_year)
+
+
+tmp <- table(data$Current.Status,data$status_year) %>% 
+  as.matrix()
+# under review
+tmp[c('New Submission','Reviewers Assigned','Revision Submitted',
+      'Under Review',  'Reviews Completed','Editor Assigned'),] %>% 
+  colSums()
+tmp[c('New Submission','Reviewers Assigned','Revision Submitted',
+      'Under Review',  'Reviews Completed','Editor Assigned'),] %>% 
+  colSums()
+
+###### 附件📎2
+names <- sapply(strsplit(data$Author.Name,split = '\\('),function(x){
+  x[1]
+})
+article_type <- data$Article.Type
+article_type[which(article_type == 'Article')] <- '研究'
+article_type[which(article_type == 'Review')] <- '综述'
+article_type[which(article_type == 'Brief Communication')] <- '简报'
+article_type[which(article_type == 'Commentary')] <- '评论'
+data$article_type_chinese <- paste0(names,'(',article_type,')')
+
+review_articles <- filter(data,Current.Status %in% c('New Submission','Reviewers Assigned','Revision Submitted',
+                                                     'Under Review',  'Reviews Completed','Editor Assigned'))$article_type_chinese
+length(review_articles)
+paste(review_articles,collapse = ', ')
+
+revise_articles <- filter(data,Current.Status %in% c('Incomplete','Revise','Revision Needs Approval',
+                                                     'Revision Submitted'))$article_type_chinese
+length(revise_articles)
+paste(revise_articles,collapse = ', ')
+
+
+1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 '####################### 表一 ###########################' %>% message()
 data$Round <- '1round'
@@ -127,7 +198,7 @@ RT <- colSums(table(data$Current.Status,data$status_year)[c(
 last <- colSums(table(data$Current.Status,data$status_year)[c(
   'Content Files Deleted - Forced to Withdrawn','Sent Back to Author'),]) %>% print()
 
-##################### UNDER REVIEW	和 EVISE 的new_data #####################
+##################### UNDER REVIEW  和 EVISE 的new_data #####################
 new_data <- filter(data,Current.Status != 'Final Decision Accept' &
                      Current.Status != 'Final Decision Reject' &
                      Current.Status != 'Submission Transferred' &
@@ -149,7 +220,7 @@ table(review_data$Round)
 revise_data <-filter(new_data,!Current.Status %in%
                        c('New Submission','Reviewers Assigned','Revision Submitted',
                          'Under Review',  'Reviews Completed','Editor Assigned') &
-                     Current.Status != '')
+                       Current.Status != '')
 table(revise_data$Decision,revise_data$Round)
 
 
@@ -212,7 +283,7 @@ word9 <- paste0(length(which(review_data$Round == '1round')),'篇一审中：',
 paste0('1) ',word9) %>% print()
 
 word10 <- paste0(length(which(review_data$Round == '2/3round')),'篇二/三审中：',
-                stringr::str_c(filter(review_data,Round == '2/3round')$article_type_chinese,collapse = '、'),'。')
+                 stringr::str_c(filter(review_data,Round == '2/3round')$article_type_chinese,collapse = '、'),'。')
 paste0('2) ',word10) %>% print()
 
 message('---------------------------------------------------------------')
@@ -223,9 +294,9 @@ paste0('# ',word11) %>% print()
 word12 <- paste0(nrow(filter(revise_data,
                              Round == '1round' &
                                Decision %in% c('Major revisions','Major Revisions'))),'篇一审大修中：',
-                stringr::str_c(filter(revise_data,
-                                      Round == '1round' &
-                                        Decision %in% c('Major revisions','Major Revisions'))$article_type_chinese,collapse = '、'),'。')
+                 stringr::str_c(filter(revise_data,
+                                       Round == '1round' &
+                                         Decision %in% c('Major revisions','Major Revisions'))$article_type_chinese,collapse = '、'),'。')
 paste0('1) ',word12) %>% print()
 
 word13 <- paste0(nrow(filter(revise_data,

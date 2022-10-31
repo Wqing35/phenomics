@@ -6,8 +6,8 @@ library(Seurat)
 
 
 this_year <- '2022'
-this_month <- '9'
-this_date <- '30'
+this_month <- '10'
+this_date <- '31'
 
 data <- read.table('../Phenomics/monthly_report/version2/Editorial_Search_Submissions_results_20220930T204538819.tab',
                    sep = '\t',quote = '',header=T)
@@ -18,18 +18,18 @@ data <- data[order(data$Manuscript.Number),]
 write.csv(data,paste0('../Phenomics/monthly_report/20220930_out.csv'),fileEncoding = 'UTF-8')
 
 ################################################################
-data <- read.csv('../Phenomics/monthly_report/version2/Phenomics0930.csv')
+data <- readxl::read_xlsx('../Phenomics/monthly_report/version2/Phenomics_1031.xlsx')
 tail(data)
-data <- data[-nrow(data),]
+# data <- data[-nrow(data),]
 
 
 '####################### 一、投稿情况 ###########################' %>% message()
 '1. 投稿数量：' %>% message()
-sub_year <- sapply(strsplit(data$Initial.Date.Submitted,'-'),function(i){i[3]})
+sub_year <- sapply(strsplit(as.character(data$Initial.Date.Submitted),'-'),function(i){i[1]})
 data$sub_year <- sub_year
-status_year <- sapply(strsplit(data$Status.Date,'-'),function(i){i[3]})
+status_year <- sapply(strsplit(as.character(data$Status.Date),'-'),function(i){i[1]})
 data$status_year <- status_year
-month <- sapply(strsplit(data$Initial.Date.Submitted,'-'),function(i){paste0(i[2],'-',i[3])})
+month <- sapply(strsplit(as.character(data$Initial.Date.Submitted),'-'),function(i){paste0(i[1],'-',i[2])})
 data$Month <- factor(month,levels = rev(unique(month)))
 word1 <- paste0('截止',this_year,'年',this_month,'月',this_date,'日',
                 '，累计收到投稿',(nrow(data)),'篇，含',
@@ -48,26 +48,26 @@ table(data$Article.Type)
 
 # 投稿分布
 word2 <- paste0('如图2所示，国内投稿',length(which(data$Country == 'CHINA')),
-                '篇（复旦及附属医院',length(which(data$is.Fudan == 1)),
+                '篇（复旦及附属医院',length(which(data$`is Fudan` == 1)),
                 '篇，其它国内单位',length(which(data$Institution == 'Non-Fudan')),
                 '篇），国外',(length(unique(data$Country))-1),'个国家',
-                (length(unique(data[which(data$Country != 'CHINA'),]$Institution.of.the.First.Corresponding.Author))-1),
+                (length(unique(data[which(data$Country != 'CHINA'),]$`Institution of the First Corresponding Author`))-1),
                 '家科研机构投稿',length(which(data$Institution == 'Overseas')),
                 '篇；具体单位情况详见附件1。含',
-                length(which(data$is.invited == 'Y')),'篇邀请稿（',round(length(which(data$is.invited == 'Y'))/nrow(data)*100,1),
-                '%）和',length(which(data$is.invited == 'N')),'篇自投稿（',round(length(which(data$is.invited == 'N'))/nrow(data)*100,1) ,'%）')
+                length(which(data$`is invited` == 'Y')),'篇邀请稿（',round(length(which(data$`is invited` == 'Y'))/nrow(data)*100,1),
+                '%）和',length(which(data$`is invited` == 'N')),'篇自投稿（',round(length(which(data$`is invited` == 'N'))/nrow(data)*100,1) ,'%）')
 word2 %>% print()
 
 
 # 图1
-fig1 <- ggplot(data = data[-nrow(data),],aes(x = Month)) +
+fig1 <- ggplot(data = data,aes(x = Month)) +
   geom_bar(width = 0.8,aes(fill = Institution)) +
   geom_text(stat='count', aes(label=..count..), vjust= -0.1) + 
   theme_bw() +
   theme(axis.text.x = element_text(angle = 45, hjust = 0.5, vjust = 0.5)) +
   # ggtitle('Number of submissions each month') + 
   # theme(plot.title = element_text(hjust = 0.5)) +
-  labs(x = '', y = '')
+  labs(x = '', y = '') + NoLegend()
 fig1
 
 # 图2
@@ -151,12 +151,12 @@ paste0('1) ',word4) %>% print()
 
 all_name_article_type <- data$article_type_chinese
 
-online_not_issue_index <- which(data$is.online == 1 & data$Issue == '')
+online_not_issue_index <- which(!is.na(data$is_online) & is.na(data$Issue))
 word5 <- paste0('已上线但尚未集合成期',length(online_not_issue_index),'篇：',
                 stringr::str_c(all_name_article_type[online_not_issue_index],collapse = '、'),'。')
 paste0('2) ',word5) %>% print()
 
-not_online_index <- which(is.na(data$is.online) & data$Current.Status == 'Final Decision Accept')
+not_online_index <- which(is.na(data$is_online) & data$Current.Status == 'Final Decision Accept')
 word6 <- paste0('尚未上线发表',length(not_online_index),'篇：',
                 stringr::str_c(all_name_article_type[not_online_index],collapse = '、'),'。')
 paste0('3) ',word6) %>% print()
