@@ -3,7 +3,7 @@
 *Phenomics* is a new hybrid journal focusing on cutting-edge scientific advances in the emerging field of phenomics. The dedicated editorial team welcomes studies that advances people’s knowledge on phenomics, the study of phenome that is a set of measurable properties of physical, chemical and biological phenotypes of individuals and populations other than the genome. The journal is free of charge for none-Open Access publication and provides free access in 2021-22.
 
 
-## *Phenomics* webpage
+## *Phenomics* webpage 
 
 https://www.springer.com/journal/43657
 
