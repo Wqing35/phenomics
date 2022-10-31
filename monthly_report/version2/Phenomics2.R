@@ -85,14 +85,14 @@ pie_data$label = rev(paste0(pie_data$Institutes,'\n',pie_data$Freqency,'\n',roun
 fig2 <- ggplot(pie_data, aes(x = "", y = Percentage, fill = Institutes)) +
   geom_bar(stat = "identity") +
   coord_polar(theta = "y") +
-  geom_text(aes(y= 100-(cumsum(Percentage)-Percentage/2), x= 1.1),
-            label = rev(pie_data$label)) +
+  geom_text(aes(y= 100-(cumsum(Percentage)-Percentage/2), x= 1.2),
+            label = rev(pie_data$label),size = 5) +
   labs(x = '', y = '') +
   cowplot::theme_nothing() 
   # ggtitle('Submission distribution') + 
   # theme(plot.title = element_text(hjust = 0.5))
 fig2
-ggpubr::ggarrange(plotlist = list(fig1, fig2), ncol = 2, nrow = 1,widths = c(2, 1))
+ggpubr::ggarrange(plotlist = list(fig1, fig2), ncol = 2, nrow = 1,widths = c(2.2, 1))
 
 
 
