@@ -62,12 +62,19 @@ word2 %>% print()
 # 图1
 fig1 <- ggplot(data = data,aes(x = Month)) +
   geom_bar(width = 0.8,aes(fill = Institution)) +
-  geom_text(stat='count', aes(label=..count..), vjust= -0.1) + 
+  geom_text(stat='count', aes(label=..count..), vjust= -0.1,size = 6) + 
   theme_bw() +
-  theme(axis.text.x = element_text(angle = 45, hjust = 0.5, vjust = 0.5)) +
+  labs(y="Number of submissions") + 
   # ggtitle('Number of submissions each month') + 
   # theme(plot.title = element_text(hjust = 0.5)) +
-  labs(x = '', y = '') + NoLegend()
+  NoLegend() + 
+  theme(axis.title.x = element_blank(),
+        axis.text.x = element_text(size = 12,color = 'black',angle = 45,vjust = 1,hjust = 1),
+        axis.title.y = element_text(size = 14,color = 'black'),
+        axis.text.y = element_text(size = 12,color = 'black'),
+        axis.ticks.y = element_blank(),
+        plot.title = element_text(hjust = .5)) 
+
 fig1
 
 # 图2
