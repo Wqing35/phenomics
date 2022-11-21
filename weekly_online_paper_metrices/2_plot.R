@@ -4,7 +4,7 @@ library(stringr)
 library(ggpubr)
 library(aplot)
 library(dplyr)
-
+setwd('~/Phenomics/')
 
 plot_file_names <- list.files('../Phenomics/weekly_online_paper_metrices/output/')
 plot_file_names

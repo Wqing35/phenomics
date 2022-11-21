@@ -9,7 +9,7 @@ this_year <- '2022'
 this_month <- '10'
 this_date <- '31'
 
-data <- read.table('../Phenomics/monthly_report/version2/Editorial_Search_Submissions_results_20220930T204538819.tab',
+data <- read.table('../Phenomics/monthly_report/version2/Editorial_Search_Submissions_results_20221115T104624924.tab',
                    sep = '\t',quote = '',header=T)
 data$Classifications <- NULL
 data$Country <- unlist(strsplit(sapply(strsplit(data$Author.Name,'\\('),function(i){i[2]}),'\\)'))
