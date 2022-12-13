@@ -96,7 +96,8 @@ p1 <- ggplot(out_df,aes(x = year)) +
   theme(axis.text.x = element_text(size = 12,color = 'black'),
         axis.text.y = element_text(size = 12,color = 'black'),
         plot.title = element_text(hjust = 0.5)) +
-  ylab('Number')
+  ylab('Number')+ 
+  ylim(0,52)
 
 # citations
 out_df$citation_range <- '0'
@@ -117,7 +118,8 @@ p2 <- ggplot(out_df,aes(x = citation_range)) +
   ylab('Number') +
   theme(axis.text.x = element_text(size = 12,colour = 'black'),
         axis.text.y = element_text(size = 12,colour = 'black'),
-        plot.title = element_text(hjust = 0.5))
+        plot.title = element_text(hjust = 0.5)) + 
+  ylim(0,52)
 
 ggpubr::ggarrange(plotlist = list(p1,p2),nrow = 1,ncol = 2,common.legend = T,legend = 'right')
 
