@@ -14,24 +14,31 @@ phenomics@fudan.edu.cn
 
 ## All papers submitted to *Phenomics* 
 
+<!-- 月初修改 -->
 ![image.png](https://upload-images.jianshu.io/upload_images/17916304-5fc3a7d13e7ff230.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 
 ## All *Phenomics* online papers
-<!-- 修改 -->
+<!-- 每周修改 -->
 Updata time: 2022-12-12
 
-### All *Phenomics* Paper Subject Distribution
+
+### All *Phenomics* Papers' Distribution
+<!-- fig2 每周修改-->
+![image.png](https://upload-images.jianshu.io/upload_images/17916304-a108d216dc39c32a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+<!-- fig3 不修改 -->
 ![image.png](https://upload-images.jianshu.io/upload_images/17916304-851300efbde6f2ce.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 ### All *Phenomics* Paper Metrics
+<!-- fig1 每周修改 -->
 ![image.png](https://upload-images.jianshu.io/upload_images/17916304-b8ea4d9ca2723bec.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
-<!-- 修改 -->
+<!-- 每周修改 -->
 [Download as Excel](https://github.com/Telogen/Phenomics/raw/master/weekly_online_paper_metrices/output/2022-12-12.xlsx)
 
 
-<!-- 修改 -->
+<!-- 每周修改 -->
 <table>
  <thead>
   <tr>
