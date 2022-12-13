@@ -102,6 +102,7 @@ p1 <- ggplot(out_df,aes(x = year)) +
 out_df$citation_range <- '0'
 out_df[which(out_df$citation > 0 & out_df$citation <= 5),]$citation_range <- '1-5'
 out_df[which(out_df$citation > 5 & out_df$citation <= 10),]$citation_range <- '6-10'
+out_df[which(out_df$citation > 10 & out_df$citation <= 50),]$citation_range <- '11-50'
 
 table(out_df$citation_range)
 out_df$citation_range <- factor(out_df$citation_range,

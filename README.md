@@ -24,14 +24,14 @@ Updata time: 2022-12-12
 
 
 ### All *Phenomics* Papers' Distribution
-<!-- fig2 每周修改-->
+<!-- fig2 文章分布、citation分布图 每周修改-->
 ![image.png](https://upload-images.jianshu.io/upload_images/17916304-a108d216dc39c32a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
-<!-- fig3 不修改 -->
-![image.png](https://upload-images.jianshu.io/upload_images/17916304-851300efbde6f2ce.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+<!-- fig3 subject分布图 暂不修改 -->
+![image.png](https://upload-images.jianshu.io/upload_images/17916304-70fe63f424de0f12.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 ### All *Phenomics* Paper Metrics
-<!-- fig1 每周修改 -->
+<!-- fig1 增量趋势图 每周修改 -->
 ![image.png](https://upload-images.jianshu.io/upload_images/17916304-b8ea4d9ca2723bec.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 <!-- 每周修改 -->

@@ -11,6 +11,7 @@ file_name
 full_file_name <- paste0('/mdshare/node8/tianlejin/Phenomics/weekly_online_paper_metrices/output/',file_name)
 out_df <- readxl::read_excel(full_file_name)
 # knitr::kable(out_df)
+out_df <- filter(out_df,type != 'Correction')
 head(out_df)
 
 out_df <- mutate(out_df,

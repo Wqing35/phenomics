@@ -1,22 +1,14 @@
 library(dplyr)
+library(ggplot2)
 
-plot_file_names <- list.files('../Phenomics/weekly_online_paper_metrices/output/')
-file_name <- rev(plot_file_names)[1]
-file_name
-full_file_name <- paste0('/mdshare/node8/tianlejin/Phenomics/weekly_online_paper_metrices/output/',file_name)
-out_df <- readxl::read_excel(full_file_name)
-# knitr::kable(out_df)
-head(out_df)
 
-subject <- c('Metabonomics','','Metabonomics','Traditional Chinese Medicine','Phenomics')
-
-Subjects <- c(rep('Phenomics',19),
-              rep('Bioinformatics/Biostatics',12),
-              rep('Genomics',8),
-              rep('Imageology',7),
+Subjects <- c(rep('Phenomics',20),
+              rep('Bioinformatics/Biostatics',13),
+              rep('Genomics',10),
+              rep('Imageology',8),
               rep('Botany/Agronomy',5),
               rep('Metabonomics',5),
-              rep('Proteomics',3),
+              rep('Proteomics',4),
               rep('Traditional Chinese Medicine',2),
               rep('Anthropology',2),
               rep('Molecular biology',2),
