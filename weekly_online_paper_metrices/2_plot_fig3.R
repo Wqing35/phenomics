@@ -1,5 +1,10 @@
-library(dplyr)
+# fig2
 library(ggplot2)
+library(stringr)
+library(ggpubr)
+library(aplot)
+library(dplyr)
+setwd('/mdshare/node8/tianlejin/Phenomics/')
 
 
 Subjects <- c(rep('Phenomics',20),
@@ -19,7 +24,7 @@ Subjects <- c(rep('Phenomics',20),
               rep('Healthcare',1))
 df <- as.data.frame(sort(table(Subjects),T))
 
-ggplot(df, aes(x = Subjects, y = Freq)) + 
+fig3 <- ggplot(df, aes(x = Subjects, y = Freq)) + 
   geom_bar(aes(color = Subjects,fill = Subjects), stat = "identity", 
            position = position_dodge(width = 0.8, preserve = "single"), width = 0.7) + 
   geom_text(aes(label = Freq), size = 4, position = position_dodge(0.8), vjust = -0.2) + 
@@ -33,4 +38,9 @@ ggplot(df, aes(x = Subjects, y = Freq)) +
         plot.margin = unit(c(.2,.2,.2,1.2),units = 'cm'),
         legend.position = "none") +
   ggtitle("Phenomics Paper Subject Distribution") 
+
+
+ggsave('./figures/fig3.png',fig3,width = 15,height = 8)
+
+
 
