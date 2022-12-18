@@ -75,6 +75,6 @@ fig4 <- access_plot %>%
   insert_bottom(citations_plot, height = 1) %>% 
   insert_bottom(altmetrics_plot, height = 1)
 
-ggsave('./figures/fig4.png',fig1,width = 15,height = 8)
+ggsave('./figures/fig4.png',fig4,width = 12,height = 6)
 
 

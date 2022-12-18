@@ -40,7 +40,7 @@ fig3 <- ggplot(df, aes(x = Subjects, y = Freq)) +
   ggtitle("Phenomics Paper Subject Distribution") 
 
 
-ggsave('./figures/fig3.png',fig3,width = 15,height = 8)
+ggsave('./figures/fig3.png',fig3,width = 12,height = 6)
 
 
 

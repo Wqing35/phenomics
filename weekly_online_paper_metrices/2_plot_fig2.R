@@ -51,7 +51,7 @@ p2 <- ggplot(out_df,aes(x = citation_range)) +
 
 fig2 <- ggpubr::ggarrange(plotlist = list(p1,p2),nrow = 1,ncol = 2,common.legend = T,legend = 'right')
 
-ggsave('./figures/fig2.png',fig2,width = 15,height = 8)
+ggsave('./figures/fig2.png',fig2,width = 12,height = 6)
 
 
 
