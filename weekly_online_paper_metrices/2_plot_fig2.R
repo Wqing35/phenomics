@@ -6,6 +6,9 @@ library(aplot)
 library(dplyr)
 setwd('/mdshare/node8/tianlejin/Phenomics/')
 
+plot_file_names <- list.files('../Phenomics/weekly_online_paper_metrices/output/')
+plot_file_names
+
 full_file_name <- paste0('/mdshare/node8/tianlejin/Phenomics/weekly_online_paper_metrices/output/',
                          rev(plot_file_names)[1])
 out_df <- readxl::read_excel(full_file_name)
