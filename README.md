@@ -15,7 +15,7 @@ phenomics@fudan.edu.cn
 ## All papers submitted to *Phenomics* 
 
 <!-- 月初修改 -->
-![fig1.png](https://gitee.com/telogen/Journal-Phenomics/blob/master/figures/fig1.png)
+![fig1.png](https://gitee.com/telogen/Journal-Phenomics/raw/master/figures/fig1.png)
 
 
 ## All *Phenomics* online papers
@@ -25,18 +25,18 @@ Updata time: 2022-12-19
 
 ### All *Phenomics* Papers' Distribution
 <!-- fig2 文章分布、citation分布图 每周修改-->
-![fig2.png](https://gitee.com/telogen/Journal-Phenomics/blob/master/figures/fig2.png)
+![fig2.png](https://gitee.com/telogen/Journal-Phenomics/raw/master/figures/fig2.png)
 
 <!-- fig3 subject分布图 暂不修改 -->
-![fig3.png](https://gitee.com/telogen/Journal-Phenomics/blob/master/figures/fig3.png)
+![fig3.png](https://gitee.com/telogen/Journal-Phenomics/raw/master/figures/fig3.png)
 
 ### *Phenomics* Paper Metrics
 <!-- fig4 增量趋势图 每周修改 -->
-![fig4.png](https://gitee.com/telogen/Journal-Phenomics/blob/master/figures/fig4.png)
+![fig4.png](https://gitee.com/telogen/Journal-Phenomics/raw/master/figures/fig4.png)
 
 <!-- 每周修改 -->
 
-### [Details about each *Phenomics* Paper](https://gitee.com/telogen/Journal-Phenomics/blob/master/weekly_online_paper_metrices)
+### [Details about each *Phenomics* Paper](https://gitee.com/telogen/Journal-Phenomics/blob/master/weekly_online_paper_metrices/README.md)
 
 [Download as Excel](https://gitee.com/telogen/Journal-Phenomics/blob/master/weekly_online_paper_metrices/all_Phenomics_paper_metrics.xlsx)
 
