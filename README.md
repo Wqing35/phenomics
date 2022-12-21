@@ -28,21 +28,20 @@ https://www.springer.com/journal/43657
 
 ## All *Phenomics* online papers (Update weekly)
 
-#### Paper Distribution
+- Paper type and citation distribution
 <!-- fig2 文章分布、citation分布图 每周修改-->
 ![fig2.png](https://gitee.com/telogen/Journal-Phenomics/raw/master/figures/fig2.png)
 
+- Paper subject distribution
 <!-- fig3 subject分布图 暂不修改 -->
 ![fig3.png](https://gitee.com/telogen/Journal-Phenomics/raw/master/figures/fig3.png)
 
-#### *Phenomics* Paper Metrics
+- Paper metrics
 <!-- fig4 增量趋势图 每周修改 -->
 ![fig4.png](https://gitee.com/telogen/Journal-Phenomics/raw/master/figures/fig4.png)
 
 <!-- 每周修改 -->
-#### [Details about each *Phenomics* online paper](https://github.com/Telogen/Journal-Phenomics/blob/master/weekly_online_paper_metrices/README.md)
-
-- [Download as Excel](https://github.com/Telogen/Journal-Phenomics/blob/master/weekly_online_paper_metrices/all_Phenomics_paper_metrics.xlsx)
+- See [details about each online paper](https://github.com/Telogen/Journal-Phenomics/blob/master/weekly_online_paper_metrices/README.md) or [download as Excel](https://github.com/Telogen/Journal-Phenomics/blob/master/weekly_online_paper_metrices/all_Phenomics_paper_metrics.xlsx)
 
 
 -----
