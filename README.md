@@ -36,9 +36,9 @@ Updata time: 2022-12-19
 
 <!-- 每周修改 -->
 
-### [Details about each *Phenomics* Paper](https://github.com/Telogen/Phenomics/raw/master/weekly_online_paper_metrices)
+### [Details about each *Phenomics* Paper](https://gitee.com/telogen/Journal-Phenomics/blob/master/weekly_online_paper_metrices)
 
-[Download as Excel](https://github.com/Telogen/Phenomics/raw/master/weekly_online_paper_metrices/all_Phenomics_paper_metrics.xlsx)
+[Download as Excel](https://gitee.com/telogen/Journal-Phenomics/blob/master/weekly_online_paper_metrices/all_Phenomics_paper_metrics.xlsx)
 
 
 
