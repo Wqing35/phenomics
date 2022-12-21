@@ -26,6 +26,8 @@ out_file_name
 
 writexl::write_xlsx(all_Phenomics_paper_metrics,out_file_name)
 
+writexl::write_xlsx(all_Phenomics_paper_metrics,
+                    './weekly_online_paper_metrices/all_Phenomics_paper_metrics.xlsx')
 
 
 
