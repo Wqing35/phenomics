@@ -4,10 +4,11 @@
 
 https://www.springer.com/journal/43657
 
-## Current Predicted Impact Factor
+## Current Predicted Impact Factor 
+
+> Estimated 2023 citation / (Total numbers of 2021 and 2022 papers)
 
 ![fig_IF.png](https://gitee.com/telogen/Journal-Phenomics/raw/master/figures/fig_IF.png)
-
 
 ## All *Phenomics* submitted papers (monthly updated)
 
