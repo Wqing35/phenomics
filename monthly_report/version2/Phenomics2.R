@@ -94,7 +94,7 @@ f2 <- ggplot(pie_data, aes(x = "", y = Percentage, fill = Institutes)) +
 f2
 fig1 <- ggpubr::ggarrange(plotlist = list(f1, f2), ncol = 2, nrow = 1,widths = c(2.2, 1))
 fig1
-ggsave('./figures/fig1.png',fig1,width = 12,height = 6)
+ggsave('./figures/fig1.png',fig1,width = 12,height = 5)
 
 
 '####################### 二、审稿情况 ###########################' %>% message()
