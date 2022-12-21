@@ -19,9 +19,6 @@ phenomics@fudan.edu.cn
 
 
 ## All *Phenomics* online papers
-<!-- 每周修改 -->
-Updata time: 2022-12-19
-
 
 ### All *Phenomics* Papers' Distribution
 <!-- fig2 文章分布、citation分布图 每周修改-->
@@ -36,9 +33,9 @@ Updata time: 2022-12-19
 
 <!-- 每周修改 -->
 
-### [Details about each *Phenomics* Paper](https://gitee.com/telogen/Journal-Phenomics/blob/master/weekly_online_paper_metrices/README.md)
+### [Details about each *Phenomics* Paper](https://github.com/Telogen/Journal-Phenomics/blob/master/weekly_online_paper_metrices/README.md)
 
-[Download as Excel](https://gitee.com/telogen/Journal-Phenomics/blob/master/weekly_online_paper_metrices/all_Phenomics_paper_metrics.xlsx)
+[Download as Excel](https://github.com/Telogen/Journal-Phenomics/blob/master/weekly_online_paper_metrices/all_Phenomics_paper_metrics.xlsx)
 
 
 

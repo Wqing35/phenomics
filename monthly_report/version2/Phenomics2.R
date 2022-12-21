@@ -60,7 +60,7 @@ word2 %>% print()
 
 
 # 图1
-fig1 <- ggplot(data = data,aes(x = Month)) +
+f1 <- ggplot(data = data,aes(x = Month)) +
   geom_bar(width = 0.8,aes(fill = Institution)) +
   geom_text(stat='count', aes(label=..count..), vjust= -0.1,size = 6) + 
   theme_bw() +
@@ -75,14 +75,14 @@ fig1 <- ggplot(data = data,aes(x = Month)) +
         axis.ticks.y = element_blank(),
         plot.title = element_text(hjust = .5)) 
 
-fig1
+f1
 
 # 图2
 pie_data <- data.frame(table(data$Institution))
 colnames(pie_data) <- c('Institutes','Freqency')
 pie_data$Percentage = pie_data$Freq/sum(pie_data$Freq)*100
 pie_data$label = rev(paste0(pie_data$Institutes,'\n',pie_data$Freqency,'\n',round(pie_data$Freq/sum(pie_data$Freq)*100,2),'%'))
-fig2 <- ggplot(pie_data, aes(x = "", y = Percentage, fill = Institutes)) +
+f2 <- ggplot(pie_data, aes(x = "", y = Percentage, fill = Institutes)) +
   geom_bar(stat = "identity") +
   coord_polar(theta = "y") +
   geom_text(aes(y= 100-(cumsum(Percentage)-Percentage/2), x= 1.2),
@@ -91,9 +91,10 @@ fig2 <- ggplot(pie_data, aes(x = "", y = Percentage, fill = Institutes)) +
   cowplot::theme_nothing() 
   # ggtitle('Submission distribution') + 
   # theme(plot.title = element_text(hjust = 0.5))
-fig2
-ggpubr::ggarrange(plotlist = list(fig1, fig2), ncol = 2, nrow = 1,widths = c(2.2, 1))
-
+f2
+fig1 <- ggpubr::ggarrange(plotlist = list(f1, f2), ncol = 2, nrow = 1,widths = c(2.2, 1))
+fig1
+ggsave('./figures/fig1.png',fig2,width = 12,height = 6)
 
 
 '####################### 二、审稿情况 ###########################' %>% message()
