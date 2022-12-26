@@ -41,7 +41,7 @@ https://www.springer.com/journal/43657
 ![fig4.png](https://gitee.com/telogen/Journal-Phenomics/raw/master/figures/fig4.png)
 
 <!-- 每周修改 -->
-- See [details about each online paper](https://github.com/Telogen/Journal-Phenomics/blob/master/weekly_online_paper_metrices/README.md) or [download as Excel](https://github.com/Telogen/Journal-Phenomics/raw/master/weekly_online_paper_metrices/all_Phenomics_paper_metrics.xlsx)
+- See [details about each online paper](https://github.com/Telogen/Journal-Phenomics/blob/master/weekly_online_paper_metrices/README.md) or [download as Excel](https://gitee.com/telogen/Journal-Phenomics/raw/master/weekly_online_paper_metrices/all_Phenomics_paper_metrics.xlsx)
 
 
 -----
@@ -50,6 +50,7 @@ https://www.springer.com/journal/43657
 ## Contact *Phenomics*
 
 phenomics@fudan.edu.cn
+
 phenomics@m.fudan.edu.cn
 
 
