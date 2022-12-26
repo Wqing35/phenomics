@@ -61,7 +61,7 @@ altmetrics_plot <- ggplot(df,aes(x = Date,y = `Total altmetrics`)) +
   geom_point(stat = "identity") +
   geom_line(aes(group = 1)) +
   geom_text(aes(label = `Total altmetrics`),hjust = .5,vjust = -.8) + 
-  ylim((min(df$`Total altmetrics`) - 2),(max(df$`Total altmetrics`) + 2)) + 
+  ylim((min(df$`Total altmetrics`) - 2),(max(df$`Total altmetrics`) + 5)) + 
   theme_light() + 
   theme(axis.title.x = element_blank(),
         axis.text.x = element_text(size = 12,color = 'black',angle = 45,vjust = 1,hjust = 1),

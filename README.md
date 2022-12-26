@@ -8,7 +8,7 @@ https://www.springer.com/journal/43657
 
 ## Current Predicted Impact Factor (Update weekly)
 
-> Estimated 2023 citation / (Number of published papers in 2021 and 2022)
+> Estimated 2023 citations / (Number of published papers in 2021 and 2022)
 
 ![fig_IF.png](https://gitee.com/telogen/Journal-Phenomics/raw/master/figures/fig_IF.png)
 
@@ -41,13 +41,16 @@ https://www.springer.com/journal/43657
 ![fig4.png](https://gitee.com/telogen/Journal-Phenomics/raw/master/figures/fig4.png)
 
 <!-- 每周修改 -->
-- See [details about each online paper](https://github.com/Telogen/Journal-Phenomics/blob/master/weekly_online_paper_metrices/README.md) or [download as Excel](https://github.com/Telogen/Journal-Phenomics/blob/master/weekly_online_paper_metrices/all_Phenomics_paper_metrics.xlsx)
+- See [details about each online paper](https://github.com/Telogen/Journal-Phenomics/blob/master/weekly_online_paper_metrices/README.md) or [download as Excel](https://github.com/Telogen/Journal-Phenomics/raw/master/weekly_online_paper_metrices/all_Phenomics_paper_metrics.xlsx)
 
 
 -----
 
+
 ## Contact *Phenomics*
 
 phenomics@fudan.edu.cn
+phenomics@m.fudan.edu.cn
+
 
 
