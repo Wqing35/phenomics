@@ -14,7 +14,7 @@ setwd('/mdshare/node8/tianlejin/Phenomics/')
 plot_file_names <- list.files('../Phenomics/weekly_online_paper_metrices/output/')
 plot_file_names
 
-begin_day <- "2022-10-03"
+begin_day <- "2022-12-26"
 end_day <- str_sub(rev(plot_file_names)[1],1,10)
 diff_day <- difftime(end_day, begin_day, units = c("days")) %>% as.numeric()
 diff_day
@@ -22,7 +22,7 @@ time_fold <- 365/diff_day
 time_fold
 
 
-begin_df <- readxl::read_excel('/mdshare/node8/tianlejin/Phenomics/weekly_online_paper_metrices/output/2022-10-03.xlsx')
+begin_df <- readxl::read_excel('/mdshare/node8/tianlejin/Phenomics/weekly_online_paper_metrices/output/2022-12-26.xlsx')
 begin_citation <- sum(begin_df$citation)
 begin_citation
 
@@ -37,6 +37,7 @@ Citation2023 <- (end_citation - begin_citation) * time_fold
 N2021_plus_2022 <- length(which(begin_df$type %in% c('Article','Review')))
 
 Pred_IF <- round(Citation2023/N2021_plus_2022,3)
+Pred_IF
 
 pred_if_df <- data.frame(day = end_day,Pred_IF = Pred_IF)
 pred_if_df
