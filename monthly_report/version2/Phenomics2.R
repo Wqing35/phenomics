@@ -6,19 +6,25 @@ library(Seurat)
 setwd('~/Phenomics/')
 
 this_year <- '2022'
-this_month <- '11'
-this_date <- '30'
+this_month <- '12'
+this_date <- '31'
 
-data <- read.table('../Phenomics/monthly_report/version2/Editorial_Search_Submissions_results_20221130T222848371.tab',
+data <- read.table('../Phenomics/monthly_report/version2/Editorial_Search_Submissions_results_20230102T225541387.tab',
                    sep = '\t',quote = '',header=T)
 data$Classifications <- NULL
 data$Country <- unlist(strsplit(sapply(strsplit(data$Author.Name,'\\('),function(i){i[2]}),'\\)'))
 data$is_China <- factor(data$Country == 'CHINA',labels = c('Overseas','China'))
 data <- data[order(data$Manuscript.Number),]
-write.csv(data,paste0('../Phenomics/monthly_report/20221130_out.csv'),fileEncoding = 'UTF-8')
+write.csv(data,paste0('../Phenomics/monthly_report/20221231_out.csv'),fileEncoding = 'UTF-8')
+
+
+
+
+
+
 
 ################################################################
-data <- readxl::read_xlsx('../Phenomics/monthly_report/version2/Phenomics_1130.xlsx')
+data <- readxl::read_xlsx('../Phenomics/monthly_report/version2/Phenomics_1231.xlsx')
 tail(data)
 # data <- data[-nrow(data),]
 
@@ -77,6 +83,7 @@ f1 <- ggplot(data = data,aes(x = Month)) +
 
 f1
 
+
 # 图2
 pie_data <- data.frame(table(data$Institution))
 colnames(pie_data) <- c('Institutes','Freqency')
@@ -92,8 +99,10 @@ f2 <- ggplot(pie_data, aes(x = "", y = Percentage, fill = Institutes)) +
   # ggtitle('Submission distribution') + 
   # theme(plot.title = element_text(hjust = 0.5))
 f2
-fig1 <- ggpubr::ggarrange(plotlist = list(f1, f2), ncol = 2, nrow = 1,widths = c(2.2, 1))
+
+fig1 <- ggpubr::ggarrange(plotlist = list(f1, f2), ncol = 2, nrow = 1,widths = c(2.3, 1))
 fig1
+
 ggsave('./figures/fig1.png',fig1,width = 12,height = 5)
 
 
@@ -104,7 +113,7 @@ word3 <- paste0('累计接受文章',length(which(data$Current.Status == 'Final 
                                                  'Content Files Deleted - Forced to Withdrawn '))),
                 '篇，其它正在审稿中（如下表），具体审稿情况如附件2；2021年已上线6期（23篇+1篇开刊词），2022年已上线',
                 (length(unique(data$Issue))-7),'期（共计',
-                (length(unique(data$Issue))-7)*6,'篇），已上线文章相关参数见附件3。')
+                (length(unique(data$Issue))-7)*6,'篇）。')
 word3 %>% print()
 table(data$Current.Status,data$status_year)
 
@@ -173,7 +182,7 @@ word8 <- paste0('在审文章',length(UR_idx),'篇：',
                 stringr::str_c(all_name_article_type[UR_idx],collapse = '、'),'。')
 paste0('# ',word8) %>% print()
 
-word9 <- paste0('在修文章',length(UR_idx),'篇：',
+word9 <- paste0('在修文章',length(Revise_idx),'篇：',
                 stringr::str_c(all_name_article_type[Revise_idx],collapse = '、'),'。')
 paste0('# ',word9) %>% print()
 
