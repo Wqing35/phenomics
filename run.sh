@@ -8,12 +8,15 @@ Rscript /mdshare/node8/tianlejin/Phenomics/weekly_online_paper_metrices/1_get_me
 Rscript /mdshare/node8/tianlejin/Phenomics/weekly_online_paper_metrices/2_plot_fig2.R
 Rscript /mdshare/node8/tianlejin/Phenomics/weekly_online_paper_metrices/2_plot_fig3.R
 Rscript /mdshare/node8/tianlejin/Phenomics/weekly_online_paper_metrices/2_plot_fig4.R
+Rscript /mdshare/node8/tianlejin/Phenomics/weekly_online_paper_metrices/3_get_readme.R
+Rscript /mdshare/node8/tianlejin/Phenomics/weekly_online_paper_metrices/4_pred_IF.R
+
+rm -rf /mdshare/node8/tianlejin/Phenomics/Rplots.pdf
 
 git add -A
 DATE=$(date "+%Y%m%d")
 git commit -m $DATE --no-verify
 git push
 
-rm -rf /mdshare/node8/tianlejin/Phenomics/Rplots.pdf
 
 
