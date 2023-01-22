@@ -1,0 +1,80 @@
+                                                                                                                     title
+38     Deep Learning-Assisted Quantitative Susceptibility Mapping as a Tool for Grading and Molecular Subtyping of Gliomas
+66                               Infrared Imageries of Human Body Activated by Tea Match the Hypothesis of Meridian System
+31 Proteomic Portrait of Human Lymphoma Reveals Protein Molecular Fingerprint of Disease Specific Subtypes and Progression
+26             In Silico Pipeline to Identify Tumor-Specific Antigens for Cancer Immunotherapy Using Exome Sequencing Data
+36                                A Genome-Wide Association Study for Susceptibility to Axial Length in Highly Myopic Eyes
+82                           Measurement of Cerebral Oxygen Extraction Fraction Using Quantitative BOLD Approach: A Review
+                                                           url           type
+38 http://link.springer.com/article/10.1007/s43657-022-00087-6        Article
+66 http://link.springer.com/article/10.1007/s43657-022-00090-x Correspondence
+31 http://link.springer.com/article/10.1007/s43657-022-00075-w        Article
+26 http://link.springer.com/article/10.1007/s43657-022-00084-9        Article
+36 http://link.springer.com/article/10.1007/s43657-022-00082-x        Article
+82 http://link.springer.com/article/10.1007/s43657-022-00081-y         Review
+   year year_month online_time access citation altmetric
+38 2023    2023-01  2023-01-05    103        0         0
+66 2023    2023-01  2023-01-05     30        0         0
+31 2022    2022-12  2022-12-12    566        0         1
+26 2022    2022-12  2022-12-08    364        0         0
+36 2022    2022-12  2022-12-05    392        0         1
+82 2022    2022-12  2022-12-05    322        0         1
+         correspond_authors volume issue update_time
+38 Xiao-Yong Zhang, Yan Ren               2023-01-23
+66                   Hui Li               2023-01-23
+31         Wei Yan, Jie Jin               2023-01-23
+26  Jose Arturo Molina-Mora               2023-01-23
+36      Xiangjia Zhu, Yi Lu               2023-01-23
+82                  He Wang               2023-01-23
+[1] 105761
+[1] 110
+[1] "./weekly_online_paper_metrices/output/2023-01-23.xlsx"
+ [1] "2022-08-15.txt"  "2022-08-22.txt"  "2022-08-29.txt"  "2022-09-05.txt" 
+ [5] "2022-09-12.txt"  "2022-09-19.txt"  "2022-09-26.txt"  "2022-10-03.xlsx"
+ [9] "2022-10-10.xlsx" "2022-10-17.xlsx" "2022-10-24.xlsx" "2022-10-31.xlsx"
+[13] "2022-11-07.xlsx" "2022-11-14.xlsx" "2022-11-21.xlsx" "2022-11-28.xlsx"
+[17] "2022-12-05.xlsx" "2022-12-12.xlsx" "2022-12-19.xlsx" "2022-12-26.xlsx"
+[21] "2023-01-02.xlsx" "2023-01-09.xlsx" "2023-01-16.xlsx" "2023-01-23.xlsx"
+
+    0   1-5 11-50  6-10 
+   42    31     2     4 
+[1] "2023-01-23.xlsx"
+[90m# A tibble: 6 × 13[39m
+  title  url   type   year year_…¹ onlin…² access citat…³ altme…⁴ corre…⁵ volume
+  [3m[90m<chr>[39m[23m  [3m[90m<chr>[39m[23m [3m[90m<chr>[39m[23m [3m[90m<dbl>[39m[23m [3m[90m<chr>[39m[23m   [3m[90m<chr>[39m[23m    [3m[90m<dbl>[39m[23m   [3m[90m<dbl>[39m[23m   [3m[90m<dbl>[39m[23m [3m[90m<chr>[39m[23m   [3m[90m<chr>[39m[23m 
+[90m1[39m Deep … http… Arti…  [4m2[24m023 2023-01 2023-0…    103       0       0 Xiao-Y… [31mNA[39m    
+[90m2[39m Infra… http… Corr…  [4m2[24m023 2023-01 2023-0…     30       0       0 Hui Li  [31mNA[39m    
+[90m3[39m Prote… http… Arti…  [4m2[24m022 2022-12 2022-1…    566       0       1 Wei Ya… [31mNA[39m    
+[90m4[39m In Si… http… Arti…  [4m2[24m022 2022-12 2022-1…    364       0       0 Jose A… [31mNA[39m    
+[90m5[39m A Gen… http… Arti…  [4m2[24m022 2022-12 2022-1…    392       0       1 Xiangj… [31mNA[39m    
+[90m6[39m Measu… http… Revi…  [4m2[24m022 2022-12 2022-1…    322       0       1 He Wang [31mNA[39m    
+[90m# … with 2 more variables: issue <chr>, update_time <chr>, and abbreviated[39m
+[90m#   variable names ¹​year_month, ²​online_time, ³​citation, ⁴​altmetric,[39m
+[90m#   ⁵​correspond_authors[39m
+ [1] "title"                 "url"                   "type"                 
+ [4] "year"                  "year_month"            "online_time"          
+ [7] "access"                "citation"              "altmetric"            
+[10] "correspond_authors"    "volume"                "issue"                
+[13] "update_time"           "short_title"           "short_title_with_link"
+ [1] "2022-08-15.txt"  "2022-08-22.txt"  "2022-08-29.txt"  "2022-09-05.txt" 
+ [5] "2022-09-12.txt"  "2022-09-19.txt"  "2022-09-26.txt"  "2022-10-03.xlsx"
+ [9] "2022-10-10.xlsx" "2022-10-17.xlsx" "2022-10-24.xlsx" "2022-10-31.xlsx"
+[13] "2022-11-07.xlsx" "2022-11-14.xlsx" "2022-11-21.xlsx" "2022-11-28.xlsx"
+[17] "2022-12-05.xlsx" "2022-12-12.xlsx" "2022-12-19.xlsx" "2022-12-26.xlsx"
+[21] "2023-01-02.xlsx" "2023-01-09.xlsx" "2023-01-16.xlsx" "2023-01-23.xlsx"
+[1] 28
+[1] 13.03571
+[1] 102
+[1] 110
+[1] 1.448
+         day Pred_IF
+1 2023-01-23   1.448
+         day Pred_IF
+1 2023-01-02   0.724
+2 2023-01-09   1.448
+3 2023-01-16   1.448
+         day Pred_IF
+1 2023-01-02   0.724
+2 2023-01-09   1.448
+3 2023-01-16   1.448
+4 2023-01-23   1.448
