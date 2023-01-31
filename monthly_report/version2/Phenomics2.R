@@ -5,17 +5,18 @@ library(cowplot)
 library(Seurat)
 setwd('~/Phenomics/')
 
-this_year <- '2022'
-this_month <- '12'
-this_date <- '31'
+file_names <- list.files('../Phenomics/monthly_report/version2')
+file_name <- (file_names[str_detect(string = file_names,pattern = 'Edit')] %>% sort(T))[1]
 
-data <- read.table('../Phenomics/monthly_report/version2/Editorial_Search_Submissions_results_20230102T225541387.tab',
+
+data <- read.table(paste0('../Phenomics/monthly_report/version2/',file_name),
                    sep = '\t',quote = '',header=T)
 data$Classifications <- NULL
 data$Country <- unlist(strsplit(sapply(strsplit(data$Author.Name,'\\('),function(i){i[2]}),'\\)'))
 data$is_China <- factor(data$Country == 'CHINA',labels = c('Overseas','China'))
 data <- data[order(data$Manuscript.Number),]
-write.csv(data,paste0('../Phenomics/monthly_report/20221231_out.csv'),fileEncoding = 'UTF-8')
+
+write.csv(data,paste0('../Phenomics/monthly_report/20230131_out.csv'),fileEncoding = 'UTF-8')
 
 
 
@@ -24,7 +25,11 @@ write.csv(data,paste0('../Phenomics/monthly_report/20221231_out.csv'),fileEncodi
 
 
 ################################################################
-data <- readxl::read_xlsx('../Phenomics/monthly_report/version2/Phenomics_1231.xlsx')
+this_year <- '2023'
+this_month <- '1'
+this_date <- '31'
+
+data <- readxl::read_xlsx('../Phenomics/monthly_report/version2/Phenomics_0131.xlsx')
 tail(data)
 # data <- data[-nrow(data),]
 
@@ -47,7 +52,8 @@ word1 <- paste0('截止',this_year,'年',this_month,'月',this_date,'日',
                 length(which((data$Article.Type == 'Correspondence/Letter to the Editor'))),'篇读者来信',
                 '。自2020年7月开刊，2020年投稿平均',round(length(which(data$sub_year == '2020'))/6,1),
                 '篇/月，2021年投稿平均',round(length(which(data$sub_year == '2021'))/12,1),
-                '篇/月，2022年投稿平均',round(length(which(data$sub_year == '2022'))/as.numeric(this_month),1),
+                '篇/月，2022年投稿平均',round(length(which(data$sub_year == '2022'))/12,1),
+                '篇/月，2023年投稿平均',round(length(which(data$sub_year == '2023'))/as.numeric(this_month),1),
                 '篇/月（如图1）。')
 word1 %>% print()
 table(data$Article.Type)
@@ -67,8 +73,9 @@ word2 %>% print()
 
 # 图1
 f1 <- ggplot(data = data,aes(x = Month)) +
-  geom_bar(width = 0.8,aes(fill = Institution)) +
+  geom_bar(width = 0.8,aes(fill = Institution)) + 
   geom_text(stat='count', aes(label=..count..), vjust= -0.1,size = 6) + 
+  facet_grid(. ~ sub_year, scales = 'free', space = 'free') +
   theme_bw() +
   labs(y="Number of submissions") + 
   # ggtitle('Number of submissions each month') + 
@@ -107,13 +114,15 @@ ggsave('./figures/fig1.png',fig1,width = 12,height = 5)
 
 
 '####################### 二、审稿情况 ###########################' %>% message()
+
 word3 <- paste0('累计接受文章',length(which(data$Current.Status == 'Final Decision Accept')),
                 '篇，拒稿或transfer',length(which(data$Current.Status %in%
                                                c('Final Decision Reject','Submission Transferred',
                                                  'Content Files Deleted - Forced to Withdrawn '))),
-                '篇，其它正在审稿中（如下表），具体审稿情况如附件2；2021年已上线6期（23篇+1篇开刊词），2022年已上线',
-                (length(unique(data$Issue))-7),'期（共计',
-                (length(unique(data$Issue))-7)*6,'篇）。')
+                '篇，其它正在审稿中（如下表），具体审稿情况如附件2；2021年已上线6期（23篇+1篇开刊词），',
+                '2022年已上线6期（36篇），','2023年已上线',
+                round(length(which(data$Volumn == '3'))/8),'期（',
+                length(which(data$Volumn == '3')),'篇+1篇会议报告）。')
 word3 %>% print()
 table(data$Current.Status,data$status_year)
 
@@ -163,7 +172,7 @@ word3.2 %>% message()
 word3.5 <- paste0('已接受文章', length(accept_idx),'篇：')
 paste0('# ',word3.5) %>% print()
 
-word4 <- paste0('已集结成册',length(which(data$Issue != '')),'篇。')
+word4 <- paste0('已集结成册',length(which(!is.na(data$Volumn))),'篇。')
 paste0('1) ',word4) %>% print()
 
 all_name_article_type <- data$article_type_chinese

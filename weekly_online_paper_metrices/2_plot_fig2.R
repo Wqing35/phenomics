@@ -14,12 +14,12 @@ full_file_name <- paste0('/mdshare/node8/tianlejin/Phenomics/weekly_online_paper
 out_df <- readxl::read_excel(full_file_name)
 out_df <- filter(out_df,type != 'Correction')
 out_df$mytype <- factor(out_df$type,
-                        levels = c('Article','Review','Commentary','Correspondence','Editorial','Meeting Report'),
-                        labels = c('Article','Review','Others','Others','Others','Others'))
+                        levels = c('Article','Review','Protocol','Commentary','Correspondence','Editorial','Meeting Report'),
+                        labels = c('Article','Review','Protocol','Others','Others','Others','Others'))
 # 发文量
 p1 <- ggplot(out_df,aes(x = year)) +
   geom_bar(width = 0.6, aes(fill = mytype)) +
-  geom_text(stat = "count", aes(label = ..count..), vjust = -0.5,size = 5) +
+  geom_text(stat = "count", aes(label = ..count..), vjust = -0.5,size = 4) +
   scale_x_continuous(breaks=c(2021,2022,2023)) +
   scale_fill_discrete(name = "Article type") +
   ggtitle('Published paper distribution') +
@@ -42,7 +42,7 @@ out_df$citation_range <- factor(out_df$citation_range,
 
 p2 <- ggplot(out_df,aes(x = citation_range)) +
   geom_bar(width = 0.6, aes(fill = mytype)) +
-  geom_text(stat = "count", aes(label = ..count..), vjust = -0.5,size = 5) +
+  geom_text(stat = "count", aes(label = ..count..), vjust = -0.5,size = 4) +
   ggtitle("Citation distribution") +
   theme_bw() +
   xlab('Citation ranges') +
