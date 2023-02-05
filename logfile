@@ -1,32 +1,32 @@
---2023-01-29 23:40:01--  https://link.springer.com/search/csv?query=&search-within=Jounal&facet-journal-id=43657
-Resolving link.springer.com (link.springer.com)... 146.75.112.95
-Connecting to link.springer.com (link.springer.com)|146.75.112.95|:443... connected.
+--2023-02-05 23:40:02--  https://link.springer.com/search/csv?query=&search-within=Jounal&facet-journal-id=43657
+Resolving link.springer.com (link.springer.com)... 151.101.108.95
+Connecting to link.springer.com (link.springer.com)|151.101.108.95|:443... connected.
 WARNING: cannot verify link.springer.com's certificate, issued by ‘/C=US/O=Let's Encrypt/CN=R3’:
   Issued certificate has expired.
 HTTP request sent, awaiting response... 302 Found
 Location: https://idp.springer.com/authorize?redirect_uri=https://link.springer.com/search/csv?query%3D%26search-within%3DJounal%26facet-journal-id%3D43657&client_id=springerlink&response_type=cookie [following]
---2023-01-29 23:40:07--  https://idp.springer.com/authorize?redirect_uri=https://link.springer.com/search/csv?query%3D%26search-within%3DJounal%26facet-journal-id%3D43657&client_id=springerlink&response_type=cookie
-Resolving idp.springer.com (idp.springer.com)... 146.75.112.95
-Connecting to idp.springer.com (idp.springer.com)|146.75.112.95|:443... connected.
+--2023-02-05 23:40:03--  https://idp.springer.com/authorize?redirect_uri=https://link.springer.com/search/csv?query%3D%26search-within%3DJounal%26facet-journal-id%3D43657&client_id=springerlink&response_type=cookie
+Resolving idp.springer.com (idp.springer.com)... 151.101.108.95
+Connecting to idp.springer.com (idp.springer.com)|151.101.108.95|:443... connected.
 WARNING: cannot verify idp.springer.com's certificate, issued by ‘/C=US/O=Let's Encrypt/CN=R3’:
   Issued certificate has expired.
 HTTP request sent, awaiting response... 302 Found
-Location: https://idp.springer.com/transit?redirect_uri=https%3A%2F%2Flink.springer.com%2Fsearch%2Fcsv%3Fquery%3D%26search-within%3DJounal%26facet-journal-id%3D43657&code=94876056-daa2-454e-9e19-42738bd9074a [following]
---2023-01-29 23:40:09--  https://idp.springer.com/transit?redirect_uri=https%3A%2F%2Flink.springer.com%2Fsearch%2Fcsv%3Fquery%3D%26search-within%3DJounal%26facet-journal-id%3D43657&code=94876056-daa2-454e-9e19-42738bd9074a
+Location: https://idp.springer.com/transit?redirect_uri=https%3A%2F%2Flink.springer.com%2Fsearch%2Fcsv%3Fquery%3D%26search-within%3DJounal%26facet-journal-id%3D43657&code=207ea7d0-04b8-4750-979f-d3abbe5ba43c [following]
+--2023-02-05 23:40:09--  https://idp.springer.com/transit?redirect_uri=https%3A%2F%2Flink.springer.com%2Fsearch%2Fcsv%3Fquery%3D%26search-within%3DJounal%26facet-journal-id%3D43657&code=207ea7d0-04b8-4750-979f-d3abbe5ba43c
 Reusing existing connection to idp.springer.com:443.
 HTTP request sent, awaiting response... 302 Found
 Location: https://link.springer.com/search/csv?query=&search-within=Jounal&facet-journal-id=43657 [following]
---2023-01-29 23:40:09--  https://link.springer.com/search/csv?query=&search-within=Jounal&facet-journal-id=43657
-Connecting to link.springer.com (link.springer.com)|146.75.112.95|:443... connected.
+--2023-02-05 23:40:10--  https://link.springer.com/search/csv?query=&search-within=Jounal&facet-journal-id=43657
+Connecting to link.springer.com (link.springer.com)|151.101.108.95|:443... connected.
 WARNING: cannot verify link.springer.com's certificate, issued by ‘/C=US/O=Let's Encrypt/CN=R3’:
   Issued certificate has expired.
 HTTP request sent, awaiting response... 200 OK
 Length: unspecified [text/csv]
 Saving to: ‘/mdshare/node8/tianlejin/Phenomics/weekly_online_paper_metrices/SearchResults.csv’
 
-     0K .......... .......... ......                            106K=0.2s
+     0K .......... .......... ......                           99.7K=0.3s
 
-2023-01-29 23:40:13 (106 KB/s) - ‘/mdshare/node8/tianlejin/Phenomics/weekly_online_paper_metrices/SearchResults.csv’ saved [27149]
+2023-02-05 23:40:12 (99.7 KB/s) - ‘/mdshare/node8/tianlejin/Phenomics/weekly_online_paper_metrices/SearchResults.csv’ saved [27149]
 
 
 Attaching package: ‘dplyr’
@@ -138,22 +138,22 @@ The following objects are masked from ‘package:base’:
 32 http://link.springer.com/article/10.1007/s43657-022-00075-w        Article
 27 http://link.springer.com/article/10.1007/s43657-022-00084-9        Article
    year year_month online_time access citation altmetric
-14 2023    2023-01  2023-01-05     98        0         0
-39 2023    2023-01  2023-01-05    137        0         0
-64 2023    2023-01  2023-01-05     57        0         0
-68 2023    2023-01  2023-01-05     75        0         0
-32 2022    2022-12  2022-12-12    595        0         1
-27 2022    2022-12  2022-12-08    386        0         0
+14 2023    2023-01  2023-01-05    186        0         0
+39 2023    2023-01  2023-01-05    181        0         0
+64 2023    2023-01  2023-01-05    119        0         0
+68 2023    2023-01  2023-01-05    128        0         0
+32 2022    2022-12  2022-12-12    633        0         1
+27 2022    2022-12  2022-12-08    421        0         0
          correspond_authors volume issue update_time
-14              Weihai Ying               2023-01-30
-39 Xiao-Yong Zhang, Yan Ren               2023-01-30
-64                 Mei Tian               2023-01-30
-68                   Hui Li               2023-01-30
-32         Wei Yan, Jie Jin               2023-01-30
-27  Jose Arturo Molina-Mora               2023-01-30
-[1] 108285
-[1] 120
-[1] "./weekly_online_paper_metrices/output/2023-01-30.xlsx"
+14              Weihai Ying               2023-02-06
+39 Xiao-Yong Zhang, Yan Ren               2023-02-06
+64                 Mei Tian               2023-02-06
+68                   Hui Li               2023-02-06
+32         Wei Yan, Jie Jin               2023-02-06
+27  Jose Arturo Molina-Mora               2023-02-06
+[1] 111607
+[1] 122
+[1] "./weekly_online_paper_metrices/output/2023-02-06.xlsx"
 
 Attaching package: ‘dplyr’
 
@@ -171,7 +171,7 @@ The following objects are masked from ‘package:base’:
 [13] "2022-11-07.xlsx" "2022-11-14.xlsx" "2022-11-21.xlsx" "2022-11-28.xlsx"
 [17] "2022-12-05.xlsx" "2022-12-12.xlsx" "2022-12-19.xlsx" "2022-12-26.xlsx"
 [21] "2023-01-02.xlsx" "2023-01-09.xlsx" "2023-01-16.xlsx" "2023-01-23.xlsx"
-[25] "2023-01-30.xlsx"
+[25] "2023-01-30.xlsx" "2023-02-06.xlsx"
 
     0   1-5 11-50  6-10 
    39    36     2     4 
@@ -212,16 +212,16 @@ The following objects are masked from ‘package:base’:
 
     intersect, setdiff, setequal, union
 
-[1] "2023-01-30.xlsx"
+[1] "2023-02-06.xlsx"
 # A tibble: 6 × 13
   title  url   type   year year_…¹ onlin…² access citat…³ altme…⁴ corre…⁵ volume
   <chr>  <chr> <chr> <dbl> <chr>   <chr>    <dbl>   <dbl>   <dbl> <chr>   <chr> 
-1 Pheno… http… Revi…  2023 2023-01 2023-0…     98       0       0 Weihai… <NA>  
-2 Deep … http… Arti…  2023 2023-01 2023-0…    137       0       0 Xiao-Y… <NA>  
-3 Proto… http… Prot…  2023 2023-01 2023-0…     57       0       0 Mei Ti… <NA>  
-4 Infra… http… Corr…  2023 2023-01 2023-0…     75       0       0 Hui Li  <NA>  
-5 Prote… http… Arti…  2022 2022-12 2022-1…    595       0       1 Wei Ya… <NA>  
-6 In Si… http… Arti…  2022 2022-12 2022-1…    386       0       0 Jose A… <NA>  
+1 Pheno… http… Revi…  2023 2023-01 2023-0…    186       0       0 Weihai… <NA>  
+2 Deep … http… Arti…  2023 2023-01 2023-0…    181       0       0 Xiao-Y… <NA>  
+3 Proto… http… Prot…  2023 2023-01 2023-0…    119       0       0 Mei Ti… <NA>  
+4 Infra… http… Corr…  2023 2023-01 2023-0…    128       0       0 Hui Li  <NA>  
+5 Prote… http… Arti…  2022 2022-12 2022-1…    633       0       1 Wei Ya… <NA>  
+6 In Si… http… Arti…  2022 2022-12 2022-1…    421       0       0 Jose A… <NA>  
 # … with 2 more variables: issue <chr>, update_time <chr>, and abbreviated
 #   variable names ¹​year_month, ²​online_time, ³​citation, ⁴​altmetric,
 #   ⁵​correspond_authors
@@ -247,51 +247,24 @@ The following objects are masked from ‘package:base’:
 [13] "2022-11-07.xlsx" "2022-11-14.xlsx" "2022-11-21.xlsx" "2022-11-28.xlsx"
 [17] "2022-12-05.xlsx" "2022-12-12.xlsx" "2022-12-19.xlsx" "2022-12-26.xlsx"
 [21] "2023-01-02.xlsx" "2023-01-09.xlsx" "2023-01-16.xlsx" "2023-01-23.xlsx"
-[25] "2023-01-30.xlsx"
-[1] 35
-[1] 10.42857
+[25] "2023-01-30.xlsx" "2023-02-06.xlsx"
+[1] 42
+[1] 8.690476
 [1] 102
-[1] 120
-[1] 2.607
+[1] 122
+[1] 2.414
          day Pred_IF
-1 2023-01-30   2.607
-         day Pred_IF
-1 2023-01-02   0.724
-2 2023-01-09   1.448
-3 2023-01-16   1.448
-4 2023-01-23   1.448
+1 2023-02-06   2.414
          day Pred_IF
 1 2023-01-02   0.724
 2 2023-01-09   1.448
 3 2023-01-16   1.448
 4 2023-01-23   1.448
 5 2023-01-30   2.607
-[master 31d5b64] 20230130
- 9 files changed, 406 insertions(+), 115 deletions(-)
- rewrite figures/fig2.png (75%)
- rewrite figures/fig4.png (97%)
- rewrite figures/fig_IF.png (96%)
- create mode 100644 logfile
- rewrite weekly_online_paper_metrices/all_Phenomics_paper_metrics.xlsx (79%)
- create mode 100644 weekly_online_paper_metrices/output/2023-01-30.xlsx
-warning: push.default is unset; its implicit value is changing in
-Git 2.0 from 'matching' to 'simple'. To squelch this message
-and maintain the current behavior after the default changes, use:
-
-  git config --global push.default matching
-
-To squelch this message and adopt the new behavior now, use:
-
-  git config --global push.default simple
-
-See 'git help config' and search for 'push.default' for further information.
-(the 'simple' mode was introduced in Git 1.7.11. Use the similar mode
-'current' instead of 'simple' if you sometimes use older versions of Git)
-
-remote: This repository moved. Please use the new location:        
-remote:   git@github.com:Telogen/Journal-Phenomics.git        
-To git@github.com:Telogen/Phenomics.git
-   253b3aa..31d5b64  master -> master
-remote: Powered by [01;33mGITEE.COM [0m[[01;35mGNK-6.4[0m][0m        
-To git@gitee.com:Telogen/Journal-Phenomics.git
-   253b3aa..31d5b64  master -> master
+         day Pred_IF
+1 2023-01-02   0.724
+2 2023-01-09   1.448
+3 2023-01-16   1.448
+4 2023-01-23   1.448
+5 2023-01-30   2.607
+6 2023-02-06   2.414
