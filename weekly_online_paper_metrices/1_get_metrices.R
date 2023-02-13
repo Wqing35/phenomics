@@ -10,7 +10,7 @@ library(ggplot2)
 online_data <- read.csv('../Phenomics/weekly_online_paper_metrices/SearchResults.csv')
 online_data <- filter(online_data,Content.Type != 'Journal')
 
-all_Phenomics_paper_metrics <- get_all_Phenomics_paper_metrics(online_data,sleep_seconds = 20)
+all_Phenomics_paper_metrics <- get_all_Phenomics_paper_metrics(online_data,sleep_seconds = 5)
 
 
 
