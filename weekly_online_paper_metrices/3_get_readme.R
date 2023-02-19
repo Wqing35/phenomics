@@ -4,6 +4,7 @@
 library(kableExtra)
 library(knitr)
 library(dplyr)
+setwd('/mdshare/node8/tianlejin/Phenomics/')
 
 plot_file_names <- list.files('../Phenomics/weekly_online_paper_metrices/output/')
 file_name <- rev(plot_file_names)[1]
