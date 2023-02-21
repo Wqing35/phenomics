@@ -274,3 +274,31 @@ The following objects are masked from ‘package:base’:
 6 2023-02-06   2.414
 7 2023-02-13   2.173
 8 2023-02-20   2.173
+[master 908196f] 20230220
+ 10 files changed, 256 insertions(+), 215 deletions(-)
+ rewrite figures/fig2.png (76%)
+ rewrite figures/fig4.png (96%)
+ rewrite figures/fig_IF.png (97%)
+ rewrite weekly_online_paper_metrices/all_Phenomics_paper_metrics.xlsx (82%)
+ create mode 100644 weekly_online_paper_metrices/output/2023-02-20.xlsx
+warning: push.default is unset; its implicit value is changing in
+Git 2.0 from 'matching' to 'simple'. To squelch this message
+and maintain the current behavior after the default changes, use:
+
+  git config --global push.default matching
+
+To squelch this message and adopt the new behavior now, use:
+
+  git config --global push.default simple
+
+See 'git help config' and search for 'push.default' for further information.
+(the 'simple' mode was introduced in Git 1.7.11. Use the similar mode
+'current' instead of 'simple' if you sometimes use older versions of Git)
+
+remote: This repository moved. Please use the new location:        
+remote:   git@github.com:Telogen/Journal-Phenomics.git        
+To git@github.com:Telogen/Phenomics.git
+   fefeac4..908196f  master -> master
+remote: Powered by [01;33mGITEE.COM [0m[[01;35mGNK-6.4[0m][0m        
+To git@gitee.com:Telogen/Journal-Phenomics.git
+   fefeac4..908196f  master -> master

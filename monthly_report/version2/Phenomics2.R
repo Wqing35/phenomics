@@ -38,6 +38,8 @@ tail(data)
 '1. 投稿数量：' %>% message()
 sub_year <- sapply(strsplit(as.character(data$Initial.Date.Submitted),'-'),function(i){i[1]})
 data$sub_year <- sub_year
+sub_month <- sapply(strsplit(as.character(data$Initial.Date.Submitted),'-'),function(i){i[2]})
+data$sub_month <- sub_month
 status_year <- sapply(strsplit(as.character(data$Status.Date),'-'),function(i){i[1]})
 data$status_year <- status_year
 month <- sapply(strsplit(as.character(data$Initial.Date.Submitted),'-'),function(i){paste0(i[1],'-',i[2])})
@@ -74,13 +76,16 @@ word2 %>% print()
 # 图1
 f1 <- ggplot(data = data,aes(x = Month)) +
   geom_bar(width = 0.8,aes(fill = Institution)) + 
-  geom_text(stat='count', aes(label=..count..), vjust= -0.1,size = 6) + 
-  facet_grid(. ~ sub_year, scales = 'free', space = 'free') +
+  geom_text(stat='count', aes(label=..count..), vjust= -0.1,size = 3) + 
+  facet_grid(. ~ sub_month, scales = 'free', space = 'free') +
   theme_bw() +
   labs(y="Number of submissions") + 
   # ggtitle('Number of submissions each month') + 
   # theme(plot.title = element_text(hjust = 0.5)) +
   NoLegend() + 
+  scale_fill_manual(
+    values=c("Fudan Hospital"="#F7B0E8", "Fudan University"="#FFB3B5", "Non-Fudan"="#6BDABC", "Overseas"="#77D3EC"), 
+    labels=c("Fudan Hospital","Fudan University","Non-Fudan","Overseas"))+
   theme(axis.title.x = element_blank(),
         axis.text.x = element_text(size = 12,color = 'black',angle = 45,vjust = 1,hjust = 1),
         axis.title.y = element_text(size = 14,color = 'black'),
@@ -92,22 +97,45 @@ f1
 
 
 # 图2
-pie_data <- data.frame(table(data$Institution))
-colnames(pie_data) <- c('Institutes','Freqency')
-pie_data$Percentage = pie_data$Freq/sum(pie_data$Freq)*100
-pie_data$label = rev(paste0(pie_data$Institutes,'\n',pie_data$Freqency,'\n',round(pie_data$Freq/sum(pie_data$Freq)*100,2),'%'))
-f2 <- ggplot(pie_data, aes(x = "", y = Percentage, fill = Institutes)) +
-  geom_bar(stat = "identity") +
-  coord_polar(theta = "y") +
-  geom_text(aes(y= 100-(cumsum(Percentage)-Percentage/2), x= 1.2),
-            label = rev(pie_data$label),size = 5) +
-  labs(x = '', y = '') +
-  cowplot::theme_nothing() 
-  # ggtitle('Submission distribution') + 
-  # theme(plot.title = element_text(hjust = 0.5))
+dat_2021 <- data[data$sub_year=="2021",]
+dat_2022 <- data[data$sub_year=="2022",]
+dat_2020 <- data[data$sub_year=="2020",]
+dat_2023 <- data[data$sub_year=="2023",]
+
+percent_2021 <- round(table(dat_2021$Institution)/nrow(dat_2021),2)
+percent_2022 <- round(table(dat_2022$Institution)/nrow(dat_2022),2)
+percent_2023 <- c(round(table(dat_2023$Institution)/nrow(dat_2023),2),0)
+percent_2020 <- c(0,round(table(dat_2020$Institution)/nrow(dat_2020),2))
+
+percent_all <- c(percent_2020,percent_2021,percent_2022,percent_2023)
+names(percent_all)[1]="Fudan Hospital"
+names(percent_all)[16]="Non-Fudan"
+
+count <- c(0.3,table(dat_2020$Institution),table(dat_2021$Institution),table(dat_2022$Institution),table(dat_2023$Institution),0.3)
+year <- c(rep("2020",times=4),rep("2021",times=4),rep("2022",times=4),rep("2023",times=4))
+color <- rep(c("#FFB3B5","#F7B0E8","#6BDABC","#77D3EC"),times=4)
+propotion_dat <- as.data.frame(cbind(names(percent_all),year,paste0(percent_all*100,'%'),count,color))
+colnames(propotion_dat) <- c("Institution","Year","Percent","Count","Color")
+
+f2 <- ggplot(propotion_dat, aes(x=Year, y=count, group=Institution)) + 
+  geom_col(aes(fill=Institution), position="dodge") + 
+  #scale_x_discrete(limits=factor(rownames(propotion_dat))) +
+  theme_bw() +
+  scale_fill_manual(
+    values=c("Fudan Hospital"="#F7B0E8", "Fudan University"="#FFB3B5", "Non-Fudan"="#6BDABC", "Overseas"="#77D3EC"), 
+    labels=c("Fudan Hospital","Fudan University","Non-Fudan","Overseas"))+
+  geom_text(size=3,aes(label=Percent, y=count+0.05), position=position_dodge(0.9), vjust=0) +
+  theme(axis.title.x = element_blank(),
+        axis.text.x = element_text(size = 12,color = 'black',angle = 45,vjust = 1,hjust = 1),
+        axis.title.y = element_text(size = 14,color = 'black'),
+        axis.text.y = element_text(size = 12,color = 'black'),
+        axis.ticks.y = element_blank(),
+        plot.title = element_text(hjust = .5)) +
+  ylab(' ')
 f2
 
-fig1 <- ggpubr::ggarrange(plotlist = list(f1, f2), ncol = 2, nrow = 1,widths = c(2.3, 1))
+
+fig1 <- ggpubr::ggarrange(plotlist = list(f1, f2), ncol = 2, nrow = 1,widths = c(1, 1))
 fig1
 
 ggsave('./figures/fig1.png',fig1,width = 12,height = 5)
