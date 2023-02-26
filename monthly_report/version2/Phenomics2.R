@@ -141,6 +141,7 @@ fig1
 ggsave('./figures/fig1.png',fig1,width = 12,height = 5)
 
 
+
 '####################### 二、审稿情况 ###########################' %>% message()
 
 word3 <- paste0('累计接受文章',length(which(data$Current.Status == 'Final Decision Accept')),
