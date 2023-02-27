@@ -36,7 +36,7 @@
    <td style="text-align:center;"> <a href="http://link.springer.com/article/10.1007/s43657-022-00093-8" style="     " >Presence of Rare Variants is ...</a> </td>
    <td style="text-align:center;"> Article </td>
    <td style="text-align:center;"> 2023-02-12 </td>
-   <td style="text-align:center;"> 199 </td>
+   <td style="text-align:center;"> 205 </td>
    <td style="text-align:center;"> 0 </td>
    <td style="text-align:center;"> 0 </td>
    <td style="text-align:center;"> NA </td>
@@ -46,7 +46,7 @@
    <td style="text-align:center;"> <a href="http://link.springer.com/article/10.1007/s43657-022-00089-4" style="     " >Phenomic Studies on Diseases: Potential ...</a> </td>
    <td style="text-align:center;"> Review </td>
    <td style="text-align:center;"> 2023-01-05 </td>
-   <td style="text-align:center;"> 420 </td>
+   <td style="text-align:center;"> 430 </td>
    <td style="text-align:center;"> 1 </td>
    <td style="text-align:center;"> 1 </td>
    <td style="text-align:center;"> NA </td>
@@ -56,7 +56,7 @@
    <td style="text-align:center;"> <a href="http://link.springer.com/article/10.1007/s43657-022-00087-6" style="     " >Deep Learning-Assisted Quantitative Susceptibility Mapping ...</a> </td>
    <td style="text-align:center;"> Article </td>
    <td style="text-align:center;"> 2023-01-05 </td>
-   <td style="text-align:center;"> 350 </td>
+   <td style="text-align:center;"> 354 </td>
    <td style="text-align:center;"> 0 </td>
    <td style="text-align:center;"> 1 </td>
    <td style="text-align:center;"> NA </td>
@@ -106,7 +106,7 @@
    <td style="text-align:center;"> <a href="http://link.springer.com/article/10.1007/s43657-022-00082-x" style="     " >A Genome-Wide Association Study for ...</a> </td>
    <td style="text-align:center;"> Article </td>
    <td style="text-align:center;"> 2022-12-05 </td>
-   <td style="text-align:center;"> 560 </td>
+   <td style="text-align:center;"> 564 </td>
    <td style="text-align:center;"> 0 </td>
    <td style="text-align:center;"> 1 </td>
    <td style="text-align:center;"> NA </td>
@@ -136,7 +136,7 @@
    <td style="text-align:center;"> <a href="http://link.springer.com/article/10.1007/s43657-022-00078-7" style="     " >A Meta-Analysis of the Genome-Wide ...</a> </td>
    <td style="text-align:center;"> Article </td>
    <td style="text-align:center;"> 2022-11-18 </td>
-   <td style="text-align:center;"> 837 </td>
+   <td style="text-align:center;"> 840 </td>
    <td style="text-align:center;"> 0 </td>
    <td style="text-align:center;"> 7 </td>
    <td style="text-align:center;"> 3 </td>
@@ -146,7 +146,7 @@
    <td style="text-align:center;"> <a href="http://link.springer.com/article/10.1007/s43657-022-00069-8" style="     " >Increased Soluble Epoxide Hydrolase Activity ...</a> </td>
    <td style="text-align:center;"> Article </td>
    <td style="text-align:center;"> 2022-10-27 </td>
-   <td style="text-align:center;"> 744 </td>
+   <td style="text-align:center;"> 747 </td>
    <td style="text-align:center;"> 0 </td>
    <td style="text-align:center;"> 1 </td>
    <td style="text-align:center;"> 3 </td>
@@ -186,7 +186,7 @@
    <td style="text-align:center;"> <a href="http://link.springer.com/article/10.1007/s43657-022-00073-y" style="     " >Skin Microbiome, Metabolome and Skin ...</a> </td>
    <td style="text-align:center;"> Review </td>
    <td style="text-align:center;"> 2022-10-10 </td>
-   <td style="text-align:center;"> 2097 </td>
+   <td style="text-align:center;"> 2106 </td>
    <td style="text-align:center;"> 0 </td>
    <td style="text-align:center;"> 2 </td>
    <td style="text-align:center;"> 2 </td>
@@ -256,7 +256,7 @@
    <td style="text-align:center;"> <a href="http://link.springer.com/article/10.1007/s43657-022-00064-z" style="     " >Cross-sectional Exploration of the Relationship ...</a> </td>
    <td style="text-align:center;"> Article </td>
    <td style="text-align:center;"> 2022-08-16 </td>
-   <td style="text-align:center;"> 778 </td>
+   <td style="text-align:center;"> 781 </td>
    <td style="text-align:center;"> 0 </td>
    <td style="text-align:center;"> 2 </td>
    <td style="text-align:center;"> NA </td>
@@ -266,7 +266,7 @@
    <td style="text-align:center;"> <a href="http://link.springer.com/article/10.1007/s43657-022-00066-x" style="     " >Human Genetic Variants Associated with ...</a> </td>
    <td style="text-align:center;"> Article </td>
    <td style="text-align:center;"> 2022-08-13 </td>
-   <td style="text-align:center;"> 1218 </td>
+   <td style="text-align:center;"> 1223 </td>
    <td style="text-align:center;"> 2 </td>
    <td style="text-align:center;"> 2 </td>
    <td style="text-align:center;"> 2 </td>
@@ -326,7 +326,7 @@
    <td style="text-align:center;"> <a href="http://link.springer.com/article/10.1007/s43657-022-00062-1" style="     " >Identification of Germline Mutations in ...</a> </td>
    <td style="text-align:center;"> Article </td>
    <td style="text-align:center;"> 2022-06-11 </td>
-   <td style="text-align:center;"> 1208 </td>
+   <td style="text-align:center;"> 1210 </td>
    <td style="text-align:center;"> 1 </td>
    <td style="text-align:center;"> 1 </td>
    <td style="text-align:center;"> NA </td>
@@ -356,7 +356,7 @@
    <td style="text-align:center;"> <a href="http://link.springer.com/article/10.1007/s43657-021-00043-w" style="     " >Emerging Regulatory Mechanisms of N6-Methyladenosine ...</a> </td>
    <td style="text-align:center;"> Review </td>
    <td style="text-align:center;"> 2022-05-25 </td>
-   <td style="text-align:center;"> 1221 </td>
+   <td style="text-align:center;"> 1226 </td>
    <td style="text-align:center;"> 2 </td>
    <td style="text-align:center;"> 1 </td>
    <td style="text-align:center;"> 3 </td>
@@ -426,7 +426,7 @@
    <td style="text-align:center;"> <a href="http://link.springer.com/article/10.1007/s43657-022-00048-z" style="     " >A Comprehensive Review of High ...</a> </td>
    <td style="text-align:center;"> Review </td>
    <td style="text-align:center;"> 2022-04-04 </td>
-   <td style="text-align:center;"> 3549 </td>
+   <td style="text-align:center;"> 3562 </td>
    <td style="text-align:center;"> 14 </td>
    <td style="text-align:center;"> 7 </td>
    <td style="text-align:center;"> 2 </td>
@@ -476,7 +476,7 @@
    <td style="text-align:center;"> <a href="http://link.springer.com/article/10.1007/s43657-022-00045-2" style="     " >Immunosuppression Induced by Brain-Specific HDAC6 ...</a> </td>
    <td style="text-align:center;"> Article </td>
    <td style="text-align:center;"> 2022-02-23 </td>
-   <td style="text-align:center;"> 1184 </td>
+   <td style="text-align:center;"> 1188 </td>
    <td style="text-align:center;"> 0 </td>
    <td style="text-align:center;"> 0 </td>
    <td style="text-align:center;"> 2 </td>
@@ -536,7 +536,7 @@
    <td style="text-align:center;"> <a href="http://link.springer.com/article/10.1007/s43657-021-00038-7" style="     " >Seasonality and Sex-Biased Fluctuation of ...</a> </td>
    <td style="text-align:center;"> Article </td>
    <td style="text-align:center;"> 2022-01-31 </td>
-   <td style="text-align:center;"> 943 </td>
+   <td style="text-align:center;"> 945 </td>
    <td style="text-align:center;"> 0 </td>
    <td style="text-align:center;"> 0 </td>
    <td style="text-align:center;"> 2 </td>
@@ -546,7 +546,7 @@
    <td style="text-align:center;"> <a href="http://link.springer.com/article/10.1007/s43657-021-00037-8" style="     " >Why Do We Care More ...</a> </td>
    <td style="text-align:center;"> Commentary </td>
    <td style="text-align:center;"> 2022-01-28 </td>
-   <td style="text-align:center;"> 2447 </td>
+   <td style="text-align:center;"> 2449 </td>
    <td style="text-align:center;"> 4 </td>
    <td style="text-align:center;"> 21 </td>
    <td style="text-align:center;"> 2 </td>
@@ -566,7 +566,7 @@
    <td style="text-align:center;"> <a href="http://link.springer.com/article/10.1007/s43657-021-00034-x" style="     " >Pan-cancer analysis identifies RNA helicase ...</a> </td>
    <td style="text-align:center;"> Article </td>
    <td style="text-align:center;"> 2022-01-19 </td>
-   <td style="text-align:center;"> 1414 </td>
+   <td style="text-align:center;"> 1417 </td>
    <td style="text-align:center;"> 0 </td>
    <td style="text-align:center;"> 0 </td>
    <td style="text-align:center;"> 2 </td>
@@ -606,7 +606,7 @@
    <td style="text-align:center;"> <a href="http://link.springer.com/article/10.1007/s43657-021-00028-9" style="     " >CYP2C9*3 Increases the Ibuprofen Response ...</a> </td>
    <td style="text-align:center;"> Correspondence </td>
    <td style="text-align:center;"> 2021-11-11 </td>
-   <td style="text-align:center;"> 1048 </td>
+   <td style="text-align:center;"> 1051 </td>
    <td style="text-align:center;"> 0 </td>
    <td style="text-align:center;"> 0 </td>
    <td style="text-align:center;"> 2 </td>
@@ -706,7 +706,7 @@
    <td style="text-align:center;"> <a href="http://link.springer.com/article/10.1007/s43657-021-00019-w" style="     " >Computational Methods for Prediction of ...</a> </td>
    <td style="text-align:center;"> Review </td>
    <td style="text-align:center;"> 2021-08-06 </td>
-   <td style="text-align:center;"> 1897 </td>
+   <td style="text-align:center;"> 1899 </td>
    <td style="text-align:center;"> 2 </td>
    <td style="text-align:center;"> 3 </td>
    <td style="text-align:center;"> 1 </td>
@@ -776,7 +776,7 @@
    <td style="text-align:center;"> <a href="http://link.springer.com/article/10.1007/s43657-021-00011-4" style="     " >Distribution Atlas of COVID-19 Pneumonia ...</a> </td>
    <td style="text-align:center;"> Article </td>
    <td style="text-align:center;"> 2021-05-11 </td>
-   <td style="text-align:center;"> 2085 </td>
+   <td style="text-align:center;"> 2088 </td>
    <td style="text-align:center;"> 3 </td>
    <td style="text-align:center;"> 1 </td>
    <td style="text-align:center;"> 1 </td>
@@ -796,9 +796,9 @@
    <td style="text-align:center;"> <a href="http://link.springer.com/article/10.1007/s43657-020-00007-6" style="     " >High-Throughput Phenotyping: A Platform to ...</a> </td>
    <td style="text-align:center;"> Review </td>
    <td style="text-align:center;"> 2021-05-11 </td>
-   <td style="text-align:center;"> 0 </td>
-   <td style="text-align:center;"> 0 </td>
-   <td style="text-align:center;"> 0 </td>
+   <td style="text-align:center;"> 3978 </td>
+   <td style="text-align:center;"> 13 </td>
+   <td style="text-align:center;"> 1 </td>
    <td style="text-align:center;"> 1 </td>
    <td style="text-align:center;"> 2 </td>
   </tr>
