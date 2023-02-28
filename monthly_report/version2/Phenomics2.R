@@ -7,7 +7,7 @@ setwd('~/Phenomics/')
 
 file_names <- list.files('../Phenomics/monthly_report/version2')
 file_name <- (file_names[str_detect(string = file_names,pattern = 'Edit')] %>% sort(T))[1]
-
+file_name
 
 data <- read.table(paste0('../Phenomics/monthly_report/version2/',file_name),
                    sep = '\t',quote = '',header=T)
@@ -16,7 +16,7 @@ data$Country <- unlist(strsplit(sapply(strsplit(data$Author.Name,'\\('),function
 data$is_China <- factor(data$Country == 'CHINA',labels = c('Overseas','China'))
 data <- data[order(data$Manuscript.Number),]
 
-write.csv(data,paste0('../Phenomics/monthly_report/20230131_out.csv'),fileEncoding = 'UTF-8')
+write.csv(data,paste0('../Phenomics/monthly_report/20230228_out.csv'),fileEncoding = 'UTF-8')
 
 
 
@@ -26,10 +26,10 @@ write.csv(data,paste0('../Phenomics/monthly_report/20230131_out.csv'),fileEncodi
 
 ################################################################
 this_year <- '2023'
-this_month <- '1'
-this_date <- '31'
+this_month <- '2'
+this_date <- '28'
 
-data <- readxl::read_xlsx('../Phenomics/monthly_report/version2/Phenomics_0131.xlsx')
+data <- readxl::read_xlsx('../Phenomics/monthly_report/version2/Phenomics_0228.xlsx')
 tail(data)
 # data <- data[-nrow(data),]
 
@@ -87,7 +87,7 @@ f1 <- ggplot(data = data,aes(x = Month)) +
     values=c("Fudan Hospital"="#F7B0E8", "Fudan University"="#FFB3B5", "Non-Fudan"="#6BDABC", "Overseas"="#77D3EC"), 
     labels=c("Fudan Hospital","Fudan University","Non-Fudan","Overseas"))+
   theme(axis.title.x = element_blank(),
-        axis.text.x = element_text(size = 12,color = 'black',angle = 45,vjust = 1,hjust = 1),
+        axis.text.x = element_text(size = 10,color = 'black',angle = 45,vjust = 1,hjust = 1),
         axis.title.y = element_text(size = 14,color = 'black'),
         axis.text.y = element_text(size = 12,color = 'black'),
         axis.ticks.y = element_blank(),
@@ -104,12 +104,11 @@ dat_2023 <- data[data$sub_year=="2023",]
 
 percent_2021 <- round(table(dat_2021$Institution)/nrow(dat_2021),2)
 percent_2022 <- round(table(dat_2022$Institution)/nrow(dat_2022),2)
-percent_2023 <- c(round(table(dat_2023$Institution)/nrow(dat_2023),2),0)
+percent_2023 <- round(table(dat_2023$Institution)/nrow(dat_2023),2)
 percent_2020 <- c(0,round(table(dat_2020$Institution)/nrow(dat_2020),2))
 
 percent_all <- c(percent_2020,percent_2021,percent_2022,percent_2023)
 names(percent_all)[1]="Fudan Hospital"
-names(percent_all)[16]="Non-Fudan"
 
 count <- c(0.3,table(dat_2020$Institution),table(dat_2021$Institution),table(dat_2022$Institution),table(dat_2023$Institution),0.3)
 year <- c(rep("2020",times=4),rep("2021",times=4),rep("2022",times=4),rep("2023",times=4))
@@ -126,7 +125,7 @@ f2 <- ggplot(propotion_dat, aes(x=Year, y=count, group=Institution)) +
     labels=c("Fudan Hospital","Fudan University","Non-Fudan","Overseas"))+
   geom_text(size=3,aes(label=Percent, y=count+0.05), position=position_dodge(0.9), vjust=0) +
   theme(axis.title.x = element_blank(),
-        axis.text.x = element_text(size = 12,color = 'black',angle = 45,vjust = 1,hjust = 1),
+        axis.text.x = element_text(size = 10,color = 'black',angle = 45,vjust = 1,hjust = 1),
         axis.title.y = element_text(size = 14,color = 'black'),
         axis.text.y = element_text(size = 12,color = 'black'),
         axis.ticks.y = element_blank(),
@@ -177,8 +176,9 @@ RT <- colSums(table(data$Current.Status,data$status_year)[c(
 RT_idx <- which(data$Current.Status %in% c('Final Decision Reject','Submission Transferred'))
 
 '# 最后一列' %>% message()
-last <- colSums(table(data$Current.Status,data$status_year)[c(
-  'Content Files Deleted - Forced to Withdrawn','Sent Back to Author'),]) %>% print()
+tmp_row_idx <- which(rownames(table(data$Current.Status,data$status_year)) %in% c('Content Files Deleted - Forced to Withdrawn','Sent Back to Author'))
+table(data$Current.Status,data$status_year)[tmp_row_idx,]
+last <- colSums(table(data$Current.Status,data$status_year)[tmp_row_idx,]) %>% print()
 last_idx <- which(data$Current.Status %in% c('Content Files Deleted - Forced to Withdrawn',
                                              'Sent Back to Author'))
 
