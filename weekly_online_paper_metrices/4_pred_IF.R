@@ -5,13 +5,13 @@ library(stringr)
 library(ggpubr)
 library(aplot)
 library(dplyr)
-setwd('/mdshare/node8/tianlejin/Phenomics/')
+setwd('/mdshare/node8/txmdata/Phenomics/')
 
 
 # ref: https://zhuanlan.zhihu.com/p/138831192
 # IF2023 = Citation2023/(N2022+N2021)
 
-plot_file_names <- list.files('../Phenomics/weekly_online_paper_metrices/output/')
+plot_file_names <- list.files('./weekly_online_paper_metrices/output/')
 plot_file_names
 
 begin_day <- "2022-12-26"
@@ -22,12 +22,12 @@ time_fold <- 365/diff_day
 time_fold
 
 
-begin_df <- readxl::read_excel('/mdshare/node8/tianlejin/Phenomics/weekly_online_paper_metrices/output/2022-12-26.xlsx')
+begin_df <- readxl::read_excel('./weekly_online_paper_metrices/output/2022-12-26.xlsx')
 begin_citation <- sum(begin_df$citation)
 begin_citation
 
 end_df <- readxl::read_excel(
-  paste0('/mdshare/node8/tianlejin/Phenomics/weekly_online_paper_metrices/output/',
+  paste0('./weekly_online_paper_metrices/output/',
          rev(plot_file_names)[1]))
 end_citation <- sum(end_df$citation)
 end_citation

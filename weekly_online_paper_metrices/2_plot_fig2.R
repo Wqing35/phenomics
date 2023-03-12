@@ -4,12 +4,12 @@ library(stringr)
 library(ggpubr)
 library(aplot)
 library(dplyr)
-setwd('/mdshare/node8/tianlejin/Phenomics/')
+setwd('/mdshare/node8/txmdata/Phenomics/')
 
-plot_file_names <- list.files('../Phenomics/weekly_online_paper_metrices/output/')
+plot_file_names <- list.files('./weekly_online_paper_metrices/output/')
 plot_file_names
 
-full_file_name <- paste0('/mdshare/node8/tianlejin/Phenomics/weekly_online_paper_metrices/output/',
+full_file_name <- paste0('./weekly_online_paper_metrices/output/',
                          rev(plot_file_names)[1])
 out_df <- readxl::read_excel(full_file_name)
 out_df <- filter(out_df,type != 'Correction')
@@ -42,7 +42,7 @@ out_df$citation_range <- factor(out_df$citation_range,
 
 p2 <- ggplot(out_df,aes(x = citation_range)) +
   geom_bar(width = 0.6, aes(fill = mytype)) +
-  geom_text(stat = "count", aes(label = ..count..), vjust = -0.5,size = 4) +
+  geom_text(stat = "count", aes(label = after_stat(count)), vjust = -0.5,size = 4) +
   ggtitle("Citation distribution") +
   theme_bw() +
   xlab('Citation ranges') +

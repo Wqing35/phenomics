@@ -1,10 +1,10 @@
-# fig2
+# fig3
 library(ggplot2)
 library(stringr)
 library(ggpubr)
 library(aplot)
 library(dplyr)
-setwd('/mdshare/node8/tianlejin/Phenomics/')
+setwd('/mdshare/node8/txmdata/Phenomics/')
 
 
 Subjects <- c(rep('Phenomics',20),

@@ -1,13 +1,13 @@
 # get_online_paper_metrices
 # devtools::install_github('Telogen/ASNJ')
-setwd('/mdshare/node8/tianlejin/Phenomics/')
+setwd('/mdshare/node8/txmdata/Phenomics/')
 library(ASNJ)
 library(dplyr)
 library(stringr)
 library(ggplot2)
 
 
-online_data <- read.csv('../Phenomics/weekly_online_paper_metrices/SearchResults.csv')
+online_data <- read.csv('./weekly_online_paper_metrices/SearchResults.csv')
 online_data <- filter(online_data,Content.Type != 'Journal')
 
 all_Phenomics_paper_metrics <- get_all_Phenomics_paper_metrics(online_data,sleep_seconds = 5)

@@ -4,15 +4,15 @@ library(stringr)
 library(ggpubr)
 library(aplot)
 library(dplyr)
-setwd('/mdshare/node8/tianlejin/Phenomics/')
+setwd('/mdshare/node8/txmdata/Phenomics/')
 
-plot_file_names <- list.files('../Phenomics/weekly_online_paper_metrices/output/')
+plot_file_names <- list.files('./weekly_online_paper_metrices/output/')
 plot_file_names <- rev(plot_file_names)[1:15]
 
 df <- pbmcapply::pbmclapply(plot_file_names,function(file_name){
   # file_name <- rev(plot_file_names)[1]
   file_name
-  full_file_name <- paste0('/mdshare/node8/tianlejin/Phenomics/weekly_online_paper_metrices/output/',file_name)
+  full_file_name <- paste0('./weekly_online_paper_metrices/output/',file_name)
   if(str_detect(file_name,'xlsx')){
     out_df <- readxl::read_excel(full_file_name)
   }else{

@@ -4,12 +4,12 @@
 library(kableExtra)
 library(knitr)
 library(dplyr)
-setwd('/mdshare/node8/tianlejin/Phenomics/')
+setwd('/mdshare/node8/txmdata/Phenomics/')
 
-plot_file_names <- list.files('../Phenomics/weekly_online_paper_metrices/output/')
+plot_file_names <- list.files('./weekly_online_paper_metrices/output/')
 file_name <- rev(plot_file_names)[1]
 file_name
-full_file_name <- paste0('/mdshare/node8/tianlejin/Phenomics/weekly_online_paper_metrices/output/',file_name)
+full_file_name <- paste0('./weekly_online_paper_metrices/output/',file_name)
 out_df <- readxl::read_excel(full_file_name)
 # knitr::kable(out_df)
 out_df <- filter(out_df,type != 'Correction')
@@ -34,7 +34,7 @@ readme_table <- select(out_df,
                        Volume = volume,
                        Issue = issue)
 readme_kable <- kable(readme_table,escape = F,align = 'c')
-cat(readme_kable, file = "../Phenomics/weekly_online_paper_metrices/README.md")
+cat(readme_kable, file = "./weekly_online_paper_metrices/README.md")
  
 
 
