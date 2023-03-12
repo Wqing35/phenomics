@@ -1,196 +1,52 @@
---2023-03-05 23:40:03--  https://link.springer.com/search/csv?query=&search-within=Jounal&facet-journal-id=43657
-Resolving link.springer.com (link.springer.com)... 146.75.112.95
-Connecting to link.springer.com (link.springer.com)|146.75.112.95|:443... connected.
+--2023-03-12 23:40:03--  https://link.springer.com/search/csv?query=&search-within=Jounal&facet-journal-id=43657
+Resolving link.springer.com (link.springer.com)... 151.101.108.95
+Connecting to link.springer.com (link.springer.com)|151.101.108.95|:443... connected.
 WARNING: cannot verify link.springer.com's certificate, issued by ‘/C=US/O=Let's Encrypt/CN=R3’:
   Issued certificate has expired.
 HTTP request sent, awaiting response... 302 Found
 Location: https://idp.springer.com/authorize?redirect_uri=https://link.springer.com/search/csv?query%3D%26search-within%3DJounal%26facet-journal-id%3D43657&client_id=springerlink&response_type=cookie [following]
---2023-03-05 23:40:05--  https://idp.springer.com/authorize?redirect_uri=https://link.springer.com/search/csv?query%3D%26search-within%3DJounal%26facet-journal-id%3D43657&client_id=springerlink&response_type=cookie
-Resolving idp.springer.com (idp.springer.com)... 146.75.112.95
-Connecting to idp.springer.com (idp.springer.com)|146.75.112.95|:443... connected.
-WARNING: cannot verify idp.springer.com's certificate, issued by ‘/C=US/O=Let's Encrypt/CN=R3’:
-  Issued certificate has expired.
+--2023-03-12 23:40:05--  https://idp.springer.com/authorize?redirect_uri=https://link.springer.com/search/csv?query%3D%26search-within%3DJounal%26facet-journal-id%3D43657&client_id=springerlink&response_type=cookie
+Resolving idp.springer.com (idp.springer.com)... 34.149.66.100
+Connecting to idp.springer.com (idp.springer.com)|34.149.66.100|:443... connected.
 HTTP request sent, awaiting response... 302 Found
-Location: https://idp.springer.com/transit?redirect_uri=https%3A%2F%2Flink.springer.com%2Fsearch%2Fcsv%3Fquery%3D%26search-within%3DJounal%26facet-journal-id%3D43657&code=7cab693d-e189-4c4a-81e0-173ea7a47784 [following]
---2023-03-05 23:40:13--  https://idp.springer.com/transit?redirect_uri=https%3A%2F%2Flink.springer.com%2Fsearch%2Fcsv%3Fquery%3D%26search-within%3DJounal%26facet-journal-id%3D43657&code=7cab693d-e189-4c4a-81e0-173ea7a47784
+Location: https://idp.springer.com/transit?redirect_uri=https%3A%2F%2Flink.springer.com%2Fsearch%2Fcsv%3Fquery%3D%26search-within%3DJounal%26facet-journal-id%3D43657&code=edae41ef-2ddc-418f-82bc-72f94c7712a8 [following]
+--2023-03-12 23:40:06--  https://idp.springer.com/transit?redirect_uri=https%3A%2F%2Flink.springer.com%2Fsearch%2Fcsv%3Fquery%3D%26search-within%3DJounal%26facet-journal-id%3D43657&code=edae41ef-2ddc-418f-82bc-72f94c7712a8
 Reusing existing connection to idp.springer.com:443.
 HTTP request sent, awaiting response... 302 Found
 Location: https://link.springer.com/search/csv?query=&search-within=Jounal&facet-journal-id=43657 [following]
---2023-03-05 23:40:16--  https://link.springer.com/search/csv?query=&search-within=Jounal&facet-journal-id=43657
-Connecting to link.springer.com (link.springer.com)|146.75.112.95|:443... connected.
+--2023-03-12 23:40:06--  https://link.springer.com/search/csv?query=&search-within=Jounal&facet-journal-id=43657
+Connecting to link.springer.com (link.springer.com)|151.101.108.95|:443... connected.
 WARNING: cannot verify link.springer.com's certificate, issued by ‘/C=US/O=Let's Encrypt/CN=R3’:
   Issued certificate has expired.
 HTTP request sent, awaiting response... 200 OK
 Length: unspecified [text/csv]
 Saving to: ‘/mdshare/node8/tianlejin/Phenomics/weekly_online_paper_metrices/SearchResults.csv’
 
-     0K .......... .......... .......                           967 =30s
+     0K .......... .......... ........                          102K=0.3s
 
-2023-03-05 23:41:10 (967 B/s) - ‘/mdshare/node8/tianlejin/Phenomics/weekly_online_paper_metrices/SearchResults.csv’ saved [28621]
+2023-03-12 23:40:09 (102 KB/s) - ‘/mdshare/node8/tianlejin/Phenomics/weekly_online_paper_metrices/SearchResults.csv’ saved [29405]
 
-
-Attaching package: ‘dplyr’
-
-The following objects are masked from ‘package:stats’:
-
-    filter, lag
-
-The following objects are masked from ‘package:base’:
-
-    intersect, setdiff, setequal, union
-
-1 of 89...
-2 of 89...
-3 of 89...
-Error in open.connection(x, "rb") : 
-  Timeout was reached: [link.springer.com] Operation timed out after 10506 milliseconds with 0 out of 0 bytes received
-Calls: get_all_Phenomics_paper_metrics ... get_Phenomics_paper_metrics -> <Anonymous> -> read_html.default
+Error: package or namespace load failed for ‘dplyr’ in dyn.load(file, DLLpath = DLLpath, ...):
+ unable to load shared object '/local/txm/R/x86_64-pc-linux-gnu-library/4.1/dplyr/libs/dplyr.so':
+  /lib64/libstdc++.so.6: version `CXXABI_1.3.9' not found (required by /local/txm/R/x86_64-pc-linux-gnu-library/4.1/dplyr/libs/dplyr.so)
 Execution halted
-
-Attaching package: ‘dplyr’
-
-The following objects are masked from ‘package:stats’:
-
-    filter, lag
-
-The following objects are masked from ‘package:base’:
-
-    intersect, setdiff, setequal, union
-
- [1] "2022-08-15.txt"  "2022-08-22.txt"  "2022-08-29.txt"  "2022-09-05.txt" 
- [5] "2022-09-12.txt"  "2022-09-19.txt"  "2022-09-26.txt"  "2022-10-03.xlsx"
- [9] "2022-10-10.xlsx" "2022-10-17.xlsx" "2022-10-24.xlsx" "2022-10-31.xlsx"
-[13] "2022-11-07.xlsx" "2022-11-14.xlsx" "2022-11-21.xlsx" "2022-11-28.xlsx"
-[17] "2022-12-05.xlsx" "2022-12-12.xlsx" "2022-12-19.xlsx" "2022-12-26.xlsx"
-[21] "2023-01-02.xlsx" "2023-01-09.xlsx" "2023-01-16.xlsx" "2023-01-23.xlsx"
-[25] "2023-01-30.xlsx" "2023-02-06.xlsx" "2023-02-13.xlsx" "2023-02-20.xlsx"
-[29] "2023-02-27.xlsx"
-
-    0   1-5 11-50  6-10 
-   37    41     2     4 
-
-Attaching package: ‘dplyr’
-
-The following objects are masked from ‘package:stats’:
-
-    filter, lag
-
-The following objects are masked from ‘package:base’:
-
-    intersect, setdiff, setequal, union
-
-
-Attaching package: ‘dplyr’
-
-The following objects are masked from ‘package:stats’:
-
-    filter, lag
-
-The following objects are masked from ‘package:base’:
-
-    intersect, setdiff, setequal, union
-
-
-Attaching package: ‘dplyr’
-
-The following object is masked from ‘package:kableExtra’:
-
-    group_rows
-
-The following objects are masked from ‘package:stats’:
-
-    filter, lag
-
-The following objects are masked from ‘package:base’:
-
-    intersect, setdiff, setequal, union
-
-[1] "2023-02-27.xlsx"
-# A tibble: 6 × 13
-  title  url   type   year year_…¹ onlin…² access citat…³ altme…⁴ corre…⁵ volume
-  <chr>  <chr> <chr> <dbl> <chr>   <chr>    <dbl>   <dbl>   <dbl> <chr>   <chr> 
-1 Deep … http… Prot…  2023 2023-02 2023-0…    115       0       0 Feng Q… <NA>  
-2 Manag… http… Revi…  2023 2023-02 2023-0…    171       0       0 Hongfe… <NA>  
-3 Prese… http… Arti…  2023 2023-02 2023-0…    205       0       0 Jiucun… <NA>  
-4 Pheno… http… Revi…  2023 2023-01 2023-0…    430       1       1 Weihai… <NA>  
-5 Deep … http… Arti…  2023 2023-01 2023-0…    354       0       1 Xiao-Y… <NA>  
-6 Proto… http… Prot…  2023 2023-01 2023-0…    268       0       1 Mei Ti… <NA>  
-# … with 2 more variables: issue <chr>, update_time <chr>, and abbreviated
-#   variable names ¹​year_month, ²​online_time, ³​citation, ⁴​altmetric,
-#   ⁵​correspond_authors
- [1] "title"                 "url"                   "type"                 
- [4] "year"                  "year_month"            "online_time"          
- [7] "access"                "citation"              "altmetric"            
-[10] "correspond_authors"    "volume"                "issue"                
-[13] "update_time"           "short_title"           "short_title_with_link"
-
-Attaching package: ‘dplyr’
-
-The following objects are masked from ‘package:stats’:
-
-    filter, lag
-
-The following objects are masked from ‘package:base’:
-
-    intersect, setdiff, setequal, union
-
- [1] "2022-08-15.txt"  "2022-08-22.txt"  "2022-08-29.txt"  "2022-09-05.txt" 
- [5] "2022-09-12.txt"  "2022-09-19.txt"  "2022-09-26.txt"  "2022-10-03.xlsx"
- [9] "2022-10-10.xlsx" "2022-10-17.xlsx" "2022-10-24.xlsx" "2022-10-31.xlsx"
-[13] "2022-11-07.xlsx" "2022-11-14.xlsx" "2022-11-21.xlsx" "2022-11-28.xlsx"
-[17] "2022-12-05.xlsx" "2022-12-12.xlsx" "2022-12-19.xlsx" "2022-12-26.xlsx"
-[21] "2023-01-02.xlsx" "2023-01-09.xlsx" "2023-01-16.xlsx" "2023-01-23.xlsx"
-[25] "2023-01-30.xlsx" "2023-02-06.xlsx" "2023-02-13.xlsx" "2023-02-20.xlsx"
-[29] "2023-02-27.xlsx"
-[1] 63
-[1] 5.793651
-[1] 102
-[1] 132
-[1] 2.414
-         day Pred_IF
-1 2023-02-27   2.414
-         day Pred_IF
-1 2023-01-02   0.724
-2 2023-01-09   1.448
-3 2023-01-16   1.448
-4 2023-01-23   1.448
-5 2023-01-30   2.607
-6 2023-02-06   2.414
-7 2023-02-13   2.173
-8 2023-02-20   2.173
-9 2023-02-27   2.414
-          day Pred_IF
-1  2023-01-02   0.724
-2  2023-01-09   1.448
-3  2023-01-16   1.448
-4  2023-01-23   1.448
-5  2023-01-30   2.607
-6  2023-02-06   2.414
-7  2023-02-13   2.173
-8  2023-02-20   2.173
-9  2023-02-27   2.414
-10 2023-02-27   2.414
-[master 0e7e800] 20230305
- 4 files changed, 47 insertions(+), 175 deletions(-)
- rewrite figures/fig_IF.png (95%)
-warning: push.default is unset; its implicit value is changing in
-Git 2.0 from 'matching' to 'simple'. To squelch this message
-and maintain the current behavior after the default changes, use:
-
-  git config --global push.default matching
-
-To squelch this message and adopt the new behavior now, use:
-
-  git config --global push.default simple
-
-See 'git help config' and search for 'push.default' for further information.
-(the 'simple' mode was introduced in Git 1.7.11. Use the similar mode
-'current' instead of 'simple' if you sometimes use older versions of Git)
-
-remote: This repository moved. Please use the new location:        
-remote:   git@github.com:Telogen/Journal-Phenomics.git        
-To git@github.com:Telogen/Phenomics.git
-   2d0a45c..0e7e800  master -> master
-remote: Powered by [01;33mGITEE.COM [0m[[01;35mGNK-6.4[0m][0m        
-To git@gitee.com:Telogen/Journal-Phenomics.git
-   2d0a45c..0e7e800  master -> master
+Error: package or namespace load failed for ‘ggpubr’ in dyn.load(file, DLLpath = DLLpath, ...):
+ unable to load shared object '/local/txm/R/x86_64-pc-linux-gnu-library/4.1/dplyr/libs/dplyr.so':
+  /lib64/libstdc++.so.6: version `CXXABI_1.3.9' not found (required by /local/txm/R/x86_64-pc-linux-gnu-library/4.1/dplyr/libs/dplyr.so)
+Execution halted
+Error: package or namespace load failed for ‘ggpubr’ in dyn.load(file, DLLpath = DLLpath, ...):
+ unable to load shared object '/local/txm/R/x86_64-pc-linux-gnu-library/4.1/dplyr/libs/dplyr.so':
+  /lib64/libstdc++.so.6: version `CXXABI_1.3.9' not found (required by /local/txm/R/x86_64-pc-linux-gnu-library/4.1/dplyr/libs/dplyr.so)
+Execution halted
+Error: package or namespace load failed for ‘ggpubr’ in dyn.load(file, DLLpath = DLLpath, ...):
+ unable to load shared object '/local/txm/R/x86_64-pc-linux-gnu-library/4.1/dplyr/libs/dplyr.so':
+  /lib64/libstdc++.so.6: version `CXXABI_1.3.9' not found (required by /local/txm/R/x86_64-pc-linux-gnu-library/4.1/dplyr/libs/dplyr.so)
+Execution halted
+Error: package or namespace load failed for ‘kableExtra’ in dyn.load(file, DLLpath = DLLpath, ...):
+ unable to load shared object '/local/txm/R/x86_64-pc-linux-gnu-library/4.1/systemfonts/libs/systemfonts.so':
+  /lib64/libstdc++.so.6: version `GLIBCXX_3.4.21' not found (required by /local/txm/R/x86_64-pc-linux-gnu-library/4.1/systemfonts/libs/systemfonts.so)
+Execution halted
+Error: package or namespace load failed for ‘ggpubr’ in dyn.load(file, DLLpath = DLLpath, ...):
+ unable to load shared object '/local/txm/R/x86_64-pc-linux-gnu-library/4.1/dplyr/libs/dplyr.so':
+  /lib64/libstdc++.so.6: version `CXXABI_1.3.9' not found (required by /local/txm/R/x86_64-pc-linux-gnu-library/4.1/dplyr/libs/dplyr.so)
+Execution halted
