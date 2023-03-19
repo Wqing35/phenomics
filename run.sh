@@ -1,6 +1,6 @@
 cd /mdshare/node8/txmdata/Phenomics
 
-bash /mdshare/node8/tianlejin/software/webConnect.sh
+bash /home/timo/software/webConnect.sh
 
 wget -O /mdshare/node8/txmdata/Phenomics/weekly_online_paper_metrices/SearchResults.csv --no-check-certificate "https://link.springer.com/search/csv?query=&search-within=Jounal&facet-journal-id=43657"
 

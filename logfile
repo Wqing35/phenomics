@@ -1,56 +1,26 @@
---2023-03-19 10:22:06--  https://link.springer.com/search/csv?query=&search-within=Jounal&facet-journal-id=43657
-Resolving link.springer.com (link.springer.com)... failed: Temporary failure in name resolution.
-wget: unable to resolve host address ‘link.springer.com’
+--2023-03-19 10:37:01--  https://link.springer.com/search/csv?query=&search-within=Jounal&facet-journal-id=43657
+Resolving link.springer.com (link.springer.com)... 34.149.66.100
+Connecting to link.springer.com (link.springer.com)|34.149.66.100|:443... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: https://idp.springer.com/authorize?redirect_uri=https://link.springer.com/search/csv?query%3D%26search-within%3DJounal%26facet-journal-id%3D43657&client_id=springerlink&response_type=cookie [following]
+--2023-03-19 10:37:02--  https://idp.springer.com/authorize?redirect_uri=https://link.springer.com/search/csv?query%3D%26search-within%3DJounal%26facet-journal-id%3D43657&client_id=springerlink&response_type=cookie
+Resolving idp.springer.com (idp.springer.com)... 34.149.66.100
+Connecting to idp.springer.com (idp.springer.com)|34.149.66.100|:443... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: https://idp.springer.com/transit?redirect_uri=https%3A%2F%2Flink.springer.com%2Fsearch%2Fcsv%3Fquery%3D%26search-within%3DJounal%26facet-journal-id%3D43657&code=e461386c-2ce8-4281-a8f7-74ec293de3df [following]
+--2023-03-19 10:37:03--  https://idp.springer.com/transit?redirect_uri=https%3A%2F%2Flink.springer.com%2Fsearch%2Fcsv%3Fquery%3D%26search-within%3DJounal%26facet-journal-id%3D43657&code=e461386c-2ce8-4281-a8f7-74ec293de3df
+Reusing existing connection to idp.springer.com:443.
+HTTP request sent, awaiting response... 302 Found
+Location: https://link.springer.com/search/csv?query=&search-within=Jounal&facet-journal-id=43657 [following]
+--2023-03-19 10:37:04--  https://link.springer.com/search/csv?query=&search-within=Jounal&facet-journal-id=43657
+Connecting to link.springer.com (link.springer.com)|34.149.66.100|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: unspecified [text/csv]
+Saving to: ‘/mdshare/node8/txmdata/Phenomics/weekly_online_paper_metrices/SearchResults.csv’
 
-Attaching package: ‘dplyr’
+     0K .......... .......... ........                          122K=0.2s
 
-The following objects are masked from ‘package:stats’:
-
-    filter, lag
-
-The following objects are masked from ‘package:base’:
-
-    intersect, setdiff, setequal, union
-
-Error in read.table(file = file, header = header, sep = sep, quote = quote,  : 
-  no lines available in input
-Calls: read.csv -> read.table
-Execution halted
-
-Attaching package: ‘dplyr’
-
-The following objects are masked from ‘package:stats’:
-
-    filter, lag
-
-The following objects are masked from ‘package:base’:
-
-    intersect, setdiff, setequal, union
-
- [1] "2022-08-15.txt"  "2022-08-22.txt"  "2022-08-29.txt"  "2022-09-05.txt" 
- [5] "2022-09-12.txt"  "2022-09-19.txt"  "2022-09-26.txt"  "2022-10-03.xlsx"
- [9] "2022-10-10.xlsx" "2022-10-17.xlsx" "2022-10-24.xlsx" "2022-10-31.xlsx"
-[13] "2022-11-07.xlsx" "2022-11-14.xlsx" "2022-11-21.xlsx" "2022-11-28.xlsx"
-[17] "2022-12-05.xlsx" "2022-12-12.xlsx" "2022-12-19.xlsx" "2022-12-26.xlsx"
-[21] "2023-01-02.xlsx" "2023-01-09.xlsx" "2023-01-16.xlsx" "2023-01-23.xlsx"
-[25] "2023-01-30.xlsx" "2023-02-06.xlsx" "2023-02-13.xlsx" "2023-02-20.xlsx"
-[29] "2023-02-27.xlsx" "2023-03-06.xlsx" "2023-03-13.xlsx"
-
-    0   1-5 11-50  6-10 
-   41    41     2     4 
-Warning message:
-The dot-dot notation (`..count..`) was deprecated in ggplot2 3.4.0.
-ℹ Please use `after_stat(count)` instead. 
-
-Attaching package: ‘dplyr’
-
-The following objects are masked from ‘package:stats’:
-
-    filter, lag
-
-The following objects are masked from ‘package:base’:
-
-    intersect, setdiff, setequal, union
+2023-03-19 10:37:06 (122 KB/s) - ‘/mdshare/node8/txmdata/Phenomics/weekly_online_paper_metrices/SearchResults.csv’ saved [29405]
 
 
 Attaching package: ‘dplyr’
@@ -63,89 +33,7 @@ The following objects are masked from ‘package:base’:
 
     intersect, setdiff, setequal, union
 
-
-Attaching package: ‘dplyr’
-
-The following object is masked from ‘package:kableExtra’:
-
-    group_rows
-
-The following objects are masked from ‘package:stats’:
-
-    filter, lag
-
-The following objects are masked from ‘package:base’:
-
-    intersect, setdiff, setequal, union
-
-[1] "2023-03-13.xlsx"
-# A tibble: 6 × 13
-  title  url   type   year year_…¹ onlin…² access citat…³ altme…⁴ corre…⁵ volume
-  <chr>  <chr> <chr> <dbl> <chr>   <chr>    <dbl>   <dbl>   <dbl> <chr>   <chr> 
-1 Sampl… http… Prot…  2023 2023-03 2023-0…     60       0       0 Zhexue… <NA>  
-2 α2,3-… http… Arti…  2023 2023-03 2023-0…     22       0       0 Jianxi… <NA>  
-3 Virtu… http… Arti…  2023 2023-03 2023-0…     88       0       2 Dean Ta <NA>  
-4 Diets… http… Revi…  2023 2023-03 2023-0…    133       0       0 Shangy… <NA>  
-5 Deep … http… Prot…  2023 2023-02 2023-0…    343       0       2 Feng Q… <NA>  
-6 Manag… http… Revi…  2023 2023-02 2023-0…    282       0       2 Hongfe… <NA>  
-# … with 2 more variables: issue <chr>, update_time <chr>, and abbreviated
-#   variable names ¹​year_month, ²​online_time, ³​citation, ⁴​altmetric,
-#   ⁵​correspond_authors
- [1] "title"                 "url"                   "type"                 
- [4] "year"                  "year_month"            "online_time"          
- [7] "access"                "citation"              "altmetric"            
-[10] "correspond_authors"    "volume"                "issue"                
-[13] "update_time"           "short_title"           "short_title_with_link"
-
-Attaching package: ‘dplyr’
-
-The following objects are masked from ‘package:stats’:
-
-    filter, lag
-
-The following objects are masked from ‘package:base’:
-
-    intersect, setdiff, setequal, union
-
- [1] "2022-08-15.txt"  "2022-08-22.txt"  "2022-08-29.txt"  "2022-09-05.txt" 
- [5] "2022-09-12.txt"  "2022-09-19.txt"  "2022-09-26.txt"  "2022-10-03.xlsx"
- [9] "2022-10-10.xlsx" "2022-10-17.xlsx" "2022-10-24.xlsx" "2022-10-31.xlsx"
-[13] "2022-11-07.xlsx" "2022-11-14.xlsx" "2022-11-21.xlsx" "2022-11-28.xlsx"
-[17] "2022-12-05.xlsx" "2022-12-12.xlsx" "2022-12-19.xlsx" "2022-12-26.xlsx"
-[21] "2023-01-02.xlsx" "2023-01-09.xlsx" "2023-01-16.xlsx" "2023-01-23.xlsx"
-[25] "2023-01-30.xlsx" "2023-02-06.xlsx" "2023-02-13.xlsx" "2023-02-20.xlsx"
-[29] "2023-02-27.xlsx" "2023-03-06.xlsx" "2023-03-13.xlsx"
-[1] 77
-[1] 4.74026
-[1] 102
-[1] 137
-[1] 2.304
-         day Pred_IF
-1 2023-03-13   2.304
-          day Pred_IF
-1  2023-01-02   0.724
-2  2023-01-09   1.448
-3  2023-01-16   1.448
-4  2023-01-23   1.448
-5  2023-01-30   2.607
-6  2023-02-06   2.414
-7  2023-02-13   2.173
-8  2023-02-20   2.173
-9  2023-02-27   2.414
-10 2023-02-27   2.414
-11 2023-03-06   2.390
-12 2023-03-13   2.304
-          day Pred_IF
-1  2023-01-02   0.724
-2  2023-01-09   1.448
-3  2023-01-16   1.448
-4  2023-01-23   1.448
-5  2023-01-30   2.607
-6  2023-02-06   2.414
-7  2023-02-13   2.173
-8  2023-02-20   2.173
-9  2023-02-27   2.414
-10 2023-02-27   2.414
-11 2023-03-06   2.390
-12 2023-03-13   2.304
-13 2023-03-13   2.304
+1 of 91...
+2 of 91...
+3 of 91...
+4 of 91...
