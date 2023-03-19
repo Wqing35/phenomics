@@ -32,7 +32,10 @@ readme_table <- select(out_df,
                        Altmetric = altmetric,
                        # `Corresponding authors` = correspond_authors,
                        Volume = volume,
-                       Issue = issue)
+                       Issue = issue) %>%
+  arrange(desc(Citation))
+
+
 readme_kable <- kable(readme_table,escape = F,align = 'c')
 cat(readme_kable, file = "./weekly_online_paper_metrices/README.md")
  
