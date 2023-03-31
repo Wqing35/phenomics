@@ -293,3 +293,17 @@ The following objects are masked from ‘package:base’:
 12 2023-03-13   2.304
 13 2023-03-19   2.260
 14 2023-03-26   2.253
+[master 053cd23] 20230326
+ 9 files changed, 278 insertions(+), 274 deletions(-)
+ rewrite figures/fig2.png (82%)
+ rewrite figures/fig4.png (95%)
+ rewrite figures/fig_IF.png (97%)
+ rewrite weekly_online_paper_metrices/all_Phenomics_paper_metrics.xlsx (81%)
+ create mode 100644 weekly_online_paper_metrices/output/2023-03-26.xlsx
+remote: This repository moved. Please use the new location:        
+remote:   git@github.com:Telogen/Journal-Phenomics.git        
+To github.com:Telogen/Phenomics.git
+   1345362..053cd23  master -> master
+remote: Powered by [01;33mGITEE.COM [0m[[01;35mGNK-6.4[0m][0m        
+To gitee.com:Telogen/Journal-Phenomics.git
+   1345362..053cd23  master -> master
