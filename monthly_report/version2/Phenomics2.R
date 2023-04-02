@@ -3,7 +3,7 @@ library(stringr)
 library(ggplot2)
 library(cowplot)
 library(Seurat)
-setwd('~/Phenomics/')
+setwd('/mdshare/node8/txmdata/Phenomics')
 
 file_names <- list.files('../Phenomics/monthly_report/version2')
 file_name <- (file_names[str_detect(string = file_names,pattern = 'Edit')] %>% sort(T))[1]
@@ -16,7 +16,7 @@ data$Country <- unlist(strsplit(sapply(strsplit(data$Author.Name,'\\('),function
 data$is_China <- factor(data$Country == 'CHINA',labels = c('Overseas','China'))
 data <- data[order(data$Manuscript.Number),]
 
-write.csv(data,paste0('../Phenomics/monthly_report/20230228_out.csv'),fileEncoding = 'UTF-8')
+write.csv(data,paste0('../Phenomics/monthly_report/20230331_out.csv'),fileEncoding = 'UTF-8')
 
 
 
@@ -26,10 +26,10 @@ write.csv(data,paste0('../Phenomics/monthly_report/20230228_out.csv'),fileEncodi
 
 ################################################################
 this_year <- '2023'
-this_month <- '2'
-this_date <- '28'
+this_month <- '3'
+this_date <- '31'
 
-data <- readxl::read_xlsx('../Phenomics/monthly_report/version2/Phenomics_0228.xlsx')
+data <- readxl::read_xlsx('../Phenomics/monthly_report/version2/Phenomics_0331.xlsx')
 tail(data)
 # data <- data[-nrow(data),]
 
@@ -134,10 +134,10 @@ f2 <- ggplot(propotion_dat, aes(x=Year, y=count, group=Institution)) +
 f2
 
 
-fig1 <- ggpubr::ggarrange(plotlist = list(f1, f2), ncol = 2, nrow = 1,widths = c(1, 1))
+fig1 <- ggpubr::ggarrange(plotlist = list(f1, f2), ncol = 2, nrow = 1,widths = c(1.2, 1))
 fig1
 
-ggsave('./figures/fig1.png',fig1,width = 12,height = 5)
+ggsave('./figures/fig1.png',fig1,width = 15,height = 6)
 
 
 
@@ -179,6 +179,7 @@ RT_idx <- which(data$Current.Status %in% c('Final Decision Reject','Submission T
 tmp_row_idx <- which(rownames(table(data$Current.Status,data$status_year)) %in% c('Content Files Deleted - Forced to Withdrawn','Sent Back to Author'))
 table(data$Current.Status,data$status_year)[tmp_row_idx,]
 last <- colSums(table(data$Current.Status,data$status_year)[tmp_row_idx,]) %>% print()
+# last <- 1
 last_idx <- which(data$Current.Status %in% c('Content Files Deleted - Forced to Withdrawn',
                                              'Sent Back to Author'))
 

@@ -13,9 +13,12 @@ full_file_name <- paste0('./weekly_online_paper_metrices/output/',
                          rev(plot_file_names)[1])
 out_df <- readxl::read_excel(full_file_name)
 out_df <- filter(out_df,type != 'Correction')
+three_known_types <- c('Article','Review','Protocol')
+other_types <- setdiff(unique(out_df$type),three_known_type)
 out_df$mytype <- factor(out_df$type,
-                        levels = c('Article','Review','Protocol','Commentary','Correspondence','Editorial','Meeting Report'),
-                        labels = c('Article','Review','Protocol','Others','Others','Others','Others'))
+                        levels = c(three_known_types,other_types),
+                        labels = c('Article','Review','Protocol',rep('Others',length(other_types))))
+table(out_df$mytype)
 # 发文量
 p1 <- ggplot(out_df,aes(x = year)) +
   geom_bar(width = 0.6, aes(fill = mytype)) +

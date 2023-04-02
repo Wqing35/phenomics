@@ -53,6 +53,16 @@
    <td style="text-align:center;"> 1 </td>
   </tr>
   <tr>
+   <td style="text-align:center;"> <a href="http://link.springer.com/article/10.1007/s43657-021-00026-x" style="     " >Systematic Genome-Wide Profiles Reveal Alternative ...</a> </td>
+   <td style="text-align:center;"> Article </td>
+   <td style="text-align:center;"> 2021-10-29 </td>
+   <td style="text-align:center;"> 1736 </td>
+   <td style="text-align:center;"> 7 </td>
+   <td style="text-align:center;"> 0 </td>
+   <td style="text-align:center;"> 1 </td>
+   <td style="text-align:center;"> 6 </td>
+  </tr>
+  <tr>
    <td style="text-align:center;"> <a href="http://link.springer.com/article/10.1007/s43657-021-00025-y" style="     " >Strided Self-Supervised Low-Dose CT Denoising ...</a> </td>
    <td style="text-align:center;"> Article </td>
    <td style="text-align:center;"> 2021-10-26 </td>
@@ -76,7 +86,7 @@
    <td style="text-align:center;"> <a href="http://link.springer.com/article/10.1007/s43657-021-00020-3" style="     " >Molecular Phenomic Approaches to Deconvolving ...</a> </td>
    <td style="text-align:center;"> Review </td>
    <td style="text-align:center;"> 2021-07-22 </td>
-   <td style="text-align:center;"> 3174 </td>
+   <td style="text-align:center;"> 3180 </td>
    <td style="text-align:center;"> 5 </td>
    <td style="text-align:center;"> 37 </td>
    <td style="text-align:center;"> 1 </td>
@@ -90,6 +100,16 @@
    <td style="text-align:center;"> 5 </td>
    <td style="text-align:center;"> 0 </td>
    <td style="text-align:center;"> 1 </td>
+   <td style="text-align:center;"> 3 </td>
+  </tr>
+  <tr>
+   <td style="text-align:center;"> <a href="http://link.springer.com/article/10.1007/s43657-021-00037-8" style="     " >Why Do We Care More ...</a> </td>
+   <td style="text-align:center;"> Commentary </td>
+   <td style="text-align:center;"> 2022-01-28 </td>
+   <td style="text-align:center;"> 2623 </td>
+   <td style="text-align:center;"> 4 </td>
+   <td style="text-align:center;"> 20 </td>
+   <td style="text-align:center;"> 2 </td>
    <td style="text-align:center;"> 3 </td>
   </tr>
   <tr>
@@ -446,7 +466,7 @@
    <td style="text-align:center;"> <a href="http://link.springer.com/article/10.1007/s43657-021-00018-x" style="     " >Recommendation for Cardiac Magnetic Resonance ...</a> </td>
    <td style="text-align:center;"> Review </td>
    <td style="text-align:center;"> 2021-07-28 </td>
-   <td style="text-align:center;"> 2698 </td>
+   <td style="text-align:center;"> 2701 </td>
    <td style="text-align:center;"> 1 </td>
    <td style="text-align:center;"> 0 </td>
    <td style="text-align:center;"> 1 </td>
@@ -863,16 +883,6 @@
    <td style="text-align:center;"> 1 </td>
   </tr>
   <tr>
-   <td style="text-align:center;"> <a href="http://link.springer.com/article/10.1007/s43657-021-00037-8" style="     " >Why Do We Care More ...</a> </td>
-   <td style="text-align:center;"> Commentary </td>
-   <td style="text-align:center;"> 2022-01-28 </td>
-   <td style="text-align:center;"> 0 </td>
-   <td style="text-align:center;"> 0 </td>
-   <td style="text-align:center;"> 0 </td>
-   <td style="text-align:center;"> 2 </td>
-   <td style="text-align:center;"> 3 </td>
-  </tr>
-  <tr>
    <td style="text-align:center;"> <a href="http://link.springer.com/article/10.1007/s43657-021-00031-0" style="     " >Mapping Cell Phenomics with Multiparametric ...</a> </td>
    <td style="text-align:center;"> Review </td>
    <td style="text-align:center;"> 2022-01-09 </td>
@@ -891,16 +901,6 @@
    <td style="text-align:center;"> 0 </td>
    <td style="text-align:center;"> 2 </td>
    <td style="text-align:center;"> 1 </td>
-  </tr>
-  <tr>
-   <td style="text-align:center;"> <a href="http://link.springer.com/article/10.1007/s43657-021-00026-x" style="     " >Systematic Genome-Wide Profiles Reveal Alternative ...</a> </td>
-   <td style="text-align:center;"> Article </td>
-   <td style="text-align:center;"> 2021-10-29 </td>
-   <td style="text-align:center;"> 0 </td>
-   <td style="text-align:center;"> 0 </td>
-   <td style="text-align:center;"> 0 </td>
-   <td style="text-align:center;"> 1 </td>
-   <td style="text-align:center;"> 6 </td>
   </tr>
 </tbody>
 </table>
