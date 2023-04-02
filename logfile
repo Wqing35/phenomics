@@ -1,26 +1,26 @@
---2023-03-26 02:37:02--  https://link.springer.com/search/csv?query=&search-within=Jounal&facet-journal-id=43657
-Resolving link.springer.com (link.springer.com)... 146.75.112.95
-Connecting to link.springer.com (link.springer.com)|146.75.112.95|:443... connected.
+--2023-04-02 02:37:02--  https://link.springer.com/search/csv?query=&search-within=Jounal&facet-journal-id=43657
+Resolving link.springer.com (link.springer.com)... 34.149.66.100
+Connecting to link.springer.com (link.springer.com)|34.149.66.100|:443... connected.
 HTTP request sent, awaiting response... 302 Found
 Location: https://idp.springer.com/authorize?redirect_uri=https://link.springer.com/search/csv?query%3D%26search-within%3DJounal%26facet-journal-id%3D43657&client_id=springerlink&response_type=cookie [following]
---2023-03-26 02:37:03--  https://idp.springer.com/authorize?redirect_uri=https://link.springer.com/search/csv?query%3D%26search-within%3DJounal%26facet-journal-id%3D43657&client_id=springerlink&response_type=cookie
-Resolving idp.springer.com (idp.springer.com)... 146.75.112.95
-Connecting to idp.springer.com (idp.springer.com)|146.75.112.95|:443... connected.
+--2023-04-02 02:37:03--  https://idp.springer.com/authorize?redirect_uri=https://link.springer.com/search/csv?query%3D%26search-within%3DJounal%26facet-journal-id%3D43657&client_id=springerlink&response_type=cookie
+Resolving idp.springer.com (idp.springer.com)... 34.149.66.100
+Connecting to idp.springer.com (idp.springer.com)|34.149.66.100|:443... connected.
 HTTP request sent, awaiting response... 302 Found
-Location: https://idp.springer.com/transit?redirect_uri=https%3A%2F%2Flink.springer.com%2Fsearch%2Fcsv%3Fquery%3D%26search-within%3DJounal%26facet-journal-id%3D43657&code=cad41fde-c01d-4c20-a268-3889f7375216 [following]
---2023-03-26 02:37:04--  https://idp.springer.com/transit?redirect_uri=https%3A%2F%2Flink.springer.com%2Fsearch%2Fcsv%3Fquery%3D%26search-within%3DJounal%26facet-journal-id%3D43657&code=cad41fde-c01d-4c20-a268-3889f7375216
+Location: https://idp.springer.com/transit?redirect_uri=https%3A%2F%2Flink.springer.com%2Fsearch%2Fcsv%3Fquery%3D%26search-within%3DJounal%26facet-journal-id%3D43657&code=b34b3a3c-5b0f-4483-8f66-d6a8b0190edb [following]
+--2023-04-02 02:37:06--  https://idp.springer.com/transit?redirect_uri=https%3A%2F%2Flink.springer.com%2Fsearch%2Fcsv%3Fquery%3D%26search-within%3DJounal%26facet-journal-id%3D43657&code=b34b3a3c-5b0f-4483-8f66-d6a8b0190edb
 Reusing existing connection to idp.springer.com:443.
 HTTP request sent, awaiting response... 302 Found
 Location: https://link.springer.com/search/csv?query=&search-within=Jounal&facet-journal-id=43657 [following]
---2023-03-26 02:37:05--  https://link.springer.com/search/csv?query=&search-within=Jounal&facet-journal-id=43657
-Connecting to link.springer.com (link.springer.com)|146.75.112.95|:443... connected.
+--2023-04-02 02:37:06--  https://link.springer.com/search/csv?query=&search-within=Jounal&facet-journal-id=43657
+Connecting to link.springer.com (link.springer.com)|34.149.66.100|:443... connected.
 HTTP request sent, awaiting response... 200 OK
 Length: unspecified [text/csv]
 Saving to: ‘/mdshare/node8/txmdata/Phenomics/weekly_online_paper_metrices/SearchResults.csv’
 
-     0K .......... .......... ........                          376K=0.08s
+     0K .......... .......... ........                         97.6K=0.3s
 
-2023-03-26 02:37:08 (376 KB/s) - ‘/mdshare/node8/txmdata/Phenomics/weekly_online_paper_metrices/SearchResults.csv’ saved [29674]
+2023-04-02 02:37:09 (97.6 KB/s) - ‘/mdshare/node8/txmdata/Phenomics/weekly_online_paper_metrices/SearchResults.csv’ saved [29674]
 
 
 Attaching package: ‘dplyr’
@@ -140,22 +140,22 @@ The following objects are masked from ‘package:base’:
 45 http://link.springer.com/article/10.1007/s43657-023-00095-0
 66 http://link.springer.com/article/10.1007/s43657-022-00092-9
                   type year year_month online_time access citation altmetric
-81 Brief Communication 2023    2023-03  2023-03-20    106        0         0
-41            Protocol 2023    2023-03  2023-03-08    290        0         0
-92             Article 2023    2023-03  2023-03-07    159        0         2
-11             Article 2023    2023-03  2023-03-02    213        0         2
-45              Review 2023    2023-03  2023-03-02    335        0         6
-66            Protocol 2023    2023-02  2023-02-23    668        0         2
+81 Brief Communication 2023    2023-03  2023-03-20    201        0         0
+41            Protocol 2023    2023-03  2023-03-08    332        0         0
+92             Article 2023    2023-03  2023-03-07    187        0         2
+11             Article 2023    2023-03  2023-03-02    244        0         2
+45              Review 2023    2023-03  2023-03-02    388        0         6
+66            Protocol 2023    2023-02  2023-02-23    812        0         2
                   correspond_authors volume issue update_time
-81                          Xia Shen               2023-03-26
-41            Zhexue Quan, Yan Zheng               2023-03-26
-92 Jianxin Gu, Jing Liu, Shifang Ren               2023-03-26
-11                           Dean Ta               2023-03-26
-45             Shangyu Hong, Yan Sun               2023-03-26
-66                         Feng Qian               2023-03-26
-[1] 138605
-[1] 142
-[1] "./weekly_online_paper_metrices/output/2023-03-26.xlsx"
+81                          Xia Shen               2023-04-02
+41            Zhexue Quan, Yan Zheng               2023-04-02
+92 Jianxin Gu, Jing Liu, Shifang Ren               2023-04-02
+11                           Dean Ta               2023-04-02
+45             Shangyu Hong, Yan Sun               2023-04-02
+66                         Feng Qian               2023-04-02
+[1] 137668
+[1] 134
+[1] "./weekly_online_paper_metrices/output/2023-04-02.xlsx"
 
 Attaching package: ‘dplyr’
 
@@ -175,10 +175,10 @@ The following objects are masked from ‘package:base’:
 [21] "2023-01-02.xlsx" "2023-01-09.xlsx" "2023-01-16.xlsx" "2023-01-23.xlsx"
 [25] "2023-01-30.xlsx" "2023-02-06.xlsx" "2023-02-13.xlsx" "2023-02-20.xlsx"
 [29] "2023-02-27.xlsx" "2023-03-06.xlsx" "2023-03-13.xlsx" "2023-03-19.xlsx"
-[33] "2023-03-26.xlsx"
+[33] "2023-03-26.xlsx" "2023-04-02.xlsx"
 
     0   1-5 11-50  6-10 
-   41    42     2     4 
+   42    42     2     3 
 Warning message:
 The dot-dot notation (`..count..`) was deprecated in ggplot2 3.4.0.
 ℹ Please use `after_stat(count)` instead. 
@@ -219,16 +219,16 @@ The following objects are masked from ‘package:base’:
 
     intersect, setdiff, setequal, union
 
-[1] "2023-03-26.xlsx"
+[1] "2023-04-02.xlsx"
 # A tibble: 6 × 13
   title  url   type   year year_…¹ onlin…² access citat…³ altme…⁴ corre…⁵ volume
   <chr>  <chr> <chr> <dbl> <chr>   <chr>    <dbl>   <dbl>   <dbl> <chr>   <chr> 
-1 Hidde… http… Brie…  2023 2023-03 2023-0…    106       0       0 Xia Sh… <NA>  
-2 Sampl… http… Prot…  2023 2023-03 2023-0…    290       0       0 Zhexue… <NA>  
-3 α2,3-… http… Arti…  2023 2023-03 2023-0…    159       0       2 Jianxi… <NA>  
-4 Virtu… http… Arti…  2023 2023-03 2023-0…    213       0       2 Dean Ta <NA>  
-5 Diets… http… Revi…  2023 2023-03 2023-0…    335       0       6 Shangy… <NA>  
-6 Deep … http… Prot…  2023 2023-02 2023-0…    668       0       2 Feng Q… <NA>  
+1 Hidde… http… Brie…  2023 2023-03 2023-0…    201       0       0 Xia Sh… <NA>  
+2 Sampl… http… Prot…  2023 2023-03 2023-0…    332       0       0 Zhexue… <NA>  
+3 α2,3-… http… Arti…  2023 2023-03 2023-0…    187       0       2 Jianxi… <NA>  
+4 Virtu… http… Arti…  2023 2023-03 2023-0…    244       0       2 Dean Ta <NA>  
+5 Diets… http… Revi…  2023 2023-03 2023-0…    388       0       6 Shangy… <NA>  
+6 Deep … http… Prot…  2023 2023-02 2023-0…    812       0       2 Feng Q… <NA>  
 # … with 2 more variables: issue <chr>, update_time <chr>, and abbreviated
 #   variable names ¹​year_month, ²​online_time, ³​citation, ⁴​altmetric,
 #   ⁵​correspond_authors
@@ -256,28 +256,14 @@ The following objects are masked from ‘package:base’:
 [21] "2023-01-02.xlsx" "2023-01-09.xlsx" "2023-01-16.xlsx" "2023-01-23.xlsx"
 [25] "2023-01-30.xlsx" "2023-02-06.xlsx" "2023-02-13.xlsx" "2023-02-20.xlsx"
 [29] "2023-02-27.xlsx" "2023-03-06.xlsx" "2023-03-13.xlsx" "2023-03-19.xlsx"
-[33] "2023-03-26.xlsx"
-[1] 90
-[1] 4.055556
+[33] "2023-03-26.xlsx" "2023-04-02.xlsx"
+[1] 97
+[1] 3.762887
 [1] 102
-[1] 142
-[1] 2.253
+[1] 134
+[1] 1.672
          day Pred_IF
-1 2023-03-26   2.253
-          day Pred_IF
-1  2023-01-02   0.724
-2  2023-01-09   1.448
-3  2023-01-16   1.448
-4  2023-01-23   1.448
-5  2023-01-30   2.607
-6  2023-02-06   2.414
-7  2023-02-13   2.173
-8  2023-02-20   2.173
-9  2023-02-27   2.414
-10 2023-02-27   2.414
-11 2023-03-06   2.390
-12 2023-03-13   2.304
-13 2023-03-19   2.260
+1 2023-04-02   1.672
           day Pred_IF
 1  2023-01-02   0.724
 2  2023-01-09   1.448
@@ -293,17 +279,19 @@ The following objects are masked from ‘package:base’:
 12 2023-03-13   2.304
 13 2023-03-19   2.260
 14 2023-03-26   2.253
-[master 053cd23] 20230326
- 9 files changed, 278 insertions(+), 274 deletions(-)
- rewrite figures/fig2.png (82%)
- rewrite figures/fig4.png (95%)
- rewrite figures/fig_IF.png (97%)
- rewrite weekly_online_paper_metrices/all_Phenomics_paper_metrics.xlsx (81%)
- create mode 100644 weekly_online_paper_metrices/output/2023-03-26.xlsx
-remote: This repository moved. Please use the new location:        
-remote:   git@github.com:Telogen/Journal-Phenomics.git        
-To github.com:Telogen/Phenomics.git
-   1345362..053cd23  master -> master
-remote: Powered by [01;33mGITEE.COM [0m[[01;35mGNK-6.4[0m][0m        
-To gitee.com:Telogen/Journal-Phenomics.git
-   1345362..053cd23  master -> master
+          day Pred_IF
+1  2023-01-02   0.724
+2  2023-01-09   1.448
+3  2023-01-16   1.448
+4  2023-01-23   1.448
+5  2023-01-30   2.607
+6  2023-02-06   2.414
+7  2023-02-13   2.173
+8  2023-02-20   2.173
+9  2023-02-27   2.414
+10 2023-02-27   2.414
+11 2023-03-06   2.390
+12 2023-03-13   2.304
+13 2023-03-19   2.260
+14 2023-03-26   2.253
+15 2023-04-02   1.672
