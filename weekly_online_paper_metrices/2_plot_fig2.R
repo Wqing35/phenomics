@@ -14,7 +14,7 @@ full_file_name <- paste0('./weekly_online_paper_metrices/output/',
 out_df <- readxl::read_excel(full_file_name)
 out_df <- filter(out_df,type != 'Correction')
 three_known_types <- c('Article','Review','Protocol')
-other_types <- setdiff(unique(out_df$type),three_known_type)
+other_types <- setdiff(unique(out_df$type),three_known_types)
 out_df$mytype <- factor(out_df$type,
                         levels = c(three_known_types,other_types),
                         labels = c('Article','Review','Protocol',rep('Others',length(other_types))))
@@ -22,7 +22,7 @@ table(out_df$mytype)
 # 发文量
 p1 <- ggplot(out_df,aes(x = year)) +
   geom_bar(width = 0.6, aes(fill = mytype)) +
-  geom_text(stat = "count", aes(label = ..count..), vjust = -0.5,size = 4) +
+  geom_text(stat = "count", aes(label = after_stat(count)), vjust = -0.5,size = 4) +
   scale_x_continuous(breaks=c(2021,2022,2023)) +
   scale_fill_discrete(name = "Article type") +
   ggtitle('Published paper distribution') +
