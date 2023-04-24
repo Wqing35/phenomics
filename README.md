@@ -17,12 +17,19 @@ https://www.springer.com/journal/43657
 
 -----
 
-## Current Predicted Impact Factor (Update weekly)
+## Current Predicted 2023 Impact Factor (Update weekly)
 
 > Estimated 2023 citations / (Number of published papers in 2021 and 2022)
 
 ![fig_IF.png](https://gitee.com/telogen/Journal-Phenomics/raw/master/figures/fig_IF.png)
 
+-----
+
+## Monthly Impact Factor (Update monthly)
+
+> Monthly citation / (Number of published papers in 2021 and 2022)
+
+![each_month_IF.png](https://gitee.com/telogen/Journal-Phenomics/raw/master/figures/each_month_IF.png)
 
 -----
 

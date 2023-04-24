@@ -10,6 +10,7 @@ wget -O /mdshare/node8/txmdata/Phenomics/weekly_online_paper_metrices/SearchResu
 /usr/bin/Rscript /mdshare/node8/txmdata/Phenomics/weekly_online_paper_metrices/2_plot_fig4.R
 /usr/bin/Rscript /mdshare/node8/txmdata/Phenomics/weekly_online_paper_metrices/3_get_readme.R
 /usr/bin/Rscript /mdshare/node8/txmdata/Phenomics/weekly_online_paper_metrices/4_pred_IF.R
+/usr/bin/Rscript /mdshare/node8/txmdata/Phenomics/weekly_online_paper_metrices/5_each_month_IF.R
 
 rm -rf /mdshare/node8/txmdata/Phenomics/Rplots.pdf
 
