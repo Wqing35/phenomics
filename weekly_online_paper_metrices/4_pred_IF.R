@@ -51,11 +51,14 @@ pred_if_df
 write.csv(pred_if_df,'./weekly_online_paper_metrices/pred_if_df.csv',row.names = F)
 
 
-fig_IF <- ggplot(pred_if_df,aes(x = day,y = Pred_IF)) + 
+pred_if_df <- read.csv('./weekly_online_paper_metrices/pred_if_df.csv')
+head(pred_if_df)
+plot_pred_if_df <- pred_if_df[(nrow(pred_if_df)-14):nrow(pred_if_df),]
+fig_IF <- ggplot(plot_pred_if_df,aes(x = day,y = Pred_IF)) + 
   geom_point(stat = "identity") +
   geom_line(aes(group = 1)) +
   geom_text(aes(label = Pred_IF),hjust = .5,vjust = -.8) + 
-  ylim((min(pred_if_df$Pred_IF) - 0.5),(max(pred_if_df$Pred_IF) + 0.5)) + 
+  ylim((min(plot_pred_if_df$Pred_IF) - 0.5),(max(plot_pred_if_df$Pred_IF) + 0.5)) + 
   theme_light() + 
   ylab('Predicted IF') +
   theme(axis.title.x = element_blank(),
