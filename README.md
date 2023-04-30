@@ -27,7 +27,7 @@ https://www.springer.com/journal/43657
 
 ## Monthly Impact Factor (Update monthly)
 
-> Monthly citation / (Number of published papers in 2021 and 2022)
+> Monthly citations / (Number of published papers in 2021 and 2022)
 
 ![each_month_IF.png](https://gitee.com/telogen/Journal-Phenomics/raw/master/figures/each_month_IF.png)
 
@@ -59,7 +59,6 @@ https://www.springer.com/journal/43657
 phenomics@fudan.edu.cn
 
 phenomics@m.fudan.edu.cn
-
 
 
 

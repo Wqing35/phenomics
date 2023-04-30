@@ -26,6 +26,7 @@ month_list <- list(Jan = c('2022-12-26','2023-01-30'),
                    Dec = c())
 
 each_month_pred_if <- sapply(names(month_list),function(month){
+  print(month)
   # month <- 'Jan'
   begin_day <- month_list[[month]][1]
   if(!is.null(begin_day)){
@@ -37,7 +38,7 @@ each_month_pred_if <- sapply(names(month_list),function(month){
     end_df <- readxl::read_excel(paste0('./weekly_online_paper_metrices/output/',end_day,'.xlsx'))
     end_citation <- sum(end_df$citation)
     end_citation
-    
+    print(end_citation - begin_citation)
     this_month_if <- (end_citation - begin_citation)/77
   } else{
     this_month_if <- NA
@@ -56,7 +57,7 @@ for(month in rownames(each_month_pred_if_df)){
   Monthly_cumulative_impact_factor <- c(Monthly_cumulative_impact_factor,sum(Monthly_cumulative_impact_factor_vector))
 }
 each_month_pred_if_df$Monthly_cumulative_impact_factor <- Monthly_cumulative_impact_factor
-# each_month_pred_if_df$each_month_pred_if[1] <- NA
+each_month_pred_if_df
 each_month_IF <- ggplot(each_month_pred_if_df,aes(x = Month)) + 
   geom_bar (aes(y = each_month_pred_if,fill = Month),stat = "identity") + 
   geom_text(aes(y = each_month_pred_if,label = round(each_month_pred_if,2)),vjust = -0.8) + 
@@ -70,10 +71,11 @@ each_month_IF <- ggplot(each_month_pred_if_df,aes(x = Month)) +
   theme(axis.title.x = element_blank(),
         axis.text.x = element_text(size = 12,color = 'black',angle = 45,vjust = 1,hjust = 1),
         axis.title.y = element_text(size = 14,color = 'black'),
-        axis.text.y = element_blank(),
-        axis.ticks.y = element_blank(),
+        axis.text.y = element_text(size = 10,color = 'black'),
         plot.title = element_text(hjust = .5)) 
 each_month_IF
   
 ggsave('./figures/each_month_IF.png',each_month_IF,width = 8,height = 3)
+
+
 

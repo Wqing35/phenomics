@@ -14,10 +14,7 @@ wget -O /mdshare/node8/txmdata/Phenomics/weekly_online_paper_metrices/SearchResu
 
 rm -rf /mdshare/node8/txmdata/Phenomics/Rplots.pdf
 
-git add -A
-DATE=$(date "+%Y%m%d")
-git commit -m $DATE --no-verify
-git push
+git add -A; DATE=$(date "+%Y%m%d"); git commit -m $DATE --no-verify; git push
 
 
 
