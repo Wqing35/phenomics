@@ -16,7 +16,7 @@ data$Country <- unlist(strsplit(sapply(strsplit(data$Author.Name,'\\('),function
 data$is_China <- factor(data$Country == 'CHINA',labels = c('Overseas','China'))
 data <- data[order(data$Manuscript.Number),]
 
-write.csv(data,paste0('../Phenomics/monthly_report/20230331_out.csv'),fileEncoding = 'UTF-8')
+write.csv(data,paste0('../Phenomics/monthly_report/20230430_out.csv'),fileEncoding = 'UTF-8')
 
 
 
@@ -26,10 +26,10 @@ write.csv(data,paste0('../Phenomics/monthly_report/20230331_out.csv'),fileEncodi
 
 ################################################################
 this_year <- '2023'
-this_month <- '3'
-this_date <- '31'
+this_month <- '4'
+this_date <- '30'
 
-data <- readxl::read_xlsx('../Phenomics/monthly_report/version2/Phenomics_0331.xlsx')
+data <- readxl::read_xlsx('../Phenomics/monthly_report/version2/Phenomics_0430.xlsx')
 tail(data)
 # data <- data[-nrow(data),]
 
