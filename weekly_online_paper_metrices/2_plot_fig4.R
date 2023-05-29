@@ -34,8 +34,8 @@ df <- pbmcapply::pbmclapply(plot_file_names,function(file_name){
 access_plot <- ggplot(df,aes(x = Date,y = `Total access`)) + 
   geom_point(stat = "identity") +
   geom_line(aes(group = 1)) +
-  geom_text(aes(label = `Total access`),hjust = .5,vjust = -.8) + 
-  ylim((min(df$`Total access`) - 1000),(max(df$`Total access`) + 6000)) + 
+  geom_text(aes(label = paste0(round(`Total access`/10000,1),'w')),hjust = .5,vjust = -.8) + 
+  ylim((min(df$`Total access`) - 1000),(max(df$`Total access`) + (max(df$`Total access`) - min(df$`Total access`))/6)) + 
   theme_light() + 
   theme(axis.title.x = element_blank(),
         axis.text.x = element_blank(),
@@ -48,7 +48,7 @@ citations_plot <- ggplot(df,aes(x = Date,y = `Total citations`)) +
   geom_point(stat = "identity") +
   geom_line(aes(group = 1)) +
   geom_text(aes(label = `Total citations`),hjust = .5,vjust = -.8) + 
-  ylim((min(df$`Total citations`) - 2),(max(df$`Total citations`) + 10)) + 
+  ylim((min(df$`Total citations`) - 2),(max(df$`Total citations`) + (max(df$`Total citations`)-min(df$`Total citations`))/6)) + 
   theme_light() + 
   theme(axis.title.x = element_blank(),
         axis.text.x = element_blank(),
@@ -61,7 +61,7 @@ altmetrics_plot <- ggplot(df,aes(x = Date,y = `Total altmetrics`)) +
   geom_point(stat = "identity") +
   geom_line(aes(group = 1)) +
   geom_text(aes(label = `Total altmetrics`),hjust = .5,vjust = -.8) + 
-  ylim((min(df$`Total altmetrics`) - 2),(max(df$`Total altmetrics`) + 20)) + 
+  ylim((min(df$`Total altmetrics`) - 2),(max(df$`Total altmetrics`) + (max(df$`Total altmetrics`) - min(df$`Total altmetrics`))/6)) + 
   theme_light() + 
   theme(axis.title.x = element_blank(),
         axis.text.x = element_text(size = 12,color = 'black',angle = 45,vjust = 1,hjust = 1),
@@ -74,6 +74,7 @@ altmetrics_plot <- ggplot(df,aes(x = Date,y = `Total altmetrics`)) +
 fig4 <- access_plot %>% 
   insert_bottom(citations_plot, height = 1) %>% 
   insert_bottom(altmetrics_plot, height = 1)
+fig4
 
 ggsave('./figures/fig4.png',fig4,width = 12,height = 6)
 
