@@ -1,26 +1,26 @@
---2023-05-29 08:35:43--  https://link.springer.com/search/csv?query=&search-within=Jounal&facet-journal-id=43657
-Resolving link.springer.com (link.springer.com)... 146.75.112.95
-Connecting to link.springer.com (link.springer.com)|146.75.112.95|:443... connected.
+--2023-06-04 08:11:03--  https://link.springer.com/search/csv?query=&search-within=Jounal&facet-journal-id=43657
+Resolving link.springer.com (link.springer.com)... 151.101.108.95
+Connecting to link.springer.com (link.springer.com)|151.101.108.95|:443... connected.
 HTTP request sent, awaiting response... 302 Found
 Location: https://idp.springer.com/authorize?redirect_uri=https://link.springer.com/search/csv?query%3D%26search-within%3DJounal%26facet-journal-id%3D43657&client_id=springerlink&response_type=cookie [following]
---2023-05-29 08:35:45--  https://idp.springer.com/authorize?redirect_uri=https://link.springer.com/search/csv?query%3D%26search-within%3DJounal%26facet-journal-id%3D43657&client_id=springerlink&response_type=cookie
-Resolving idp.springer.com (idp.springer.com)... 34.149.66.100
-Connecting to idp.springer.com (idp.springer.com)|34.149.66.100|:443... connected.
+--2023-06-04 08:11:04--  https://idp.springer.com/authorize?redirect_uri=https://link.springer.com/search/csv?query%3D%26search-within%3DJounal%26facet-journal-id%3D43657&client_id=springerlink&response_type=cookie
+Resolving idp.springer.com (idp.springer.com)... 151.101.108.95
+Connecting to idp.springer.com (idp.springer.com)|151.101.108.95|:443... connected.
 HTTP request sent, awaiting response... 302 Found
-Location: https://idp.springer.com/transit?redirect_uri=https%3A%2F%2Flink.springer.com%2Fsearch%2Fcsv%3Fquery%3D%26search-within%3DJounal%26facet-journal-id%3D43657&code=2849a419-8128-45b0-b767-9689351abe3a [following]
---2023-05-29 08:35:46--  https://idp.springer.com/transit?redirect_uri=https%3A%2F%2Flink.springer.com%2Fsearch%2Fcsv%3Fquery%3D%26search-within%3DJounal%26facet-journal-id%3D43657&code=2849a419-8128-45b0-b767-9689351abe3a
+Location: https://idp.springer.com/transit?redirect_uri=https%3A%2F%2Flink.springer.com%2Fsearch%2Fcsv%3Fquery%3D%26search-within%3DJounal%26facet-journal-id%3D43657&code=45b5c5c3-3c51-489b-bb07-7cc78266ff10 [following]
+--2023-06-04 08:11:06--  https://idp.springer.com/transit?redirect_uri=https%3A%2F%2Flink.springer.com%2Fsearch%2Fcsv%3Fquery%3D%26search-within%3DJounal%26facet-journal-id%3D43657&code=45b5c5c3-3c51-489b-bb07-7cc78266ff10
 Reusing existing connection to idp.springer.com:443.
 HTTP request sent, awaiting response... 302 Found
 Location: https://link.springer.com/search/csv?query=&search-within=Jounal&facet-journal-id=43657 [following]
---2023-05-29 08:35:46--  https://link.springer.com/search/csv?query=&search-within=Jounal&facet-journal-id=43657
-Connecting to link.springer.com (link.springer.com)|146.75.112.95|:443... connected.
+--2023-06-04 08:11:07--  https://link.springer.com/search/csv?query=&search-within=Jounal&facet-journal-id=43657
+Connecting to link.springer.com (link.springer.com)|151.101.108.95|:443... connected.
 HTTP request sent, awaiting response... 200 OK
 Length: unspecified [text/csv]
 Saving to: ‘/mdshare/node8/txmdata/Phenomics/weekly_online_paper_metrices/SearchResults.csv’
 
-     0K .......... .......... ..........                        398K=0.08s
+     0K .......... .......... ..........                        649K=0.05s
 
-2023-05-29 08:35:51 (398 KB/s) - ‘/mdshare/node8/txmdata/Phenomics/weekly_online_paper_metrices/SearchResults.csv’ saved [31220]
+2023-06-04 08:11:11 (649 KB/s) - ‘/mdshare/node8/txmdata/Phenomics/weekly_online_paper_metrices/SearchResults.csv’ saved [31220]
 
 
 Attaching package: ‘dplyr’
@@ -42,7 +42,37 @@ The following objects are masked from ‘package:base’:
 7 of 97...
 8 of 97...
 9 of 97...
-
+10 of 97...
+11 of 97...
+12 of 97...
+13 of 97...
+14 of 97...
+15 of 97...
+16 of 97...
+17 of 97...
+18 of 97...
+19 of 97...
+20 of 97...
+21 of 97...
+22 of 97...
+23 of 97...
+24 of 97...
+25 of 97...
+26 of 97...
+27 of 97...
+28 of 97...
+29 of 97...
+30 of 97...
+31 of 97...
+32 of 97...
+33 of 97...
+34 of 97...
+35 of 97...
+36 of 97...
+37 of 97...
+Error in open.connection(x, "rb") : 
+  Timeout was reached: [link.springer.com] Connection timed out after 10145 milliseconds
+Calls: get_all_Phenomics_paper_metrics ... get_Phenomics_paper_metrics -> <Anonymous> -> read_html.default
 Execution halted
 
 Attaching package: ‘dplyr’
@@ -65,15 +95,13 @@ The following objects are masked from ‘package:base’:
 [29] "2023-02-27.xlsx" "2023-03-06.xlsx" "2023-03-13.xlsx" "2023-03-19.xlsx"
 [33] "2023-03-26.xlsx" "2023-04-02.xlsx" "2023-04-09.xlsx" "2023-04-16.xlsx"
 [37] "2023-04-23.xlsx" "2023-04-30.xlsx" "2023-05-07.xlsx" "2023-05-14.xlsx"
-[41] "2023-05-21.xlsx" "2023-05-28.xlsx"
+[41] "2023-05-21.xlsx" "2023-05-29.xlsx"
 
  Article   Review Protocol   Others 
       57       26        4        7 
 
     0   1-5 11-50  6-10 
-   42    45     2     5 
-
-Execution halted
+   41    46     2     5 
 
 Attaching package: ‘dplyr’
 
@@ -85,8 +113,6 @@ The following objects are masked from ‘package:base’:
 
     intersect, setdiff, setequal, union
 
-
-Execution halted
 
 Attaching package: ‘dplyr’
 
@@ -113,15 +139,15 @@ The following objects are masked from ‘package:base’:
 
     intersect, setdiff, setequal, union
 
-[1] "2023-05-28.xlsx"
+[1] "2023-05-29.xlsx"
 # A tibble: 6 × 13
   title       url   type   year year_month online_time access citation altmetric
   <chr>       <chr> <chr> <dbl> <chr>      <chr>        <dbl>    <dbl>     <dbl>
-1 Immune-Age… http… Arti…  2023 2023-05    2023-05-23      54        0         2
+1 Immune-Age… http… Arti…  2023 2023-05    2023-05-23      69        0         3
 2 DBLiPro: A… http… Arti…  2023 2023-05    2023-05-16      47        0         2
-3 Overview o… http… Prot…  2023 2023-05    2023-05-06     269        2         4
+3 Overview o… http… Prot…  2023 2023-05    2023-05-06     273        2         4
 4 RNA-Sequen… http… Arti…  2023 2023-04    2023-04-08     100        0         1
-5 Genetic Ph… http… Revi…  2023 2023-04    2023-04-03     509        0         1
+5 Genetic Ph… http… Revi…  2023 2023-04    2023-04-03     515        0         1
 6 Hidden Gen… http… Brie…  2023 2023-03    2023-03-20     631        0         7
 # ℹ 4 more variables: correspond_authors <chr>, volume <chr>, issue <chr>,
 #   update_time <chr>
@@ -151,14 +177,14 @@ The following objects are masked from ‘package:base’:
 [29] "2023-02-27.xlsx" "2023-03-06.xlsx" "2023-03-13.xlsx" "2023-03-19.xlsx"
 [33] "2023-03-26.xlsx" "2023-04-02.xlsx" "2023-04-09.xlsx" "2023-04-16.xlsx"
 [37] "2023-04-23.xlsx" "2023-04-30.xlsx" "2023-05-07.xlsx" "2023-05-14.xlsx"
-[41] "2023-05-21.xlsx" "2023-05-28.xlsx"
-[1] 153
-[1] 2.385621
+[41] "2023-05-21.xlsx" "2023-05-29.xlsx"
+[1] 154
+[1] 2.37013
 [1] 102
-[1] 163
-[1] 2.021
+[1] 164
+[1] 2.041
          day Pred_IF
-1 2023-05-28   2.021
+1 2023-05-29   2.041
           day Pred_IF
 1  2023-01-02   0.724
 2  2023-01-09   1.448
@@ -182,6 +208,7 @@ The following objects are masked from ‘package:base’:
 20 2023-05-07   2.035
 21 2023-05-14   2.042
 22 2023-05-21   2.014
+23 2023-05-29   2.041
           day Pred_IF
 1  2023-01-02   0.724
 2  2023-01-09   1.448
@@ -205,7 +232,8 @@ The following objects are masked from ‘package:base’:
 20 2023-05-07   2.035
 21 2023-05-14   2.042
 22 2023-05-21   2.014
-23 2023-05-28   2.021
+23 2023-05-29   2.041
+24 2023-05-29   2.041
          day Pred_IF
 1 2023-01-02   0.724
 2 2023-01-09   1.448
@@ -235,7 +263,7 @@ Attaching SeuratObject
 [29] "2023-02-27.xlsx" "2023-03-06.xlsx" "2023-03-13.xlsx" "2023-03-19.xlsx"
 [33] "2023-03-26.xlsx" "2023-04-02.xlsx" "2023-04-09.xlsx" "2023-04-16.xlsx"
 [37] "2023-04-23.xlsx" "2023-04-30.xlsx" "2023-05-07.xlsx" "2023-05-14.xlsx"
-[41] "2023-05-21.xlsx" "2023-05-28.xlsx"
+[41] "2023-05-21.xlsx" "2023-05-29.xlsx"
 [1] "Jan"
 [1] 18
 [1] "Feb"
@@ -289,12 +317,3 @@ Warning messages:
 3: Removed 8 rows containing missing values (`geom_line()`). 
 4: Removed 8 rows containing missing values (`geom_point()`). 
 5: Removed 8 rows containing missing values (`geom_text()`). 
-[master 032b90a] 20230529
- 2 files changed, 16 insertions(+), 136 deletions(-)
- rewrite figures/fig3.png (99%)
-remote: Resolving deltas:   0% (0/3)        remote: Resolving deltas:  33% (1/3)        remote: Resolving deltas:  66% (2/3)        remote: Resolving deltas: 100% (3/3)        remote: Resolving deltas: 100% (3/3), completed with 3 local objects.        
-remote: This repository moved. Please use the new location:        
-remote:   git@github.com:Telogen/Journal-Phenomics.git        
-To github.com:Telogen/Phenomics.git
-   ee7aa26..032b90a  master -> master
-remote: Powered by [01;33mGITEE.COM [0m[[01;35mGNK-6.4[0m][0m        
