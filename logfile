@@ -1,18 +1,18 @@
---2023-06-18 08:11:01--  https://link.springer.com/search/csv?query=&search-within=Jounal&facet-journal-id=43657
+--2023-06-25 07:00:01--  https://link.springer.com/search/csv?query=&search-within=Jounal&facet-journal-id=43657
 Resolving link.springer.com (link.springer.com)... 34.149.66.100
 Connecting to link.springer.com (link.springer.com)|34.149.66.100|:443... connected.
 HTTP request sent, awaiting response... 302 Found
 Location: https://idp.springer.com/authorize?redirect_uri=https://link.springer.com/search/csv?query%3D%26search-within%3DJounal%26facet-journal-id%3D43657&client_id=springerlink&response_type=cookie [following]
---2023-06-18 08:11:03--  https://idp.springer.com/authorize?redirect_uri=https://link.springer.com/search/csv?query%3D%26search-within%3DJounal%26facet-journal-id%3D43657&client_id=springerlink&response_type=cookie
+--2023-06-25 07:00:03--  https://idp.springer.com/authorize?redirect_uri=https://link.springer.com/search/csv?query%3D%26search-within%3DJounal%26facet-journal-id%3D43657&client_id=springerlink&response_type=cookie
 Resolving idp.springer.com (idp.springer.com)... 34.149.66.100
 Connecting to idp.springer.com (idp.springer.com)|34.149.66.100|:443... connected.
 HTTP request sent, awaiting response... 302 Found
-Location: https://idp.springer.com/transit?redirect_uri=https%3A%2F%2Flink.springer.com%2Fsearch%2Fcsv%3Fquery%3D%26search-within%3DJounal%26facet-journal-id%3D43657&code=71f42fd4-b9f3-483d-afe0-66d6215fdc82 [following]
---2023-06-18 08:11:04--  https://idp.springer.com/transit?redirect_uri=https%3A%2F%2Flink.springer.com%2Fsearch%2Fcsv%3Fquery%3D%26search-within%3DJounal%26facet-journal-id%3D43657&code=71f42fd4-b9f3-483d-afe0-66d6215fdc82
+Location: https://idp.springer.com/transit?redirect_uri=https%3A%2F%2Flink.springer.com%2Fsearch%2Fcsv%3Fquery%3D%26search-within%3DJounal%26facet-journal-id%3D43657&code=e8a489fb-94d2-477b-a5d0-7e375e69e045 [following]
+--2023-06-25 07:00:04--  https://idp.springer.com/transit?redirect_uri=https%3A%2F%2Flink.springer.com%2Fsearch%2Fcsv%3Fquery%3D%26search-within%3DJounal%26facet-journal-id%3D43657&code=e8a489fb-94d2-477b-a5d0-7e375e69e045
 Reusing existing connection to idp.springer.com:443.
 HTTP request sent, awaiting response... 302 Found
 Location: https://link.springer.com/search/csv?query=&search-within=Jounal&facet-journal-id=43657 [following]
---2023-06-18 08:11:04--  https://link.springer.com/search/csv?query=&search-within=Jounal&facet-journal-id=43657
+--2023-06-25 07:00:05--  https://link.springer.com/search/csv?query=&search-within=Jounal&facet-journal-id=43657
 Connecting to link.springer.com (link.springer.com)|34.149.66.100|:443... connected.
 HTTP request sent, awaiting response... 200 OK
 Length: unspecified [text/csv]
@@ -20,7 +20,7 @@ Saving to: ‘/mdshare/node8/txmdata/Phenomics/weekly_online_paper_metrices/Sear
 
      0K .......... .......... .......... .                      130K=0.2s
 
-2023-06-18 08:11:07 (130 KB/s) - ‘/mdshare/node8/txmdata/Phenomics/weekly_online_paper_metrices/SearchResults.csv’ saved [32464]
+2023-06-25 07:00:07 (130 KB/s) - ‘/mdshare/node8/txmdata/Phenomics/weekly_online_paper_metrices/SearchResults.csv’ saved [32464]
 
 
 Attaching package: ‘dplyr’
@@ -149,12 +149,12 @@ The following objects are masked from ‘package:base’:
 18  http://link.springer.com/article/10.1007/s43657-023-00106-0 Article 2023
 17  http://link.springer.com/article/10.1007/s43657-023-00099-w Article 2023
     year_month online_time access citation altmetric
-101    2023-06  2023-06-15      7        0         0
-32     2023-06  2023-06-13    106        0         2
-48     2023-06  2023-06-08    130        0         0
-79     2023-06  2023-06-05    139        0         0
-18     2023-05  2023-05-23    352        0         4
-17     2023-05  2023-05-16     86        0         2
+101    2023-06  2023-06-15     27        0         1
+32     2023-06  2023-06-13    200        0         3
+48     2023-06  2023-06-08    189        0         1
+79     2023-06  2023-06-05    197        0         2
+18     2023-05  2023-05-23    696        0         5
+17     2023-05  2023-05-16     91        0         2
                                          correspond_authors volume issue
 101                                     Li Zhang, Weimin Li             
 32                              Guoping Zhao, Guoqing Zhang             
@@ -163,15 +163,15 @@ The following objects are masked from ‘package:base’:
 18  Peisong Chen, Oscar Junhong Luo, Yifang Gao, Zhinan Yin             
 17                    Zechi Huang, Yuan-Yuan Li, Wentao Dai             
     update_time
-101  2023-06-18
-32   2023-06-18
-48   2023-06-18
-79   2023-06-18
-18   2023-06-18
-17   2023-06-18
-[1] 167972
-[1] 174
-[1] "./weekly_online_paper_metrices/output/2023-06-18.xlsx"
+101  2023-06-25
+32   2023-06-25
+48   2023-06-25
+79   2023-06-25
+18   2023-06-25
+17   2023-06-25
+[1] 172349
+[1] 186
+[1] "./weekly_online_paper_metrices/output/2023-06-25.xlsx"
 
 Attaching package: ‘dplyr’
 
@@ -194,13 +194,13 @@ The following objects are masked from ‘package:base’:
 [33] "2023-03-26.xlsx" "2023-04-02.xlsx" "2023-04-09.xlsx" "2023-04-16.xlsx"
 [37] "2023-04-23.xlsx" "2023-04-30.xlsx" "2023-05-07.xlsx" "2023-05-14.xlsx"
 [41] "2023-05-21.xlsx" "2023-05-29.xlsx" "2023-06-04.xlsx" "2023-06-11.xlsx"
-[45] "2023-06-18.xlsx"
+[45] "2023-06-18.xlsx" "2023-06-25.xlsx"
 
  Article   Review Protocol   Others 
       61       26        4        7 
 
     0   1-5 11-50  6-10 
-   44    46     2     6 
+   42    48     2     6 
 
 Attaching package: ‘dplyr’
 
@@ -238,16 +238,16 @@ The following objects are masked from ‘package:base’:
 
     intersect, setdiff, setequal, union
 
-[1] "2023-06-18.xlsx"
+[1] "2023-06-25.xlsx"
 # A tibble: 6 × 13
   title       url   type   year year_month online_time access citation altmetric
   <chr>       <chr> <chr> <dbl> <chr>      <chr>        <dbl>    <dbl>     <dbl>
-1 Integrativ… http… Arti…  2023 2023-06    2023-06-15       7        0         0
-2 Mycobacter… http… Arti…  2023 2023-06    2023-06-13     106        0         2
-3 De Novo Di… http… Arti…  2023 2023-06    2023-06-08     130        0         0
-4 Quantitati… http… Arti…  2023 2023-06    2023-06-05     139        0         0
-5 Immune-Age… http… Arti…  2023 2023-05    2023-05-23     352        0         4
-6 DBLiPro: A… http… Arti…  2023 2023-05    2023-05-16      86        0         2
+1 Integrativ… http… Arti…  2023 2023-06    2023-06-15      27        0         1
+2 Mycobacter… http… Arti…  2023 2023-06    2023-06-13     200        0         3
+3 De Novo Di… http… Arti…  2023 2023-06    2023-06-08     189        0         1
+4 Quantitati… http… Arti…  2023 2023-06    2023-06-05     197        0         2
+5 Immune-Age… http… Arti…  2023 2023-05    2023-05-23     696        0         5
+6 DBLiPro: A… http… Arti…  2023 2023-05    2023-05-16      91        0         2
 # ℹ 4 more variables: correspond_authors <chr>, volume <chr>, issue <chr>,
 #   update_time <chr>
  [1] "title"                 "url"                   "type"                 
@@ -277,40 +277,14 @@ The following objects are masked from ‘package:base’:
 [33] "2023-03-26.xlsx" "2023-04-02.xlsx" "2023-04-09.xlsx" "2023-04-16.xlsx"
 [37] "2023-04-23.xlsx" "2023-04-30.xlsx" "2023-05-07.xlsx" "2023-05-14.xlsx"
 [41] "2023-05-21.xlsx" "2023-05-29.xlsx" "2023-06-04.xlsx" "2023-06-11.xlsx"
-[45] "2023-06-18.xlsx"
-[1] 174
-[1] 2.097701
+[45] "2023-06-18.xlsx" "2023-06-25.xlsx"
+[1] 181
+[1] 2.016575
 [1] 102
-[1] 174
-[1] 2.098
+[1] 186
+[1] 2.353
          day Pred_IF
-1 2023-06-18   2.098
-          day Pred_IF
-1  2023-01-02   0.724
-2  2023-01-09   1.448
-3  2023-01-16   1.448
-4  2023-01-23   1.448
-5  2023-01-30   2.607
-6  2023-02-06   2.414
-7  2023-02-13   2.173
-8  2023-02-20   2.173
-9  2023-02-27   2.414
-10 2023-03-06   2.390
-11 2023-03-13   2.304
-12 2023-03-19   2.260
-13 2023-03-26   2.253
-14 2023-04-02   2.247
-15 2023-04-09   2.242
-16 2023-04-16   2.192
-17 2023-04-23   2.148
-18 2023-04-30   2.068
-19 2023-04-30   2.068
-20 2023-05-07   2.035
-21 2023-05-14   2.042
-22 2023-05-21   2.014
-23 2023-05-29   2.041
-24 2023-06-04   2.250
-25 2023-06-11   2.155
+1 2023-06-25   2.353
           day Pred_IF
 1  2023-01-02   0.724
 2  2023-01-09   1.448
@@ -338,6 +312,34 @@ The following objects are masked from ‘package:base’:
 24 2023-06-04   2.250
 25 2023-06-11   2.155
 26 2023-06-18   2.098
+          day Pred_IF
+1  2023-01-02   0.724
+2  2023-01-09   1.448
+3  2023-01-16   1.448
+4  2023-01-23   1.448
+5  2023-01-30   2.607
+6  2023-02-06   2.414
+7  2023-02-13   2.173
+8  2023-02-20   2.173
+9  2023-02-27   2.414
+10 2023-03-06   2.390
+11 2023-03-13   2.304
+12 2023-03-19   2.260
+13 2023-03-26   2.253
+14 2023-04-02   2.247
+15 2023-04-09   2.242
+16 2023-04-16   2.192
+17 2023-04-23   2.148
+18 2023-04-30   2.068
+19 2023-04-30   2.068
+20 2023-05-07   2.035
+21 2023-05-14   2.042
+22 2023-05-21   2.014
+23 2023-05-29   2.041
+24 2023-06-04   2.250
+25 2023-06-11   2.155
+26 2023-06-18   2.098
+27 2023-06-25   2.353
          day Pred_IF
 1 2023-01-02   0.724
 2 2023-01-09   1.448
@@ -368,7 +370,7 @@ Attaching SeuratObject
 [33] "2023-03-26.xlsx" "2023-04-02.xlsx" "2023-04-09.xlsx" "2023-04-16.xlsx"
 [37] "2023-04-23.xlsx" "2023-04-30.xlsx" "2023-05-07.xlsx" "2023-05-14.xlsx"
 [41] "2023-05-21.xlsx" "2023-05-29.xlsx" "2023-06-04.xlsx" "2023-06-11.xlsx"
-[45] "2023-06-18.xlsx"
+[45] "2023-06-18.xlsx" "2023-06-25.xlsx"
 [1] "Jan"
 [1] 18
 [1] "Feb"
@@ -423,19 +425,3 @@ Warning messages:
 3: Removed 7 rows containing missing values (`geom_line()`). 
 4: Removed 7 rows containing missing values (`geom_point()`). 
 5: Removed 7 rows containing missing values (`geom_text()`). 
-[master 146c423] 20230618
- 10 files changed, 382 insertions(+), 365 deletions(-)
- rewrite figures/fig2.png (83%)
- rewrite figures/fig4.png (95%)
- rewrite figures/fig_IF.png (97%)
- rewrite weekly_online_paper_metrices/all_Phenomics_paper_metrics.xlsx (83%)
- create mode 100644 weekly_online_paper_metrices/output/2023-06-18.xlsx
-remote: This repository moved. Please use the new location:        
-remote:   git@github.com:Telogen/Journal-Phenomics.git        
-To github.com:Telogen/Phenomics.git
-   fb54d65..146c423  master -> master
-git@gitee.com: Permission denied (publickey).
-fatal: Could not read from remote repository.
-
-Please make sure you have the correct access rights
-and the repository exists.
