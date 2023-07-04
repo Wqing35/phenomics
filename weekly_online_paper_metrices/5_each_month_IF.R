@@ -17,7 +17,7 @@ month_list <- list(Jan = c('2022-12-26','2023-01-30'),
                    Mar = c('2023-02-27','2023-03-26'),
                    Apr = c('2023-03-26','2023-04-30'),
                    May = c('2023-04-30','2023-05-29'),
-                   Jun = c(),
+                   Jun = c('2023-05-29','2023-07-02'),
                    Jul = c(),
                    Aug = c(),
                    Sep = c(),
@@ -66,7 +66,7 @@ each_month_IF <- ggplot(each_month_pred_if_df,aes(x = Month)) +
   geom_text(aes(y = Monthly_cumulative_impact_factor, label = round(Monthly_cumulative_impact_factor,2)),vjust = -0.8) + 
   theme_bw() + 
   NoLegend() + 
-  ylim(0,1) + 
+  # ylim(0,1) + 
   ylab('Monthly Impact Factor') + 
   theme(axis.title.x = element_blank(),
         axis.text.x = element_text(size = 12,color = 'black',angle = 45,vjust = 1,hjust = 1),
