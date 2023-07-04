@@ -66,7 +66,7 @@ each_month_IF <- ggplot(each_month_pred_if_df,aes(x = Month)) +
   geom_text(aes(y = Monthly_cumulative_impact_factor, label = round(Monthly_cumulative_impact_factor,2)),vjust = -0.8) + 
   theme_bw() + 
   NoLegend() + 
-  # ylim(0,1) + 
+  ylim(0,max(each_month_pred_if_df$Monthly_cumulative_impact_factor,na.rm = T) * 1.1) + 
   ylab('Monthly Impact Factor') + 
   theme(axis.title.x = element_blank(),
         axis.text.x = element_text(size = 12,color = 'black',angle = 45,vjust = 1,hjust = 1),
@@ -75,7 +75,7 @@ each_month_IF <- ggplot(each_month_pred_if_df,aes(x = Month)) +
         plot.title = element_text(hjust = .5)) 
 each_month_IF
   
-ggsave('./figures/each_month_IF.png',each_month_IF,width = 8,height = 3)
+ggsave('./figures/each_month_IF.png',each_month_IF,width = 12,height = 5)
 
 
 
