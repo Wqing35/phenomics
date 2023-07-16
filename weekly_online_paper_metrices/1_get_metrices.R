@@ -17,6 +17,7 @@ all_Phenomics_paper_metrics <- get_all_Phenomics_paper_metrics(online_data,sleep
 head(all_Phenomics_paper_metrics)
 sum(all_Phenomics_paper_metrics$access)
 sum(all_Phenomics_paper_metrics$citation)
+sum(all_Phenomics_paper_metrics$altmetric)
 
 sys.time <- Sys.time() %>% as.character()
 update_time <- strsplit(sys.time,' ')[[1]][1]
