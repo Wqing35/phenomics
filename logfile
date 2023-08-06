@@ -1,26 +1,26 @@
---2023-07-30 01:00:07--  https://link.springer.com/search/csv?query=&search-within=Jounal&facet-journal-id=43657
+--2023-08-06 01:00:02--  https://link.springer.com/search/csv?query=&search-within=Jounal&facet-journal-id=43657
 Resolving link.springer.com (link.springer.com)... 34.149.66.100
 Connecting to link.springer.com (link.springer.com)|34.149.66.100|:443... connected.
 HTTP request sent, awaiting response... 302 Found
 Location: https://idp.springer.com/authorize?redirect_uri=https://link.springer.com/search/csv?query%3D%26search-within%3DJounal%26facet-journal-id%3D43657&client_id=springerlink&response_type=cookie [following]
---2023-07-30 01:00:09--  https://idp.springer.com/authorize?redirect_uri=https://link.springer.com/search/csv?query%3D%26search-within%3DJounal%26facet-journal-id%3D43657&client_id=springerlink&response_type=cookie
+--2023-08-06 01:00:03--  https://idp.springer.com/authorize?redirect_uri=https://link.springer.com/search/csv?query%3D%26search-within%3DJounal%26facet-journal-id%3D43657&client_id=springerlink&response_type=cookie
 Resolving idp.springer.com (idp.springer.com)... 34.149.66.100
 Connecting to idp.springer.com (idp.springer.com)|34.149.66.100|:443... connected.
 HTTP request sent, awaiting response... 302 Found
-Location: https://idp.springer.com/transit?redirect_uri=https%3A%2F%2Flink.springer.com%2Fsearch%2Fcsv%3Fquery%3D%26search-within%3DJounal%26facet-journal-id%3D43657&code=fec6ef3d-8204-4675-ac7e-4a9734b796af [following]
---2023-07-30 01:00:10--  https://idp.springer.com/transit?redirect_uri=https%3A%2F%2Flink.springer.com%2Fsearch%2Fcsv%3Fquery%3D%26search-within%3DJounal%26facet-journal-id%3D43657&code=fec6ef3d-8204-4675-ac7e-4a9734b796af
+Location: https://idp.springer.com/transit?redirect_uri=https%3A%2F%2Flink.springer.com%2Fsearch%2Fcsv%3Fquery%3D%26search-within%3DJounal%26facet-journal-id%3D43657&code=080a7246-e49d-412b-ba48-b6bea5acd415 [following]
+--2023-08-06 01:00:05--  https://idp.springer.com/transit?redirect_uri=https%3A%2F%2Flink.springer.com%2Fsearch%2Fcsv%3Fquery%3D%26search-within%3DJounal%26facet-journal-id%3D43657&code=080a7246-e49d-412b-ba48-b6bea5acd415
 Reusing existing connection to idp.springer.com:443.
 HTTP request sent, awaiting response... 302 Found
 Location: https://link.springer.com/search/csv?query=&search-within=Jounal&facet-journal-id=43657 [following]
---2023-07-30 01:00:10--  https://link.springer.com/search/csv?query=&search-within=Jounal&facet-journal-id=43657
+--2023-08-06 01:00:05--  https://link.springer.com/search/csv?query=&search-within=Jounal&facet-journal-id=43657
 Connecting to link.springer.com (link.springer.com)|34.149.66.100|:443... connected.
 HTTP request sent, awaiting response... 200 OK
 Length: unspecified [text/csv]
 Saving to: ‘/mdshare/node8/txmdata/Phenomics/weekly_online_paper_metrices/SearchResults.csv’
 
-     0K .......... .......... .......... ...                    129K=0.3s
+     0K .......... .......... .......... ...                    109K=0.3s
 
-2023-07-30 01:00:17 (129 KB/s) - ‘/mdshare/node8/txmdata/Phenomics/weekly_online_paper_metrices/SearchResults.csv’ saved [34112]
+2023-08-06 01:00:10 (109 KB/s) - ‘/mdshare/node8/txmdata/Phenomics/weekly_online_paper_metrices/SearchResults.csv’ saved [34112]
 
 
 Attaching package: ‘dplyr’
@@ -154,23 +154,23 @@ The following objects are masked from ‘package:base’:
 75  http://link.springer.com/article/10.1007/s43657-023-00107-z
 106 http://link.springer.com/article/10.1007/s43657-023-00103-3
                    type year year_month online_time access citation altmetric
-49             Protocol 2023    2023-07  2023-07-27      3        0         0
-13              Article 2023    2023-07  2023-07-25      6        0         0
-6   Brief Communication 2023    2023-07  2023-07-21     33        0         2
-2            Correction 2023    2023-07  2023-07-03    149        0         0
-75              Article 2023    2023-06  2023-06-27     50        0         3
-106             Article 2023    2023-06  2023-06-15     72        0         5
+49             Protocol 2023    2023-07  2023-07-27     17        0         1
+13              Article 2023    2023-07  2023-07-25     13        0         1
+6   Brief Communication 2023    2023-07  2023-07-21    133        0         2
+2            Correction 2023    2023-07  2023-07-03    161        0         0
+75              Article 2023    2023-06  2023-06-27     52        0         3
+106             Article 2023    2023-06  2023-06-15     88        0         5
                  correspond_authors volume issue update_time
-49                     Jingjing Luo               2023-07-30
-13                 Xin Li, Xiang Li               2023-07-30
-6                           Bing Su               2023-07-30
-2                          Xia Shen               2023-07-30
-75  Yun Liu, Hejian Zou, Zaihua Zhu               2023-07-30
-106             Li Zhang, Weimin Li               2023-07-30
-[1] 185606
-[1] 209
-[1] 647
-[1] "./weekly_online_paper_metrices/output/2023-07-30.xlsx"
+49                     Jingjing Luo               2023-08-06
+13                 Xin Li, Xiang Li               2023-08-06
+6                           Bing Su               2023-08-06
+2                          Xia Shen               2023-08-06
+75  Yun Liu, Hejian Zou, Zaihua Zhu               2023-08-06
+106             Li Zhang, Weimin Li               2023-08-06
+[1] 187378
+[1] 221
+[1] 648
+[1] "./weekly_online_paper_metrices/output/2023-08-06.xlsx"
 
 Attaching package: ‘dplyr’
 
@@ -194,7 +194,7 @@ The following objects are masked from ‘package:base’:
 [37] "2023-04-23.xlsx" "2023-04-30.xlsx" "2023-05-07.xlsx" "2023-05-14.xlsx"
 [41] "2023-05-21.xlsx" "2023-05-29.xlsx" "2023-06-04.xlsx" "2023-06-11.xlsx"
 [45] "2023-06-18.xlsx" "2023-06-25.xlsx" "2023-07-02.xlsx" "2023-07-09.xlsx"
-[49] "2023-07-16.xlsx" "2023-07-23.xlsx" "2023-07-30.xlsx"
+[49] "2023-07-16.xlsx" "2023-07-23.xlsx" "2023-07-30.xlsx" "2023-08-06.xlsx"
 
  Article   Review Protocol   Others 
       63       26        5        8 
@@ -238,16 +238,16 @@ The following objects are masked from ‘package:base’:
 
     intersect, setdiff, setequal, union
 
-[1] "2023-07-30.xlsx"
+[1] "2023-08-06.xlsx"
 # A tibble: 6 × 13
   title       url   type   year year_month online_time access citation altmetric
   <chr>       <chr> <chr> <dbl> <chr>      <chr>        <dbl>    <dbl>     <dbl>
-1 A Protocol… http… Prot…  2023 2023-07    2023-07-27       3        0         0
-2 Performanc… http… Arti…  2023 2023-07    2023-07-25       6        0         0
-3 High Arter… http… Brie…  2023 2023-07    2023-07-21      33        0         2
-4 A Common F… http… Arti…  2023 2023-06    2023-06-27      50        0         3
-5 Integrativ… http… Arti…  2023 2023-06    2023-06-15      72        0         5
-6 Mycobacter… http… Arti…  2023 2023-06    2023-06-13     586        0         5
+1 A Protocol… http… Prot…  2023 2023-07    2023-07-27      17        0         1
+2 Performanc… http… Arti…  2023 2023-07    2023-07-25      13        0         1
+3 High Arter… http… Brie…  2023 2023-07    2023-07-21     133        0         2
+4 A Common F… http… Arti…  2023 2023-06    2023-06-27      52        0         3
+5 Integrativ… http… Arti…  2023 2023-06    2023-06-15      88        0         5
+6 Mycobacter… http… Arti…  2023 2023-06    2023-06-13     619        0         5
 # ℹ 4 more variables: correspond_authors <chr>, volume <chr>, issue <chr>,
 #   update_time <chr>
  [1] "title"                 "url"                   "type"                 
@@ -278,46 +278,14 @@ The following objects are masked from ‘package:base’:
 [37] "2023-04-23.xlsx" "2023-04-30.xlsx" "2023-05-07.xlsx" "2023-05-14.xlsx"
 [41] "2023-05-21.xlsx" "2023-05-29.xlsx" "2023-06-04.xlsx" "2023-06-11.xlsx"
 [45] "2023-06-18.xlsx" "2023-06-25.xlsx" "2023-07-02.xlsx" "2023-07-09.xlsx"
-[49] "2023-07-16.xlsx" "2023-07-23.xlsx" "2023-07-30.xlsx"
-[1] 216
-[1] 1.689815
+[49] "2023-07-16.xlsx" "2023-07-23.xlsx" "2023-07-30.xlsx" "2023-08-06.xlsx"
+[1] 223
+[1] 1.636771
 [1] 102
-[1] 209
-[1] 2.511
+[1] 221
+[1] 2.705
          day Pred_IF
-1 2023-07-30   2.511
-          day Pred_IF
-1  2023-01-02   0.724
-2  2023-01-09   1.448
-3  2023-01-16   1.448
-4  2023-01-23   1.448
-5  2023-01-30   2.607
-6  2023-02-06   2.414
-7  2023-02-13   2.173
-8  2023-02-20   2.173
-9  2023-02-27   2.414
-10 2023-03-06   2.390
-11 2023-03-13   2.304
-12 2023-03-19   2.260
-13 2023-03-26   2.253
-14 2023-04-02   2.247
-15 2023-04-09   2.242
-16 2023-04-16   2.192
-17 2023-04-23   2.148
-18 2023-04-30   2.068
-19 2023-04-30   2.068
-20 2023-05-07   2.035
-21 2023-05-14   2.042
-22 2023-05-21   2.014
-23 2023-05-29   2.041
-24 2023-06-04   2.250
-25 2023-06-11   2.155
-26 2023-06-18   2.098
-27 2023-06-25   2.353
-28 2023-07-02   2.562
-29 2023-07-09   2.470
-30 2023-07-16   2.485
-31 2023-07-23   2.474
+1 2023-08-06   2.705
           day Pred_IF
 1  2023-01-02   0.724
 2  2023-01-09   1.448
@@ -351,6 +319,40 @@ The following objects are masked from ‘package:base’:
 30 2023-07-16   2.485
 31 2023-07-23   2.474
 32 2023-07-30   2.511
+          day Pred_IF
+1  2023-01-02   0.724
+2  2023-01-09   1.448
+3  2023-01-16   1.448
+4  2023-01-23   1.448
+5  2023-01-30   2.607
+6  2023-02-06   2.414
+7  2023-02-13   2.173
+8  2023-02-20   2.173
+9  2023-02-27   2.414
+10 2023-03-06   2.390
+11 2023-03-13   2.304
+12 2023-03-19   2.260
+13 2023-03-26   2.253
+14 2023-04-02   2.247
+15 2023-04-09   2.242
+16 2023-04-16   2.192
+17 2023-04-23   2.148
+18 2023-04-30   2.068
+19 2023-04-30   2.068
+20 2023-05-07   2.035
+21 2023-05-14   2.042
+22 2023-05-21   2.014
+23 2023-05-29   2.041
+24 2023-06-04   2.250
+25 2023-06-11   2.155
+26 2023-06-18   2.098
+27 2023-06-25   2.353
+28 2023-07-02   2.562
+29 2023-07-09   2.470
+30 2023-07-16   2.485
+31 2023-07-23   2.474
+32 2023-07-30   2.511
+33 2023-08-06   2.705
          day Pred_IF
 1 2023-01-02   0.724
 2 2023-01-09   1.448
@@ -382,7 +384,7 @@ Attaching SeuratObject
 [37] "2023-04-23.xlsx" "2023-04-30.xlsx" "2023-05-07.xlsx" "2023-05-14.xlsx"
 [41] "2023-05-21.xlsx" "2023-05-29.xlsx" "2023-06-04.xlsx" "2023-06-11.xlsx"
 [45] "2023-06-18.xlsx" "2023-06-25.xlsx" "2023-07-02.xlsx" "2023-07-09.xlsx"
-[49] "2023-07-16.xlsx" "2023-07-23.xlsx" "2023-07-30.xlsx"
+[49] "2023-07-16.xlsx" "2023-07-23.xlsx" "2023-07-30.xlsx" "2023-08-06.xlsx"
 [1] "Jan"
 [1] 18
 [1] "Feb"
@@ -396,6 +398,7 @@ Attaching SeuratObject
 [1] "Jun"
 [1] 33
 [1] "Jul"
+[1] 12
 [1] "Aug"
 [1] "Sep"
 [1] "Oct"
@@ -420,35 +423,21 @@ Mar          0.1298701   Mar                        0.5194805
 Apr          0.1428571   Apr                        0.6623377
 May          0.1428571   May                        0.8051948
 Jun          0.4285714   Jun                        1.2337662
-Jul                 NA   Jul                               NA
+Jul          0.1558442   Jul                        1.3896104
 Aug                 NA   Aug                               NA
 Sep                 NA   Sep                               NA
 Oct                 NA   Oct                               NA
 Nov                 NA   Nov                               NA
 Dec                 NA   Dec                               NA
 Warning messages:
-1: Removed 6 rows containing missing values (`position_stack()`). 
-2: Removed 6 rows containing missing values (`geom_text()`). 
-3: Removed 6 rows containing missing values (`geom_line()`). 
-4: Removed 6 rows containing missing values (`geom_point()`). 
-5: Removed 6 rows containing missing values (`geom_text()`). 
+1: Removed 5 rows containing missing values (`position_stack()`). 
+2: Removed 5 rows containing missing values (`geom_text()`). 
+3: Removed 5 rows containing missing values (`geom_line()`). 
+4: Removed 5 rows containing missing values (`geom_point()`). 
+5: Removed 5 rows containing missing values (`geom_text()`). 
 Warning messages:
-1: Removed 6 rows containing missing values (`position_stack()`). 
-2: Removed 6 rows containing missing values (`geom_text()`). 
-3: Removed 6 rows containing missing values (`geom_line()`). 
-4: Removed 6 rows containing missing values (`geom_point()`). 
-5: Removed 6 rows containing missing values (`geom_text()`). 
-[master 213d850] 20230730
- 9 files changed, 315 insertions(+), 288 deletions(-)
- rewrite figures/fig2.png (83%)
- rewrite figures/fig4.png (94%)
- rewrite figures/fig_IF.png (97%)
- rewrite weekly_online_paper_metrices/all_Phenomics_paper_metrics.xlsx (83%)
- create mode 100644 weekly_online_paper_metrices/output/2023-07-30.xlsx
-remote: This repository moved. Please use the new location:        
-remote:   git@github.com:Telogen/Journal-Phenomics.git        
-To github.com:Telogen/Phenomics.git
-   742f8e7..213d850  master -> master
-remote: Powered by [01;33mGITEE.COM [0m[[01;35mGNK-6.4[0m][0m        
-To gitee.com:Telogen/Journal-Phenomics.git
-   742f8e7..213d850  master -> master
+1: Removed 5 rows containing missing values (`position_stack()`). 
+2: Removed 5 rows containing missing values (`geom_text()`). 
+3: Removed 5 rows containing missing values (`geom_line()`). 
+4: Removed 5 rows containing missing values (`geom_point()`). 
+5: Removed 5 rows containing missing values (`geom_text()`). 
