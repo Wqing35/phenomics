@@ -51,7 +51,7 @@ write.csv(pred_if_df,'./weekly_online_paper_metrices/pred_if_df.csv',row.names =
 
 pred_if_df <- read.csv('./weekly_online_paper_metrices/pred_if_df.csv')
 head(pred_if_df)
-plot_pred_if_df <- pred_if_df[(nrow(pred_if_df)-15):nrow(pred_if_df),]
+plot_pred_if_df <- pred_if_df[(nrow(pred_if_df)-14):nrow(pred_if_df),]
 fig_IF <- ggplot(plot_pred_if_df,aes(x = day,y = Pred_IF)) + 
   geom_point(stat = "identity") +
   geom_line(aes(group = 1)) +
