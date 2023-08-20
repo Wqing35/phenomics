@@ -1,26 +1,26 @@
---2023-08-20 01:00:02--  https://link.springer.com/search/csv?query=&search-within=Jounal&facet-journal-id=43657
+--2023-08-20 12:57:50--  https://link.springer.com/search/csv?query=&search-within=Jounal&facet-journal-id=43657
 Resolving link.springer.com (link.springer.com)... 34.149.66.100
 Connecting to link.springer.com (link.springer.com)|34.149.66.100|:443... connected.
 HTTP request sent, awaiting response... 302 Found
 Location: https://idp.springer.com/authorize?redirect_uri=https://link.springer.com/search/csv?query%3D%26search-within%3DJounal%26facet-journal-id%3D43657&client_id=springerlink&response_type=cookie [following]
---2023-08-20 01:00:03--  https://idp.springer.com/authorize?redirect_uri=https://link.springer.com/search/csv?query%3D%26search-within%3DJounal%26facet-journal-id%3D43657&client_id=springerlink&response_type=cookie
+--2023-08-20 12:57:52--  https://idp.springer.com/authorize?redirect_uri=https://link.springer.com/search/csv?query%3D%26search-within%3DJounal%26facet-journal-id%3D43657&client_id=springerlink&response_type=cookie
 Resolving idp.springer.com (idp.springer.com)... 34.149.66.100
 Connecting to idp.springer.com (idp.springer.com)|34.149.66.100|:443... connected.
 HTTP request sent, awaiting response... 302 Found
-Location: https://idp.springer.com/transit?redirect_uri=https%3A%2F%2Flink.springer.com%2Fsearch%2Fcsv%3Fquery%3D%26search-within%3DJounal%26facet-journal-id%3D43657&code=1ac55baa-ba40-4fab-b10b-2486a128ad34 [following]
---2023-08-20 01:00:04--  https://idp.springer.com/transit?redirect_uri=https%3A%2F%2Flink.springer.com%2Fsearch%2Fcsv%3Fquery%3D%26search-within%3DJounal%26facet-journal-id%3D43657&code=1ac55baa-ba40-4fab-b10b-2486a128ad34
+Location: https://idp.springer.com/transit?redirect_uri=https%3A%2F%2Flink.springer.com%2Fsearch%2Fcsv%3Fquery%3D%26search-within%3DJounal%26facet-journal-id%3D43657&code=f58ee8d0-f91a-4fe1-ac7e-9a28bf927e6e [following]
+--2023-08-20 12:57:53--  https://idp.springer.com/transit?redirect_uri=https%3A%2F%2Flink.springer.com%2Fsearch%2Fcsv%3Fquery%3D%26search-within%3DJounal%26facet-journal-id%3D43657&code=f58ee8d0-f91a-4fe1-ac7e-9a28bf927e6e
 Reusing existing connection to idp.springer.com:443.
 HTTP request sent, awaiting response... 302 Found
 Location: https://link.springer.com/search/csv?query=&search-within=Jounal&facet-journal-id=43657 [following]
---2023-08-20 01:00:05--  https://link.springer.com/search/csv?query=&search-within=Jounal&facet-journal-id=43657
+--2023-08-20 12:57:53--  https://link.springer.com/search/csv?query=&search-within=Jounal&facet-journal-id=43657
 Connecting to link.springer.com (link.springer.com)|34.149.66.100|:443... connected.
 HTTP request sent, awaiting response... 200 OK
 Length: unspecified [text/csv]
 Saving to: ‘/mdshare/node8/txmdata/Phenomics/weekly_online_paper_metrices/SearchResults.csv’
 
-     0K .......... .......... .......... ...                    139K=0.2s
+     0K .......... .......... .......... ...                    132K=0.3s
 
-2023-08-20 01:00:09 (139 KB/s) - ‘/mdshare/node8/txmdata/Phenomics/weekly_online_paper_metrices/SearchResults.csv’ saved [34432]
+2023-08-20 12:57:57 (132 KB/s) - ‘/mdshare/node8/txmdata/Phenomics/weekly_online_paper_metrices/SearchResults.csv’ saved [34432]
 
 
 Attaching package: ‘dplyr’
@@ -191,6 +191,7 @@ The following objects are masked from ‘package:base’:
 32 2023-07-30   2.511
 33 2023-08-06   2.705
 34 2023-08-13   2.711
+35 2023-08-13   2.711
           day Pred_IF
 1  2023-01-02   0.724
 2  2023-01-09   1.448
@@ -227,6 +228,7 @@ The following objects are masked from ‘package:base’:
 33 2023-08-06   2.705
 34 2023-08-13   2.711
 35 2023-08-13   2.711
+36 2023-08-13   2.711
          day Pred_IF
 1 2023-01-02   0.724
 2 2023-01-09   1.448
