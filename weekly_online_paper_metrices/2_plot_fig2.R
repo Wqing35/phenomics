@@ -1,9 +1,7 @@
 # fig2
-library(ggplot2)
-library(stringr)
 library(ggpubr)
 library(aplot)
-library(dplyr)
+library(tidyverse)
 setwd('/mdshare/node8/txmdata/Phenomics/')
 
 plot_file_names <- list.files('./weekly_online_paper_metrices/output/')

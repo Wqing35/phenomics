@@ -1,10 +1,8 @@
 # 4_pred_IF
 
-library(ggplot2)
-library(stringr)
 library(ggpubr)
 library(aplot)
-library(dplyr)
+library(tidyverse)
 setwd('/mdshare/node8/txmdata/Phenomics/')
 
 

@@ -3,7 +3,7 @@
 # https://link.springer.com/search?query=&search-within=Journal&facet-journal-id=43657
 library(kableExtra)
 library(knitr)
-library(dplyr)
+library(tidyverse)
 setwd('/mdshare/node8/txmdata/Phenomics/')
 
 plot_file_names <- list.files('./weekly_online_paper_metrices/output/')
