@@ -53,6 +53,16 @@
    <td style="text-align:center;"> 1 </td>
   </tr>
   <tr>
+   <td style="text-align:center;"> <a href="http://link.springer.com/article/10.1007/s43657-021-00020-3" style="     " >Molecular Phenomic Approaches to Deconvolving ...</a> </td>
+   <td style="text-align:center;"> Review </td>
+   <td style="text-align:center;"> 2021-07-22 </td>
+   <td style="text-align:center;"> 4110 </td>
+   <td style="text-align:center;"> 9 </td>
+   <td style="text-align:center;"> 39 </td>
+   <td style="text-align:center;"> 1 </td>
+   <td style="text-align:center;"> 4 </td>
+  </tr>
+  <tr>
    <td style="text-align:center;"> <a href="http://link.springer.com/article/10.1007/s43657-021-00026-x" style="     " >Systematic Genome-Wide Profiles Reveal Alternative ...</a> </td>
    <td style="text-align:center;"> Article </td>
    <td style="text-align:center;"> 2021-10-29 </td>
@@ -130,6 +140,16 @@
    <td style="text-align:center;"> 5 </td>
    <td style="text-align:center;"> 34 </td>
    <td style="text-align:center;"> 2 </td>
+   <td style="text-align:center;"> 3 </td>
+  </tr>
+  <tr>
+   <td style="text-align:center;"> <a href="http://link.springer.com/article/10.1007/s43657-021-00014-1" style="     " >Genetic Architecture of Childhood Kidney ...</a> </td>
+   <td style="text-align:center;"> Article </td>
+   <td style="text-align:center;"> 2021-07-15 </td>
+   <td style="text-align:center;"> 2908 </td>
+   <td style="text-align:center;"> 5 </td>
+   <td style="text-align:center;"> 1 </td>
+   <td style="text-align:center;"> 1 </td>
    <td style="text-align:center;"> 3 </td>
   </tr>
   <tr>
@@ -241,6 +261,16 @@
    <td style="text-align:center;"> 1 </td>
    <td style="text-align:center;"> 3 </td>
    <td style="text-align:center;"> 1 </td>
+  </tr>
+  <tr>
+   <td style="text-align:center;"> <a href="http://link.springer.com/article/10.1007/s43657-022-00054-1" style="     " >Biomarkers and Disease Trajectories Influencing ...</a> </td>
+   <td style="text-align:center;"> Article </td>
+   <td style="text-align:center;"> 2022-05-12 </td>
+   <td style="text-align:center;"> 2941 </td>
+   <td style="text-align:center;"> 3 </td>
+   <td style="text-align:center;"> 2 </td>
+   <td style="text-align:center;"> 2 </td>
+   <td style="text-align:center;"> 3 </td>
   </tr>
   <tr>
    <td style="text-align:center;"> <a href="http://link.springer.com/article/10.1007/s43657-021-00042-x" style="     " >Positron Emission Tomography Molecular Imaging ...</a> </td>
@@ -493,6 +523,16 @@
    <td style="text-align:center;"> 2 </td>
   </tr>
   <tr>
+   <td style="text-align:center;"> <a href="http://link.springer.com/article/10.1007/s43657-022-00065-y" style="     " >Report on the 3rd Board ...</a> </td>
+   <td style="text-align:center;"> Meeting Report </td>
+   <td style="text-align:center;"> 2022-06-22 </td>
+   <td style="text-align:center;"> 2657 </td>
+   <td style="text-align:center;"> 1 </td>
+   <td style="text-align:center;"> 3 </td>
+   <td style="text-align:center;"> 3 </td>
+   <td style="text-align:center;"> 1 </td>
+  </tr>
+  <tr>
    <td style="text-align:center;"> <a href="http://link.springer.com/article/10.1007/s43657-022-00062-1" style="     " >Identification of Germline Mutations in ...</a> </td>
    <td style="text-align:center;"> Article </td>
    <td style="text-align:center;"> 2022-06-11 </td>
@@ -648,7 +688,7 @@
    <td style="text-align:center;"> 2023-06-13 </td>
    <td style="text-align:center;"> 675 </td>
    <td style="text-align:center;"> 0 </td>
-   <td style="text-align:center;"> NA </td>
+   <td style="text-align:center;"> 5 </td>
    <td style="text-align:center;"> NA </td>
    <td style="text-align:center;"> NA </td>
   </tr>
@@ -656,7 +696,7 @@
    <td style="text-align:center;"> <a href="http://link.springer.com/article/10.1007/s43657-023-00109-x" style="     " >De Novo Dissecting the Three-Dimensional ...</a> </td>
    <td style="text-align:center;"> Article </td>
    <td style="text-align:center;"> 2023-06-08 </td>
-   <td style="text-align:center;"> 496 </td>
+   <td style="text-align:center;"> 497 </td>
    <td style="text-align:center;"> 0 </td>
    <td style="text-align:center;"> 1 </td>
    <td style="text-align:center;"> NA </td>
@@ -668,7 +708,7 @@
    <td style="text-align:center;"> 2023-06-05 </td>
    <td style="text-align:center;"> 527 </td>
    <td style="text-align:center;"> 0 </td>
-   <td style="text-align:center;"> NA </td>
+   <td style="text-align:center;"> 2 </td>
    <td style="text-align:center;"> NA </td>
    <td style="text-align:center;"> NA </td>
   </tr>
@@ -698,7 +738,7 @@
    <td style="text-align:center;"> 2023-04-03 </td>
    <td style="text-align:center;"> 1179 </td>
    <td style="text-align:center;"> 0 </td>
-   <td style="text-align:center;"> NA </td>
+   <td style="text-align:center;"> 16 </td>
    <td style="text-align:center;"> 3 </td>
    <td style="text-align:center;"> 4 </td>
   </tr>
@@ -708,7 +748,7 @@
    <td style="text-align:center;"> 2023-03-20 </td>
    <td style="text-align:center;"> 1784 </td>
    <td style="text-align:center;"> 0 </td>
-   <td style="text-align:center;"> NA </td>
+   <td style="text-align:center;"> 7 </td>
    <td style="text-align:center;"> 3 </td>
    <td style="text-align:center;"> 3 </td>
   </tr>
@@ -836,7 +876,7 @@
    <td style="text-align:center;"> <a href="http://link.springer.com/article/10.1007/s43657-022-00080-z" style="     " >Autophagic Clearance of Lipid Droplets ...</a> </td>
    <td style="text-align:center;"> Article </td>
    <td style="text-align:center;"> 2022-11-19 </td>
-   <td style="text-align:center;"> 1793 </td>
+   <td style="text-align:center;"> 1797 </td>
    <td style="text-align:center;"> 0 </td>
    <td style="text-align:center;"> 4 </td>
    <td style="text-align:center;"> 3 </td>
@@ -1001,46 +1041,6 @@
    <td style="text-align:center;"> 3 </td>
    <td style="text-align:center;"> 2 </td>
    <td style="text-align:center;"> 1 </td>
-  </tr>
-  <tr>
-   <td style="text-align:center;"> <a href="http://link.springer.com/article/10.1007/s43657-022-00065-y" style="     " >Report on the 3rd Board ...</a> </td>
-   <td style="text-align:center;"> Meeting Report </td>
-   <td style="text-align:center;"> 2022-06-22 </td>
-   <td style="text-align:center;"> 2657 </td>
-   <td style="text-align:center;"> NA </td>
-   <td style="text-align:center;"> NA </td>
-   <td style="text-align:center;"> 3 </td>
-   <td style="text-align:center;"> 1 </td>
-  </tr>
-  <tr>
-   <td style="text-align:center;"> <a href="http://link.springer.com/article/10.1007/s43657-022-00054-1" style="     " >Biomarkers and Disease Trajectories Influencing ...</a> </td>
-   <td style="text-align:center;"> Article </td>
-   <td style="text-align:center;"> 2022-05-12 </td>
-   <td style="text-align:center;"> 2941 </td>
-   <td style="text-align:center;"> NA </td>
-   <td style="text-align:center;"> NA </td>
-   <td style="text-align:center;"> 2 </td>
-   <td style="text-align:center;"> 3 </td>
-  </tr>
-  <tr>
-   <td style="text-align:center;"> <a href="http://link.springer.com/article/10.1007/s43657-021-00020-3" style="     " >Molecular Phenomic Approaches to Deconvolving ...</a> </td>
-   <td style="text-align:center;"> Review </td>
-   <td style="text-align:center;"> 2021-07-22 </td>
-   <td style="text-align:center;"> 4110 </td>
-   <td style="text-align:center;"> NA </td>
-   <td style="text-align:center;"> NA </td>
-   <td style="text-align:center;"> 1 </td>
-   <td style="text-align:center;"> 4 </td>
-  </tr>
-  <tr>
-   <td style="text-align:center;"> <a href="http://link.springer.com/article/10.1007/s43657-021-00014-1" style="     " >Genetic Architecture of Childhood Kidney ...</a> </td>
-   <td style="text-align:center;"> Article </td>
-   <td style="text-align:center;"> 2021-07-15 </td>
-   <td style="text-align:center;"> 2908 </td>
-   <td style="text-align:center;"> NA </td>
-   <td style="text-align:center;"> NA </td>
-   <td style="text-align:center;"> 1 </td>
-   <td style="text-align:center;"> 3 </td>
   </tr>
 </tbody>
 </table>

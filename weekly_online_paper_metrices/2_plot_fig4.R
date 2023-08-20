@@ -33,7 +33,7 @@ access_plot <- ggplot(df,aes(x = Date,y = `Total access`)) +
   geom_point(stat = "identity") +
   geom_line(aes(group = 1)) +
   geom_text(aes(label = paste0(round(`Total access`/10000,1),'w')),hjust = .5,vjust = -.8) + 
-  ylim((min(df$`Total access`) - 1000),(max(df$`Total access`) + (max(df$`Total access`) - min(df$`Total access`))/6)) + 
+  ylim((min(df$`Total access`) - 1000),(max(df$`Total access`) + (max(df$`Total access`) - min(df$`Total access`))/5)) + 
   theme_light() + 
   theme(axis.title.x = element_blank(),
         axis.text.x = element_blank(),
@@ -46,7 +46,7 @@ citations_plot <- ggplot(df,aes(x = Date,y = `Total citations`)) +
   geom_point(stat = "identity") +
   geom_line(aes(group = 1)) +
   geom_text(aes(label = `Total citations`),hjust = .5,vjust = -.8) + 
-  ylim((min(df$`Total citations`) - 2),(max(df$`Total citations`) + (max(df$`Total citations`)-min(df$`Total citations`))/6)) + 
+  ylim((min(df$`Total citations`) - 2),(max(df$`Total citations`) + (max(df$`Total citations`)-min(df$`Total citations`))/5)) + 
   theme_light() + 
   theme(axis.title.x = element_blank(),
         axis.text.x = element_blank(),
@@ -59,7 +59,7 @@ altmetrics_plot <- ggplot(df,aes(x = Date,y = `Total altmetrics`)) +
   geom_point(stat = "identity") +
   geom_line(aes(group = 1)) +
   geom_text(aes(label = `Total altmetrics`),hjust = .5,vjust = -.8) + 
-  ylim((min(df$`Total altmetrics`) - 2),(max(df$`Total altmetrics`) + (max(df$`Total altmetrics`) - min(df$`Total altmetrics`))/6)) + 
+  ylim((min(df$`Total altmetrics`) - 2),(max(df$`Total altmetrics`) + (max(df$`Total altmetrics`) - min(df$`Total altmetrics`))/5)) + 
   theme_light() + 
   theme(axis.title.x = element_blank(),
         axis.text.x = element_text(size = 12,color = 'black',angle = 45,vjust = 1,hjust = 1),
