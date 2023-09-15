@@ -48,7 +48,7 @@ https://www.springer.com/journal/43657
 
 - Citation index of paper classified
 <!-- fig5 分类文章引用次数 每周修改 -->
-![fig4.png](https://github.com/Telogen/Journal-Phenomics/blob/master/figures/分类引用图.pdf)
+![fig5.png](https://github.com/Telogen/Journal-Phenomics/blob/master/figures/fig5.png)
 
 
 - Paper subject distribution
