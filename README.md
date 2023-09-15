@@ -46,6 +46,11 @@ https://www.springer.com/journal/43657
 <!-- 每周修改 -->
 - See [details about each online paper](https://github.com/Telogen/Journal-Phenomics/blob/master/weekly_online_paper_metrices/README.md) or [download as Excel](https://gitee.com/telogen/Journal-Phenomics/raw/master/weekly_online_paper_metrices/all_Phenomics_paper_metrics.xlsx)
 
+- Citation index of paper classified
+<!-- fig5 分类文章引用次数 每周修改 -->
+![fig4.png](https://gitee.com/telogen/Journal-Phenomics/raw/master/figures/fig4.png)
+
+
 - Paper subject distribution
 <!-- fig3 subject分布图 暂不修改 -->
 ![fig3.png](https://gitee.com/telogen/Journal-Phenomics/raw/master/figures/fig3.png)
