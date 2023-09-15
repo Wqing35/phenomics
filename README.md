@@ -46,7 +46,7 @@ https://www.springer.com/journal/43657
 <!-- 每周修改 -->
 - See [details about each online paper](https://github.com/Telogen/Journal-Phenomics/blob/master/weekly_online_paper_metrices/README.md) or [download as Excel](https://gitee.com/telogen/Journal-Phenomics/raw/master/weekly_online_paper_metrices/all_Phenomics_paper_metrics.xlsx)
 
-- Citation index of paper classified
+- Citation index of papers classified
 <!-- fig5 分类文章引用次数 每周修改 -->
 ![fig5.png](https://github.com/Telogen/Journal-Phenomics/blob/master/figures/fig5.png)
 
