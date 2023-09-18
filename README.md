@@ -48,7 +48,7 @@ https://www.springer.com/journal/43657
 ![fig5.png](https://github.com/Wqing35/phenomics/blob/master/figures/fig5.png)
 
 <!-- 每周修改 -->
-- See [details about each online paper](https://github.com/Telogen/Journal-Phenomics/blob/master/weekly_online_paper_metrices/README.md) or [download as Excel](https://gitee.com/telogen/Journal-Phenomics/raw/master/weekly_online_paper_metrices/all_Phenomics_paper_metrics.xlsx)
+- See [details about each online paper](https://github.com/Wqing35/phenomics/blob/master/weekly_online_paper_metrices/README.md) or [download as Excel](https://github.com/Wqing35/phenomics/blob/master/weekly_online_paper_metrices/all_Phenomics_paper_metrics.xlsx)
 
 - Paper subject distribution
 <!-- fig3 subject分布图 暂不修改 -->
