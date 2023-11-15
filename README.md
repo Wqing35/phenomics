@@ -33,6 +33,13 @@ https://www.springer.com/journal/43657
 
 -----
 
+## Weekly Impact Factor (Update weekly)
+> Weekly citations / (Number of published papers in 2021 and 2022)
+
+![each_week_IF.png](https://github.com/Wqing35/phenomics/blob/master/figures/each_week_IF.png)
+
+-----
+
 ## All *Phenomics* online papers (Update weekly)
 
 - Paper type and citation distribution
